@@ -44,7 +44,6 @@ namespace UnitsNet.Tests
         protected override double NanogramsTolerance => 1E-3;
 
         protected override double OuncesInOneKilogram => 35.2739619;
-        protected override double PicogramsInOneKilogram => 1E15;
 
         protected override double PoundsInOneKilogram => 2.2046226218487757d;
 
