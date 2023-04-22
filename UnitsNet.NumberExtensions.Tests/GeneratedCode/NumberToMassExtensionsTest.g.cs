@@ -41,6 +41,10 @@ namespace UnitsNet.Tests
             Assert.Equal(Mass.FromEarthMasses(2), 2.EarthMasses());
 
         [Fact]
+        public void NumberToFemtogramsTest() =>
+            Assert.Equal(Mass.FromFemtograms(2), 2.Femtograms());
+
+        [Fact]
         public void NumberToGrainsTest() =>
             Assert.Equal(Mass.FromGrains(2), 2.Grains());
 

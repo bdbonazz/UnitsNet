@@ -100,6 +100,11 @@ namespace UnitsNet
         public double EarthMasses => As(MassUnit.EarthMass);
 
         /// <summary>
+        ///     Gets a <see cref="double"/> value of this quantity converted into <see cref="MassUnit.Femtogram"/>
+        /// </summary>
+        public double Femtograms => As(MassUnit.Femtogram);
+
+        /// <summary>
         ///     Gets a <see cref="double"/> value of this quantity converted into <see cref="MassUnit.Grain"/>
         /// </summary>
         public double Grains => As(MassUnit.Grain);
@@ -236,6 +241,12 @@ namespace UnitsNet
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Mass FromEarthMasses(double earthmasses) => new Mass(earthmasses, MassUnit.EarthMass);
+
+        /// <summary>
+        ///     Creates a <see cref="Mass"/> from <see cref="MassUnit.Femtogram"/>.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static Mass FromFemtograms(double femtograms) => new Mass(femtograms, MassUnit.Femtogram);
 
         /// <summary>
         ///     Creates a <see cref="Mass"/> from <see cref="MassUnit.Grain"/>.
@@ -413,6 +424,7 @@ namespace UnitsNet
                         MassUnit.Decagram => (_value / 1e3) * 1e1d,
                         MassUnit.Decigram => (_value / 1e3) * 1e-1d,
                         MassUnit.EarthMass => _value * 5.9722E+24,
+                        MassUnit.Femtogram => (_value / 1e3) * 1e-15d,
                         MassUnit.Grain => _value / 15432.358352941431,
                         MassUnit.Gram => _value / 1e3,
                         MassUnit.Hectogram => (_value / 1e3) * 1e2d,
@@ -452,6 +464,7 @@ namespace UnitsNet
                         MassUnit.Decagram => (baseUnitValue * 1e3) / 1e1d,
                         MassUnit.Decigram => (baseUnitValue * 1e3) / 1e-1d,
                         MassUnit.EarthMass => baseUnitValue / 5.9722E+24,
+                        MassUnit.Femtogram => (baseUnitValue * 1e3) / 1e-15d,
                         MassUnit.Grain => baseUnitValue * 15432.358352941431,
                         MassUnit.Gram => baseUnitValue * 1e3,
                         MassUnit.Hectogram => (baseUnitValue * 1e3) / 1e2d,
