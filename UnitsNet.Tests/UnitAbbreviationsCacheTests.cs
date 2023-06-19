@@ -16,9 +16,9 @@ namespace UnitsNet.Tests
         private const string RussianCultureName = "ru-RU";
         private const string NorwegianCultureName = "nb-NO";
 
-        private static readonly IFormatProvider AmericanCulture = new CultureInfo(AmericanCultureName);
-        private static readonly IFormatProvider NorwegianCulture = new CultureInfo(NorwegianCultureName);
-        private static readonly IFormatProvider RussianCulture = new CultureInfo(RussianCultureName);
+        private static readonly IFormatProvider AmericanCulture = CultureInfo.GetCultureInfo(AmericanCultureName);
+        private static readonly IFormatProvider NorwegianCulture = CultureInfo.GetCultureInfo(NorwegianCultureName);
+        private static readonly IFormatProvider RussianCulture = CultureInfo.GetCultureInfo(RussianCultureName);
 
         // The default, parameterless ToString() method uses 2 sigifnificant digits after the radix point.
         [Theory]
@@ -213,29 +213,20 @@ namespace UnitsNet.Tests
         [Fact]
         public void GetDefaultAbbreviationFallsBackToUsEnglishCulture()
         {
-            var oldCurrentCulture = CultureInfo.CurrentCulture;
+            // CurrentCulture affects number formatting, such as comma or dot as decimal separator.
+            // CurrentCulture also affects localization of unit abbreviations.
+            // Zulu (South Africa)
+            var zuluCulture = CultureInfo.GetCultureInfo("zu-ZA");
+            // CultureInfo.CurrentCulture = zuluCulture;
 
-            try
-            {
-                // CurrentCulture affects number formatting, such as comma or dot as decimal separator.
-                // CurrentCulture affects localization, in this case the abbreviation.
-                // Zulu (South Africa)
-                var zuluCulture = new CultureInfo("zu-ZA");
-                CultureInfo.CurrentCulture = zuluCulture;
+            var abbreviationsCache = new UnitAbbreviationsCache();
+            abbreviationsCache.MapUnitToAbbreviation(CustomUnit.Unit1, AmericanCulture, "US english abbreviation for Unit1");
 
-                var abbreviationsCache = new UnitAbbreviationsCache();
-                abbreviationsCache.MapUnitToAbbreviation(CustomUnit.Unit1, AmericanCulture, "US english abbreviation for Unit1");
+            // Act
+            string abbreviation = abbreviationsCache.GetDefaultAbbreviation(CustomUnit.Unit1, zuluCulture);
 
-                // Act
-                string abbreviation = abbreviationsCache.GetDefaultAbbreviation(CustomUnit.Unit1, zuluCulture);
-
-                // Assert
-                Assert.Equal("US english abbreviation for Unit1", abbreviation);
-            }
-            finally
-            {
-                CultureInfo.CurrentCulture = oldCurrentCulture;
-            }
+            // Assert
+            Assert.Equal("US english abbreviation for Unit1", abbreviation);
         }
 
         [Fact]
@@ -298,7 +289,7 @@ namespace UnitsNet.Tests
         /// </summary>
         private static CultureInfo GetCulture(string cultureName)
         {
-            return new CultureInfo(cultureName);
+            return CultureInfo.GetCultureInfo(cultureName);
         }
     }
 }

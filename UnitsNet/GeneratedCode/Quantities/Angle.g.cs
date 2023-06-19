@@ -65,22 +65,22 @@ namespace UnitsNet
             Info = new QuantityInfo<AngleUnit>("Angle",
                 new UnitInfo<AngleUnit>[]
                 {
-                    new UnitInfo<AngleUnit>(AngleUnit.Arcminute, "Arcminutes", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.Arcsecond, "Arcseconds", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.Centiradian, "Centiradians", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.Deciradian, "Deciradians", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.Degree, "Degrees", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.Gradian, "Gradians", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.Microdegree, "Microdegrees", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.Microradian, "Microradians", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.Millidegree, "Millidegrees", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.Milliradian, "Milliradians", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.Nanodegree, "Nanodegrees", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.Nanoradian, "Nanoradians", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.NatoMil, "NatoMils", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.Radian, "Radians", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.Revolution, "Revolutions", BaseUnits.Undefined),
-                    new UnitInfo<AngleUnit>(AngleUnit.Tilt, "Tilt", BaseUnits.Undefined),
+                    new UnitInfo<AngleUnit>(AngleUnit.Arcminute, "Arcminutes", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.Arcsecond, "Arcseconds", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.Centiradian, "Centiradians", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.Deciradian, "Deciradians", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.Degree, "Degrees", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.Gradian, "Gradians", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.Microdegree, "Microdegrees", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.Microradian, "Microradians", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.Millidegree, "Millidegrees", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.Milliradian, "Milliradians", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.Nanodegree, "Nanodegrees", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.Nanoradian, "Nanoradians", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.NatoMil, "NatoMils", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.Radian, "Radians", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.Revolution, "Revolutions", BaseUnits.Undefined, "Angle"),
+                    new UnitInfo<AngleUnit>(AngleUnit.Tilt, "Tilt", BaseUnits.Undefined, "Angle"),
                 },
                 BaseUnit, Zero, BaseDimensions);
 
@@ -153,7 +153,7 @@ namespace UnitsNet
         public static Angle AdditiveIdentity => Zero;
 
         #endregion
- 
+
         #region Properties
 
         /// <summary>
@@ -310,38 +310,6 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<Angle>(AngleUnit.Degree, AngleUnit.Radian, quantity => quantity.ToUnit(AngleUnit.Radian));
             unitConverter.SetConversionFunction<Angle>(AngleUnit.Degree, AngleUnit.Revolution, quantity => quantity.ToUnit(AngleUnit.Revolution));
             unitConverter.SetConversionFunction<Angle>(AngleUnit.Degree, AngleUnit.Tilt, quantity => quantity.ToUnit(AngleUnit.Tilt));
-        }
-
-        internal static void MapGeneratedLocalizations(UnitAbbreviationsCache unitAbbreviationsCache)
-        {
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Arcminute, new CultureInfo("en-US"), false, true, new string[]{"'", "arcmin", "amin", "min"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Arcsecond, new CultureInfo("en-US"), false, true, new string[]{"″", "arcsec", "asec", "sec"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Centiradian, new CultureInfo("en-US"), false, true, new string[]{"crad"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Centiradian, new CultureInfo("ru-RU"), false, true, new string[]{"срад"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Deciradian, new CultureInfo("en-US"), false, true, new string[]{"drad"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Deciradian, new CultureInfo("ru-RU"), false, true, new string[]{"драд"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Degree, new CultureInfo("en-US"), false, true, new string[]{"°", "deg"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Degree, new CultureInfo("ru-RU"), false, true, new string[]{"°"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Gradian, new CultureInfo("en-US"), false, true, new string[]{"g"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Gradian, new CultureInfo("ru-RU"), false, true, new string[]{"g"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Microdegree, new CultureInfo("en-US"), false, true, new string[]{"µ°", "µdeg"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Microdegree, new CultureInfo("ru-RU"), false, true, new string[]{"мк°"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Microradian, new CultureInfo("en-US"), false, true, new string[]{"µrad"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Microradian, new CultureInfo("ru-RU"), false, true, new string[]{"мкрад"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Millidegree, new CultureInfo("en-US"), false, true, new string[]{"m°", "mdeg"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Millidegree, new CultureInfo("ru-RU"), false, true, new string[]{"м°"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Milliradian, new CultureInfo("en-US"), false, true, new string[]{"mrad"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Milliradian, new CultureInfo("ru-RU"), false, true, new string[]{"мрад"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Nanodegree, new CultureInfo("en-US"), false, true, new string[]{"n°", "ndeg"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Nanodegree, new CultureInfo("ru-RU"), false, true, new string[]{"н°"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Nanoradian, new CultureInfo("en-US"), false, true, new string[]{"nrad"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Nanoradian, new CultureInfo("ru-RU"), false, true, new string[]{"нрад"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.NatoMil, new CultureInfo("en-US"), false, true, new string[]{"mil"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Radian, new CultureInfo("en-US"), false, true, new string[]{"rad"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Radian, new CultureInfo("ru-RU"), false, true, new string[]{"рад"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Revolution, new CultureInfo("en-US"), false, true, new string[]{"r"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Revolution, new CultureInfo("ru-RU"), false, true, new string[]{"r"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(AngleUnit.Tilt, new CultureInfo("en-US"), false, true, new string[]{"sin(θ)"});
         }
 
         /// <summary>
@@ -549,7 +517,7 @@ namespace UnitsNet
         /// </summary>
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <example>
-        ///     Length.Parse("5.5 m", new CultureInfo("en-US"));
+        ///     Length.Parse("5.5 m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <exception cref="ArgumentNullException">The value of 'str' cannot be null. </exception>
         /// <exception cref="ArgumentException">
@@ -576,7 +544,7 @@ namespace UnitsNet
         /// </summary>
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <example>
-        ///     Length.Parse("5.5 m", new CultureInfo("en-US"));
+        ///     Length.Parse("5.5 m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <exception cref="ArgumentNullException">The value of 'str' cannot be null. </exception>
         /// <exception cref="ArgumentException">
@@ -608,7 +576,7 @@ namespace UnitsNet
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <param name="result">Resulting unit quantity if successful.</param>
         /// <example>
-        ///     Length.Parse("5.5 m", new CultureInfo("en-US"));
+        ///     Length.Parse("5.5 m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         public static bool TryParse(string? str, out Angle result)
         {
@@ -622,7 +590,7 @@ namespace UnitsNet
         /// <param name="result">Resulting unit quantity if successful.</param>
         /// <returns>True if successful, otherwise false.</returns>
         /// <example>
-        ///     Length.Parse("5.5 m", new CultureInfo("en-US"));
+        ///     Length.Parse("5.5 m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <param name="provider">Format to use when parsing number and unit. Defaults to <see cref="CultureInfo.CurrentCulture" /> if null.</param>
         public static bool TryParse(string? str, IFormatProvider? provider, out Angle result)
@@ -639,7 +607,7 @@ namespace UnitsNet
         /// </summary>
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <example>
-        ///     Length.ParseUnit("m", new CultureInfo("en-US"));
+        ///     Length.ParseUnit("m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <exception cref="ArgumentNullException">The value of 'str' cannot be null. </exception>
         /// <exception cref="UnitsNetException">Error parsing string.</exception>
@@ -654,7 +622,7 @@ namespace UnitsNet
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <param name="provider">Format to use when parsing number and unit. Defaults to <see cref="CultureInfo.CurrentCulture" /> if null.</param>
         /// <example>
-        ///     Length.ParseUnit("m", new CultureInfo("en-US"));
+        ///     Length.ParseUnit("m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <exception cref="ArgumentNullException">The value of 'str' cannot be null. </exception>
         /// <exception cref="UnitsNetException">Error parsing string.</exception>
@@ -676,7 +644,7 @@ namespace UnitsNet
         /// <param name="unit">The parsed unit if successful.</param>
         /// <returns>True if successful, otherwise false.</returns>
         /// <example>
-        ///     Length.TryParseUnit("m", new CultureInfo("en-US"));
+        ///     Length.TryParseUnit("m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <param name="provider">Format to use when parsing number and unit. Defaults to <see cref="CultureInfo.CurrentCulture" /> if null.</param>
         public static bool TryParseUnit(string str, IFormatProvider? provider, out AngleUnit unit)

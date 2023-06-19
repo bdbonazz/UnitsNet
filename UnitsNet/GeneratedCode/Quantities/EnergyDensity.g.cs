@@ -33,7 +33,7 @@ namespace UnitsNet
 {
     /// <inheritdoc />
     /// <summary>
-    ///     
+    ///
     /// </summary>
     [DataContract]
     public readonly partial struct EnergyDensity :
@@ -65,18 +65,18 @@ namespace UnitsNet
             Info = new QuantityInfo<EnergyDensityUnit>("EnergyDensity",
                 new UnitInfo<EnergyDensityUnit>[]
                 {
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.GigajoulePerCubicMeter, "GigajoulesPerCubicMeter", BaseUnits.Undefined),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.GigawattHourPerCubicMeter, "GigawattHoursPerCubicMeter", BaseUnits.Undefined),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.JoulePerCubicMeter, "JoulesPerCubicMeter", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second)),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.KilojoulePerCubicMeter, "KilojoulesPerCubicMeter", BaseUnits.Undefined),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.KilowattHourPerCubicMeter, "KilowattHoursPerCubicMeter", BaseUnits.Undefined),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.MegajoulePerCubicMeter, "MegajoulesPerCubicMeter", BaseUnits.Undefined),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.MegawattHourPerCubicMeter, "MegawattHoursPerCubicMeter", BaseUnits.Undefined),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.PetajoulePerCubicMeter, "PetajoulesPerCubicMeter", BaseUnits.Undefined),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.PetawattHourPerCubicMeter, "PetawattHoursPerCubicMeter", BaseUnits.Undefined),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.TerajoulePerCubicMeter, "TerajoulesPerCubicMeter", BaseUnits.Undefined),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.TerawattHourPerCubicMeter, "TerawattHoursPerCubicMeter", BaseUnits.Undefined),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.WattHourPerCubicMeter, "WattHoursPerCubicMeter", BaseUnits.Undefined),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.GigajoulePerCubicMeter, "GigajoulesPerCubicMeter", BaseUnits.Undefined, "EnergyDensity"),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.GigawattHourPerCubicMeter, "GigawattHoursPerCubicMeter", BaseUnits.Undefined, "EnergyDensity"),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.JoulePerCubicMeter, "JoulesPerCubicMeter", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second), "EnergyDensity"),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.KilojoulePerCubicMeter, "KilojoulesPerCubicMeter", BaseUnits.Undefined, "EnergyDensity"),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.KilowattHourPerCubicMeter, "KilowattHoursPerCubicMeter", BaseUnits.Undefined, "EnergyDensity"),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.MegajoulePerCubicMeter, "MegajoulesPerCubicMeter", BaseUnits.Undefined, "EnergyDensity"),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.MegawattHourPerCubicMeter, "MegawattHoursPerCubicMeter", BaseUnits.Undefined, "EnergyDensity"),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.PetajoulePerCubicMeter, "PetajoulesPerCubicMeter", BaseUnits.Undefined, "EnergyDensity"),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.PetawattHourPerCubicMeter, "PetawattHoursPerCubicMeter", BaseUnits.Undefined, "EnergyDensity"),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.TerajoulePerCubicMeter, "TerajoulesPerCubicMeter", BaseUnits.Undefined, "EnergyDensity"),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.TerawattHourPerCubicMeter, "TerawattHoursPerCubicMeter", BaseUnits.Undefined, "EnergyDensity"),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.WattHourPerCubicMeter, "WattHoursPerCubicMeter", BaseUnits.Undefined, "EnergyDensity"),
                 },
                 BaseUnit, Zero, BaseDimensions);
 
@@ -149,7 +149,7 @@ namespace UnitsNet
         public static EnergyDensity AdditiveIdentity => Zero;
 
         #endregion
- 
+
         #region Properties
 
         /// <summary>
@@ -278,22 +278,6 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<EnergyDensity>(EnergyDensityUnit.JoulePerCubicMeter, EnergyDensityUnit.TerajoulePerCubicMeter, quantity => quantity.ToUnit(EnergyDensityUnit.TerajoulePerCubicMeter));
             unitConverter.SetConversionFunction<EnergyDensity>(EnergyDensityUnit.JoulePerCubicMeter, EnergyDensityUnit.TerawattHourPerCubicMeter, quantity => quantity.ToUnit(EnergyDensityUnit.TerawattHourPerCubicMeter));
             unitConverter.SetConversionFunction<EnergyDensity>(EnergyDensityUnit.JoulePerCubicMeter, EnergyDensityUnit.WattHourPerCubicMeter, quantity => quantity.ToUnit(EnergyDensityUnit.WattHourPerCubicMeter));
-        }
-
-        internal static void MapGeneratedLocalizations(UnitAbbreviationsCache unitAbbreviationsCache)
-        {
-            unitAbbreviationsCache.PerformAbbreviationMapping(EnergyDensityUnit.GigajoulePerCubicMeter, new CultureInfo("en-US"), false, true, new string[]{"GJ/m³"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(EnergyDensityUnit.GigawattHourPerCubicMeter, new CultureInfo("en-US"), false, true, new string[]{"GWh/m³"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(EnergyDensityUnit.JoulePerCubicMeter, new CultureInfo("en-US"), false, true, new string[]{"J/m³"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(EnergyDensityUnit.KilojoulePerCubicMeter, new CultureInfo("en-US"), false, true, new string[]{"kJ/m³"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(EnergyDensityUnit.KilowattHourPerCubicMeter, new CultureInfo("en-US"), false, true, new string[]{"kWh/m³"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(EnergyDensityUnit.MegajoulePerCubicMeter, new CultureInfo("en-US"), false, true, new string[]{"MJ/m³"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(EnergyDensityUnit.MegawattHourPerCubicMeter, new CultureInfo("en-US"), false, true, new string[]{"MWh/m³"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(EnergyDensityUnit.PetajoulePerCubicMeter, new CultureInfo("en-US"), false, true, new string[]{"PJ/m³"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(EnergyDensityUnit.PetawattHourPerCubicMeter, new CultureInfo("en-US"), false, true, new string[]{"PWh/m³"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(EnergyDensityUnit.TerajoulePerCubicMeter, new CultureInfo("en-US"), false, true, new string[]{"TJ/m³"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(EnergyDensityUnit.TerawattHourPerCubicMeter, new CultureInfo("en-US"), false, true, new string[]{"TWh/m³"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(EnergyDensityUnit.WattHourPerCubicMeter, new CultureInfo("en-US"), false, true, new string[]{"Wh/m³"});
         }
 
         /// <summary>
@@ -461,7 +445,7 @@ namespace UnitsNet
         /// </summary>
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <example>
-        ///     Length.Parse("5.5 m", new CultureInfo("en-US"));
+        ///     Length.Parse("5.5 m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <exception cref="ArgumentNullException">The value of 'str' cannot be null. </exception>
         /// <exception cref="ArgumentException">
@@ -488,7 +472,7 @@ namespace UnitsNet
         /// </summary>
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <example>
-        ///     Length.Parse("5.5 m", new CultureInfo("en-US"));
+        ///     Length.Parse("5.5 m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <exception cref="ArgumentNullException">The value of 'str' cannot be null. </exception>
         /// <exception cref="ArgumentException">
@@ -520,7 +504,7 @@ namespace UnitsNet
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <param name="result">Resulting unit quantity if successful.</param>
         /// <example>
-        ///     Length.Parse("5.5 m", new CultureInfo("en-US"));
+        ///     Length.Parse("5.5 m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         public static bool TryParse(string? str, out EnergyDensity result)
         {
@@ -534,7 +518,7 @@ namespace UnitsNet
         /// <param name="result">Resulting unit quantity if successful.</param>
         /// <returns>True if successful, otherwise false.</returns>
         /// <example>
-        ///     Length.Parse("5.5 m", new CultureInfo("en-US"));
+        ///     Length.Parse("5.5 m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <param name="provider">Format to use when parsing number and unit. Defaults to <see cref="CultureInfo.CurrentCulture" /> if null.</param>
         public static bool TryParse(string? str, IFormatProvider? provider, out EnergyDensity result)
@@ -551,7 +535,7 @@ namespace UnitsNet
         /// </summary>
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <example>
-        ///     Length.ParseUnit("m", new CultureInfo("en-US"));
+        ///     Length.ParseUnit("m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <exception cref="ArgumentNullException">The value of 'str' cannot be null. </exception>
         /// <exception cref="UnitsNetException">Error parsing string.</exception>
@@ -566,7 +550,7 @@ namespace UnitsNet
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <param name="provider">Format to use when parsing number and unit. Defaults to <see cref="CultureInfo.CurrentCulture" /> if null.</param>
         /// <example>
-        ///     Length.ParseUnit("m", new CultureInfo("en-US"));
+        ///     Length.ParseUnit("m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <exception cref="ArgumentNullException">The value of 'str' cannot be null. </exception>
         /// <exception cref="UnitsNetException">Error parsing string.</exception>
@@ -588,7 +572,7 @@ namespace UnitsNet
         /// <param name="unit">The parsed unit if successful.</param>
         /// <returns>True if successful, otherwise false.</returns>
         /// <example>
-        ///     Length.TryParseUnit("m", new CultureInfo("en-US"));
+        ///     Length.TryParseUnit("m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <param name="provider">Format to use when parsing number and unit. Defaults to <see cref="CultureInfo.CurrentCulture" /> if null.</param>
         public static bool TryParseUnit(string str, IFormatProvider? provider, out EnergyDensityUnit unit)

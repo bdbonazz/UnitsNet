@@ -33,7 +33,7 @@ namespace UnitsNet
 {
     /// <inheritdoc />
     /// <summary>
-    ///     
+    ///
     /// </summary>
     /// <remarks>
     ///     https://en.wikipedia.org/wiki/Permeability_(Earth_sciences)
@@ -68,11 +68,11 @@ namespace UnitsNet
             Info = new QuantityInfo<PorousMediumPermeabilityUnit>("PorousMediumPermeability",
                 new UnitInfo<PorousMediumPermeabilityUnit>[]
                 {
-                    new UnitInfo<PorousMediumPermeabilityUnit>(PorousMediumPermeabilityUnit.Darcy, "Darcys", BaseUnits.Undefined),
-                    new UnitInfo<PorousMediumPermeabilityUnit>(PorousMediumPermeabilityUnit.Microdarcy, "Microdarcys", BaseUnits.Undefined),
-                    new UnitInfo<PorousMediumPermeabilityUnit>(PorousMediumPermeabilityUnit.Millidarcy, "Millidarcys", BaseUnits.Undefined),
-                    new UnitInfo<PorousMediumPermeabilityUnit>(PorousMediumPermeabilityUnit.SquareCentimeter, "SquareCentimeters", new BaseUnits(length: LengthUnit.Centimeter)),
-                    new UnitInfo<PorousMediumPermeabilityUnit>(PorousMediumPermeabilityUnit.SquareMeter, "SquareMeters", new BaseUnits(length: LengthUnit.Meter)),
+                    new UnitInfo<PorousMediumPermeabilityUnit>(PorousMediumPermeabilityUnit.Darcy, "Darcys", BaseUnits.Undefined, "PorousMediumPermeability"),
+                    new UnitInfo<PorousMediumPermeabilityUnit>(PorousMediumPermeabilityUnit.Microdarcy, "Microdarcys", BaseUnits.Undefined, "PorousMediumPermeability"),
+                    new UnitInfo<PorousMediumPermeabilityUnit>(PorousMediumPermeabilityUnit.Millidarcy, "Millidarcys", BaseUnits.Undefined, "PorousMediumPermeability"),
+                    new UnitInfo<PorousMediumPermeabilityUnit>(PorousMediumPermeabilityUnit.SquareCentimeter, "SquareCentimeters", new BaseUnits(length: LengthUnit.Centimeter), "PorousMediumPermeability"),
+                    new UnitInfo<PorousMediumPermeabilityUnit>(PorousMediumPermeabilityUnit.SquareMeter, "SquareMeters", new BaseUnits(length: LengthUnit.Meter), "PorousMediumPermeability"),
                 },
                 BaseUnit, Zero, BaseDimensions);
 
@@ -145,7 +145,7 @@ namespace UnitsNet
         public static PorousMediumPermeability AdditiveIdentity => Zero;
 
         #endregion
- 
+
         #region Properties
 
         /// <summary>
@@ -225,15 +225,6 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<PorousMediumPermeability>(PorousMediumPermeabilityUnit.SquareMeter, PorousMediumPermeabilityUnit.Microdarcy, quantity => quantity.ToUnit(PorousMediumPermeabilityUnit.Microdarcy));
             unitConverter.SetConversionFunction<PorousMediumPermeability>(PorousMediumPermeabilityUnit.SquareMeter, PorousMediumPermeabilityUnit.Millidarcy, quantity => quantity.ToUnit(PorousMediumPermeabilityUnit.Millidarcy));
             unitConverter.SetConversionFunction<PorousMediumPermeability>(PorousMediumPermeabilityUnit.SquareMeter, PorousMediumPermeabilityUnit.SquareCentimeter, quantity => quantity.ToUnit(PorousMediumPermeabilityUnit.SquareCentimeter));
-        }
-
-        internal static void MapGeneratedLocalizations(UnitAbbreviationsCache unitAbbreviationsCache)
-        {
-            unitAbbreviationsCache.PerformAbbreviationMapping(PorousMediumPermeabilityUnit.Darcy, new CultureInfo("en-US"), false, true, new string[]{"D"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(PorousMediumPermeabilityUnit.Microdarcy, new CultureInfo("en-US"), false, true, new string[]{"µD"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(PorousMediumPermeabilityUnit.Millidarcy, new CultureInfo("en-US"), false, true, new string[]{"mD"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(PorousMediumPermeabilityUnit.SquareCentimeter, new CultureInfo("en-US"), false, true, new string[]{"cm²"});
-            unitAbbreviationsCache.PerformAbbreviationMapping(PorousMediumPermeabilityUnit.SquareMeter, new CultureInfo("en-US"), false, true, new string[]{"m²"});
         }
 
         /// <summary>
@@ -331,7 +322,7 @@ namespace UnitsNet
         /// </summary>
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <example>
-        ///     Length.Parse("5.5 m", new CultureInfo("en-US"));
+        ///     Length.Parse("5.5 m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <exception cref="ArgumentNullException">The value of 'str' cannot be null. </exception>
         /// <exception cref="ArgumentException">
@@ -358,7 +349,7 @@ namespace UnitsNet
         /// </summary>
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <example>
-        ///     Length.Parse("5.5 m", new CultureInfo("en-US"));
+        ///     Length.Parse("5.5 m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <exception cref="ArgumentNullException">The value of 'str' cannot be null. </exception>
         /// <exception cref="ArgumentException">
@@ -390,7 +381,7 @@ namespace UnitsNet
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <param name="result">Resulting unit quantity if successful.</param>
         /// <example>
-        ///     Length.Parse("5.5 m", new CultureInfo("en-US"));
+        ///     Length.Parse("5.5 m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         public static bool TryParse(string? str, out PorousMediumPermeability result)
         {
@@ -404,7 +395,7 @@ namespace UnitsNet
         /// <param name="result">Resulting unit quantity if successful.</param>
         /// <returns>True if successful, otherwise false.</returns>
         /// <example>
-        ///     Length.Parse("5.5 m", new CultureInfo("en-US"));
+        ///     Length.Parse("5.5 m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <param name="provider">Format to use when parsing number and unit. Defaults to <see cref="CultureInfo.CurrentCulture" /> if null.</param>
         public static bool TryParse(string? str, IFormatProvider? provider, out PorousMediumPermeability result)
@@ -421,7 +412,7 @@ namespace UnitsNet
         /// </summary>
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <example>
-        ///     Length.ParseUnit("m", new CultureInfo("en-US"));
+        ///     Length.ParseUnit("m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <exception cref="ArgumentNullException">The value of 'str' cannot be null. </exception>
         /// <exception cref="UnitsNetException">Error parsing string.</exception>
@@ -436,7 +427,7 @@ namespace UnitsNet
         /// <param name="str">String to parse. Typically in the form: {number} {unit}</param>
         /// <param name="provider">Format to use when parsing number and unit. Defaults to <see cref="CultureInfo.CurrentCulture" /> if null.</param>
         /// <example>
-        ///     Length.ParseUnit("m", new CultureInfo("en-US"));
+        ///     Length.ParseUnit("m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <exception cref="ArgumentNullException">The value of 'str' cannot be null. </exception>
         /// <exception cref="UnitsNetException">Error parsing string.</exception>
@@ -458,7 +449,7 @@ namespace UnitsNet
         /// <param name="unit">The parsed unit if successful.</param>
         /// <returns>True if successful, otherwise false.</returns>
         /// <example>
-        ///     Length.TryParseUnit("m", new CultureInfo("en-US"));
+        ///     Length.TryParseUnit("m", CultureInfo.GetCultureInfo("en-US"));
         /// </example>
         /// <param name="provider">Format to use when parsing number and unit. Defaults to <see cref="CultureInfo.CurrentCulture" /> if null.</param>
         public static bool TryParseUnit(string str, IFormatProvider? provider, out PorousMediumPermeabilityUnit unit)
