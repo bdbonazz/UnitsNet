@@ -1037,6 +1037,34 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentiliterPerLiter": return UnitKey.ForUnit(VolumeConcentrationUnit.CentiliterPerLiter);
+                case "CentiliterPerMilliliter": return UnitKey.ForUnit(VolumeConcentrationUnit.CentiliterPerMilliliter);
+                case "DeciliterPerLiter": return UnitKey.ForUnit(VolumeConcentrationUnit.DeciliterPerLiter);
+                case "DeciliterPerMilliliter": return UnitKey.ForUnit(VolumeConcentrationUnit.DeciliterPerMilliliter);
+                case "DecimalFraction": return UnitKey.ForUnit(VolumeConcentrationUnit.DecimalFraction);
+                case "LiterPerLiter": return UnitKey.ForUnit(VolumeConcentrationUnit.LiterPerLiter);
+                case "LiterPerMilliliter": return UnitKey.ForUnit(VolumeConcentrationUnit.LiterPerMilliliter);
+                case "MicroliterPerLiter": return UnitKey.ForUnit(VolumeConcentrationUnit.MicroliterPerLiter);
+                case "MicroliterPerMilliliter": return UnitKey.ForUnit(VolumeConcentrationUnit.MicroliterPerMilliliter);
+                case "MilliliterPerLiter": return UnitKey.ForUnit(VolumeConcentrationUnit.MilliliterPerLiter);
+                case "MilliliterPerMilliliter": return UnitKey.ForUnit(VolumeConcentrationUnit.MilliliterPerMilliliter);
+                case "NanoliterPerLiter": return UnitKey.ForUnit(VolumeConcentrationUnit.NanoliterPerLiter);
+                case "NanoliterPerMilliliter": return UnitKey.ForUnit(VolumeConcentrationUnit.NanoliterPerMilliliter);
+                case "PartPerBillion": return UnitKey.ForUnit(VolumeConcentrationUnit.PartPerBillion);
+                case "PartPerMillion": return UnitKey.ForUnit(VolumeConcentrationUnit.PartPerMillion);
+                case "PartPerThousand": return UnitKey.ForUnit(VolumeConcentrationUnit.PartPerThousand);
+                case "PartPerTrillion": return UnitKey.ForUnit(VolumeConcentrationUnit.PartPerTrillion);
+                case "Percent": return UnitKey.ForUnit(VolumeConcentrationUnit.Percent);
+                case "PicoliterPerLiter": return UnitKey.ForUnit(VolumeConcentrationUnit.PicoliterPerLiter);
+                case "PicoliterPerMilliliter": return UnitKey.ForUnit(VolumeConcentrationUnit.PicoliterPerMilliliter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

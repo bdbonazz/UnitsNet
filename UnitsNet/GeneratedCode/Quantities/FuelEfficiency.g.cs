@@ -745,6 +745,18 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "KilometerPerLiter": return UnitKey.ForUnit(FuelEfficiencyUnit.KilometerPerLiter);
+                case "LiterPer100Kilometers": return UnitKey.ForUnit(FuelEfficiencyUnit.LiterPer100Kilometers);
+                case "MilePerUkGallon": return UnitKey.ForUnit(FuelEfficiencyUnit.MilePerUkGallon);
+                case "MilePerUsGallon": return UnitKey.ForUnit(FuelEfficiencyUnit.MilePerUsGallon);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

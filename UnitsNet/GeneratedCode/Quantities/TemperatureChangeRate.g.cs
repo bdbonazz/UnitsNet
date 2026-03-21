@@ -987,6 +987,31 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentidegreeCelsiusPerSecond": return UnitKey.ForUnit(TemperatureChangeRateUnit.CentidegreeCelsiusPerSecond);
+                case "DecadegreeCelsiusPerSecond": return UnitKey.ForUnit(TemperatureChangeRateUnit.DecadegreeCelsiusPerSecond);
+                case "DecidegreeCelsiusPerSecond": return UnitKey.ForUnit(TemperatureChangeRateUnit.DecidegreeCelsiusPerSecond);
+                case "DegreeCelsiusPerHour": return UnitKey.ForUnit(TemperatureChangeRateUnit.DegreeCelsiusPerHour);
+                case "DegreeCelsiusPerMinute": return UnitKey.ForUnit(TemperatureChangeRateUnit.DegreeCelsiusPerMinute);
+                case "DegreeCelsiusPerSecond": return UnitKey.ForUnit(TemperatureChangeRateUnit.DegreeCelsiusPerSecond);
+                case "DegreeFahrenheitPerHour": return UnitKey.ForUnit(TemperatureChangeRateUnit.DegreeFahrenheitPerHour);
+                case "DegreeFahrenheitPerMinute": return UnitKey.ForUnit(TemperatureChangeRateUnit.DegreeFahrenheitPerMinute);
+                case "DegreeFahrenheitPerSecond": return UnitKey.ForUnit(TemperatureChangeRateUnit.DegreeFahrenheitPerSecond);
+                case "DegreeKelvinPerHour": return UnitKey.ForUnit(TemperatureChangeRateUnit.DegreeKelvinPerHour);
+                case "DegreeKelvinPerMinute": return UnitKey.ForUnit(TemperatureChangeRateUnit.DegreeKelvinPerMinute);
+                case "DegreeKelvinPerSecond": return UnitKey.ForUnit(TemperatureChangeRateUnit.DegreeKelvinPerSecond);
+                case "HectodegreeCelsiusPerSecond": return UnitKey.ForUnit(TemperatureChangeRateUnit.HectodegreeCelsiusPerSecond);
+                case "KilodegreeCelsiusPerSecond": return UnitKey.ForUnit(TemperatureChangeRateUnit.KilodegreeCelsiusPerSecond);
+                case "MicrodegreeCelsiusPerSecond": return UnitKey.ForUnit(TemperatureChangeRateUnit.MicrodegreeCelsiusPerSecond);
+                case "MillidegreeCelsiusPerSecond": return UnitKey.ForUnit(TemperatureChangeRateUnit.MillidegreeCelsiusPerSecond);
+                case "NanodegreeCelsiusPerSecond": return UnitKey.ForUnit(TemperatureChangeRateUnit.NanodegreeCelsiusPerSecond);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

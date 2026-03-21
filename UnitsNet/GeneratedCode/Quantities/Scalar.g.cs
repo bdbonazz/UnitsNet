@@ -674,6 +674,15 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Amount": return UnitKey.ForUnit(ScalarUnit.Amount);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

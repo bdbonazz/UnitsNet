@@ -763,6 +763,19 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Darcy": return UnitKey.ForUnit(PorousMediumPermeabilityUnit.Darcy);
+                case "Microdarcy": return UnitKey.ForUnit(PorousMediumPermeabilityUnit.Microdarcy);
+                case "Millidarcy": return UnitKey.ForUnit(PorousMediumPermeabilityUnit.Millidarcy);
+                case "SquareCentimeter": return UnitKey.ForUnit(PorousMediumPermeabilityUnit.SquareCentimeter);
+                case "SquareMeter": return UnitKey.ForUnit(PorousMediumPermeabilityUnit.SquareMeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

@@ -1755,6 +1755,69 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "AcreFoot": return UnitKey.ForUnit(VolumeUnit.AcreFoot);
+                case "AuTablespoon": return UnitKey.ForUnit(VolumeUnit.AuTablespoon);
+                case "BoardFoot": return UnitKey.ForUnit(VolumeUnit.BoardFoot);
+                case "Centiliter": return UnitKey.ForUnit(VolumeUnit.Centiliter);
+                case "CubicCentimeter": return UnitKey.ForUnit(VolumeUnit.CubicCentimeter);
+                case "CubicDecimeter": return UnitKey.ForUnit(VolumeUnit.CubicDecimeter);
+                case "CubicFoot": return UnitKey.ForUnit(VolumeUnit.CubicFoot);
+                case "CubicHectometer": return UnitKey.ForUnit(VolumeUnit.CubicHectometer);
+                case "CubicInch": return UnitKey.ForUnit(VolumeUnit.CubicInch);
+                case "CubicKilometer": return UnitKey.ForUnit(VolumeUnit.CubicKilometer);
+                case "CubicMeter": return UnitKey.ForUnit(VolumeUnit.CubicMeter);
+                case "CubicMicrometer": return UnitKey.ForUnit(VolumeUnit.CubicMicrometer);
+                case "CubicMile": return UnitKey.ForUnit(VolumeUnit.CubicMile);
+                case "CubicMillimeter": return UnitKey.ForUnit(VolumeUnit.CubicMillimeter);
+                case "CubicYard": return UnitKey.ForUnit(VolumeUnit.CubicYard);
+                case "Decaliter": return UnitKey.ForUnit(VolumeUnit.Decaliter);
+                case "DecausGallon": return UnitKey.ForUnit(VolumeUnit.DecausGallon);
+                case "Deciliter": return UnitKey.ForUnit(VolumeUnit.Deciliter);
+                case "DeciusGallon": return UnitKey.ForUnit(VolumeUnit.DeciusGallon);
+                case "HectocubicFoot": return UnitKey.ForUnit(VolumeUnit.HectocubicFoot);
+                case "HectocubicMeter": return UnitKey.ForUnit(VolumeUnit.HectocubicMeter);
+                case "Hectoliter": return UnitKey.ForUnit(VolumeUnit.Hectoliter);
+                case "HectousGallon": return UnitKey.ForUnit(VolumeUnit.HectousGallon);
+                case "ImperialBeerBarrel": return UnitKey.ForUnit(VolumeUnit.ImperialBeerBarrel);
+                case "ImperialGallon": return UnitKey.ForUnit(VolumeUnit.ImperialGallon);
+                case "ImperialOunce": return UnitKey.ForUnit(VolumeUnit.ImperialOunce);
+                case "ImperialPint": return UnitKey.ForUnit(VolumeUnit.ImperialPint);
+                case "ImperialQuart": return UnitKey.ForUnit(VolumeUnit.ImperialQuart);
+                case "KilocubicFoot": return UnitKey.ForUnit(VolumeUnit.KilocubicFoot);
+                case "KilocubicMeter": return UnitKey.ForUnit(VolumeUnit.KilocubicMeter);
+                case "KiloimperialGallon": return UnitKey.ForUnit(VolumeUnit.KiloimperialGallon);
+                case "Kiloliter": return UnitKey.ForUnit(VolumeUnit.Kiloliter);
+                case "KilousGallon": return UnitKey.ForUnit(VolumeUnit.KilousGallon);
+                case "Liter": return UnitKey.ForUnit(VolumeUnit.Liter);
+                case "MegacubicFoot": return UnitKey.ForUnit(VolumeUnit.MegacubicFoot);
+                case "MegaimperialGallon": return UnitKey.ForUnit(VolumeUnit.MegaimperialGallon);
+                case "Megaliter": return UnitKey.ForUnit(VolumeUnit.Megaliter);
+                case "MegausGallon": return UnitKey.ForUnit(VolumeUnit.MegausGallon);
+                case "MetricCup": return UnitKey.ForUnit(VolumeUnit.MetricCup);
+                case "MetricTablespoon": return UnitKey.ForUnit(VolumeUnit.MetricTablespoon);
+                case "MetricTeaspoon": return UnitKey.ForUnit(VolumeUnit.MetricTeaspoon);
+                case "Microliter": return UnitKey.ForUnit(VolumeUnit.Microliter);
+                case "Milliliter": return UnitKey.ForUnit(VolumeUnit.Milliliter);
+                case "Nanoliter": return UnitKey.ForUnit(VolumeUnit.Nanoliter);
+                case "OilBarrel": return UnitKey.ForUnit(VolumeUnit.OilBarrel);
+                case "UkTablespoon": return UnitKey.ForUnit(VolumeUnit.UkTablespoon);
+                case "UsBeerBarrel": return UnitKey.ForUnit(VolumeUnit.UsBeerBarrel);
+                case "UsCustomaryCup": return UnitKey.ForUnit(VolumeUnit.UsCustomaryCup);
+                case "UsGallon": return UnitKey.ForUnit(VolumeUnit.UsGallon);
+                case "UsLegalCup": return UnitKey.ForUnit(VolumeUnit.UsLegalCup);
+                case "UsOunce": return UnitKey.ForUnit(VolumeUnit.UsOunce);
+                case "UsPint": return UnitKey.ForUnit(VolumeUnit.UsPint);
+                case "UsQuart": return UnitKey.ForUnit(VolumeUnit.UsQuart);
+                case "UsTablespoon": return UnitKey.ForUnit(VolumeUnit.UsTablespoon);
+                case "UsTeaspoon": return UnitKey.ForUnit(VolumeUnit.UsTeaspoon);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

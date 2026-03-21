@@ -771,6 +771,19 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "KilonewtonMeterPerRadianPerMeter": return UnitKey.ForUnit(RotationalStiffnessPerLengthUnit.KilonewtonMeterPerRadianPerMeter);
+                case "KilopoundForceFootPerDegreesPerFoot": return UnitKey.ForUnit(RotationalStiffnessPerLengthUnit.KilopoundForceFootPerDegreesPerFoot);
+                case "MeganewtonMeterPerRadianPerMeter": return UnitKey.ForUnit(RotationalStiffnessPerLengthUnit.MeganewtonMeterPerRadianPerMeter);
+                case "NewtonMeterPerRadianPerMeter": return UnitKey.ForUnit(RotationalStiffnessPerLengthUnit.NewtonMeterPerRadianPerMeter);
+                case "PoundForceFootPerDegreesPerFoot": return UnitKey.ForUnit(RotationalStiffnessPerLengthUnit.PoundForceFootPerDegreesPerFoot);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

@@ -1174,6 +1174,42 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "GramSquareCentimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.GramSquareCentimeter);
+                case "GramSquareDecimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.GramSquareDecimeter);
+                case "GramSquareMeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.GramSquareMeter);
+                case "GramSquareMillimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.GramSquareMillimeter);
+                case "KilogramSquareCentimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.KilogramSquareCentimeter);
+                case "KilogramSquareDecimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.KilogramSquareDecimeter);
+                case "KilogramSquareMeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.KilogramSquareMeter);
+                case "KilogramSquareMillimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.KilogramSquareMillimeter);
+                case "KilotonneSquareCentimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.KilotonneSquareCentimeter);
+                case "KilotonneSquareDecimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.KilotonneSquareDecimeter);
+                case "KilotonneSquareMeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.KilotonneSquareMeter);
+                case "KilotonneSquareMillimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.KilotonneSquareMillimeter);
+                case "MegatonneSquareCentimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.MegatonneSquareCentimeter);
+                case "MegatonneSquareDecimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.MegatonneSquareDecimeter);
+                case "MegatonneSquareMeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.MegatonneSquareMeter);
+                case "MegatonneSquareMillimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.MegatonneSquareMillimeter);
+                case "MilligramSquareCentimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.MilligramSquareCentimeter);
+                case "MilligramSquareDecimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.MilligramSquareDecimeter);
+                case "MilligramSquareMeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.MilligramSquareMeter);
+                case "MilligramSquareMillimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.MilligramSquareMillimeter);
+                case "PoundSquareFoot": return UnitKey.ForUnit(MassMomentOfInertiaUnit.PoundSquareFoot);
+                case "PoundSquareInch": return UnitKey.ForUnit(MassMomentOfInertiaUnit.PoundSquareInch);
+                case "SlugSquareFoot": return UnitKey.ForUnit(MassMomentOfInertiaUnit.SlugSquareFoot);
+                case "SlugSquareInch": return UnitKey.ForUnit(MassMomentOfInertiaUnit.SlugSquareInch);
+                case "TonneSquareCentimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.TonneSquareCentimeter);
+                case "TonneSquareDecimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.TonneSquareDecimeter);
+                case "TonneSquareMeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.TonneSquareMeter);
+                case "TonneSquareMillimeter": return UnitKey.ForUnit(MassMomentOfInertiaUnit.TonneSquareMillimeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

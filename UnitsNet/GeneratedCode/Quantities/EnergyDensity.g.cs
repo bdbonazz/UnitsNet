@@ -897,6 +897,26 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "GigajoulePerCubicMeter": return UnitKey.ForUnit(EnergyDensityUnit.GigajoulePerCubicMeter);
+                case "GigawattHourPerCubicMeter": return UnitKey.ForUnit(EnergyDensityUnit.GigawattHourPerCubicMeter);
+                case "JoulePerCubicMeter": return UnitKey.ForUnit(EnergyDensityUnit.JoulePerCubicMeter);
+                case "KilojoulePerCubicMeter": return UnitKey.ForUnit(EnergyDensityUnit.KilojoulePerCubicMeter);
+                case "KilowattHourPerCubicMeter": return UnitKey.ForUnit(EnergyDensityUnit.KilowattHourPerCubicMeter);
+                case "MegajoulePerCubicMeter": return UnitKey.ForUnit(EnergyDensityUnit.MegajoulePerCubicMeter);
+                case "MegawattHourPerCubicMeter": return UnitKey.ForUnit(EnergyDensityUnit.MegawattHourPerCubicMeter);
+                case "PetajoulePerCubicMeter": return UnitKey.ForUnit(EnergyDensityUnit.PetajoulePerCubicMeter);
+                case "PetawattHourPerCubicMeter": return UnitKey.ForUnit(EnergyDensityUnit.PetawattHourPerCubicMeter);
+                case "TerajoulePerCubicMeter": return UnitKey.ForUnit(EnergyDensityUnit.TerajoulePerCubicMeter);
+                case "TerawattHourPerCubicMeter": return UnitKey.ForUnit(EnergyDensityUnit.TerawattHourPerCubicMeter);
+                case "WattHourPerCubicMeter": return UnitKey.ForUnit(EnergyDensityUnit.WattHourPerCubicMeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

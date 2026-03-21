@@ -979,6 +979,31 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Centigray": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Centigray);
+                case "Decigray": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Decigray);
+                case "Femtogray": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Femtogray);
+                case "Gigagray": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Gigagray);
+                case "Gray": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Gray);
+                case "Kilogray": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Kilogray);
+                case "Kilorad": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Kilorad);
+                case "Megagray": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Megagray);
+                case "Megarad": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Megarad);
+                case "Microgray": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Microgray);
+                case "Milligray": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Milligray);
+                case "Millirad": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Millirad);
+                case "Nanogray": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Nanogray);
+                case "Petagray": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Petagray);
+                case "Picogray": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Picogray);
+                case "Rad": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Rad);
+                case "Teragray": return UnitKey.ForUnit(AbsorbedDoseOfIonizingRadiationUnit.Teragray);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

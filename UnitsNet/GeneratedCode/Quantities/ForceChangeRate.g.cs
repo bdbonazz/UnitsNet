@@ -951,6 +951,29 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentinewtonPerSecond": return UnitKey.ForUnit(ForceChangeRateUnit.CentinewtonPerSecond);
+                case "DecanewtonPerMinute": return UnitKey.ForUnit(ForceChangeRateUnit.DecanewtonPerMinute);
+                case "DecanewtonPerSecond": return UnitKey.ForUnit(ForceChangeRateUnit.DecanewtonPerSecond);
+                case "DecinewtonPerSecond": return UnitKey.ForUnit(ForceChangeRateUnit.DecinewtonPerSecond);
+                case "KilonewtonPerMinute": return UnitKey.ForUnit(ForceChangeRateUnit.KilonewtonPerMinute);
+                case "KilonewtonPerSecond": return UnitKey.ForUnit(ForceChangeRateUnit.KilonewtonPerSecond);
+                case "KilopoundForcePerMinute": return UnitKey.ForUnit(ForceChangeRateUnit.KilopoundForcePerMinute);
+                case "KilopoundForcePerSecond": return UnitKey.ForUnit(ForceChangeRateUnit.KilopoundForcePerSecond);
+                case "MicronewtonPerSecond": return UnitKey.ForUnit(ForceChangeRateUnit.MicronewtonPerSecond);
+                case "MillinewtonPerSecond": return UnitKey.ForUnit(ForceChangeRateUnit.MillinewtonPerSecond);
+                case "NanonewtonPerSecond": return UnitKey.ForUnit(ForceChangeRateUnit.NanonewtonPerSecond);
+                case "NewtonPerMinute": return UnitKey.ForUnit(ForceChangeRateUnit.NewtonPerMinute);
+                case "NewtonPerSecond": return UnitKey.ForUnit(ForceChangeRateUnit.NewtonPerSecond);
+                case "PoundForcePerMinute": return UnitKey.ForUnit(ForceChangeRateUnit.PoundForcePerMinute);
+                case "PoundForcePerSecond": return UnitKey.ForUnit(ForceChangeRateUnit.PoundForcePerSecond);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

@@ -832,6 +832,23 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CubicMeterPerMeter": return UnitKey.ForUnit(VolumePerLengthUnit.CubicMeterPerMeter);
+                case "CubicYardPerFoot": return UnitKey.ForUnit(VolumePerLengthUnit.CubicYardPerFoot);
+                case "CubicYardPerUsSurveyFoot": return UnitKey.ForUnit(VolumePerLengthUnit.CubicYardPerUsSurveyFoot);
+                case "ImperialGallonPerMile": return UnitKey.ForUnit(VolumePerLengthUnit.ImperialGallonPerMile);
+                case "LiterPerKilometer": return UnitKey.ForUnit(VolumePerLengthUnit.LiterPerKilometer);
+                case "LiterPerMeter": return UnitKey.ForUnit(VolumePerLengthUnit.LiterPerMeter);
+                case "LiterPerMillimeter": return UnitKey.ForUnit(VolumePerLengthUnit.LiterPerMillimeter);
+                case "OilBarrelPerFoot": return UnitKey.ForUnit(VolumePerLengthUnit.OilBarrelPerFoot);
+                case "UsGallonPerMile": return UnitKey.ForUnit(VolumePerLengthUnit.UsGallonPerMile);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

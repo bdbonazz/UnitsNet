@@ -1324,6 +1324,47 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentimeterPerHour": return UnitKey.ForUnit(SpeedUnit.CentimeterPerHour);
+                case "CentimeterPerMinute": return UnitKey.ForUnit(SpeedUnit.CentimeterPerMinute);
+                case "CentimeterPerSecond": return UnitKey.ForUnit(SpeedUnit.CentimeterPerSecond);
+                case "DecimeterPerMinute": return UnitKey.ForUnit(SpeedUnit.DecimeterPerMinute);
+                case "DecimeterPerSecond": return UnitKey.ForUnit(SpeedUnit.DecimeterPerSecond);
+                case "FootPerHour": return UnitKey.ForUnit(SpeedUnit.FootPerHour);
+                case "FootPerMinute": return UnitKey.ForUnit(SpeedUnit.FootPerMinute);
+                case "FootPerSecond": return UnitKey.ForUnit(SpeedUnit.FootPerSecond);
+                case "InchPerHour": return UnitKey.ForUnit(SpeedUnit.InchPerHour);
+                case "InchPerMinute": return UnitKey.ForUnit(SpeedUnit.InchPerMinute);
+                case "InchPerSecond": return UnitKey.ForUnit(SpeedUnit.InchPerSecond);
+                case "KilometerPerHour": return UnitKey.ForUnit(SpeedUnit.KilometerPerHour);
+                case "KilometerPerMinute": return UnitKey.ForUnit(SpeedUnit.KilometerPerMinute);
+                case "KilometerPerSecond": return UnitKey.ForUnit(SpeedUnit.KilometerPerSecond);
+                case "Knot": return UnitKey.ForUnit(SpeedUnit.Knot);
+                case "Mach": return UnitKey.ForUnit(SpeedUnit.Mach);
+                case "MeterPerHour": return UnitKey.ForUnit(SpeedUnit.MeterPerHour);
+                case "MeterPerMinute": return UnitKey.ForUnit(SpeedUnit.MeterPerMinute);
+                case "MeterPerSecond": return UnitKey.ForUnit(SpeedUnit.MeterPerSecond);
+                case "MicrometerPerMinute": return UnitKey.ForUnit(SpeedUnit.MicrometerPerMinute);
+                case "MicrometerPerSecond": return UnitKey.ForUnit(SpeedUnit.MicrometerPerSecond);
+                case "MilePerHour": return UnitKey.ForUnit(SpeedUnit.MilePerHour);
+                case "MillimeterPerHour": return UnitKey.ForUnit(SpeedUnit.MillimeterPerHour);
+                case "MillimeterPerMinute": return UnitKey.ForUnit(SpeedUnit.MillimeterPerMinute);
+                case "MillimeterPerSecond": return UnitKey.ForUnit(SpeedUnit.MillimeterPerSecond);
+                case "NanometerPerMinute": return UnitKey.ForUnit(SpeedUnit.NanometerPerMinute);
+                case "NanometerPerSecond": return UnitKey.ForUnit(SpeedUnit.NanometerPerSecond);
+                case "UsSurveyFootPerHour": return UnitKey.ForUnit(SpeedUnit.UsSurveyFootPerHour);
+                case "UsSurveyFootPerMinute": return UnitKey.ForUnit(SpeedUnit.UsSurveyFootPerMinute);
+                case "UsSurveyFootPerSecond": return UnitKey.ForUnit(SpeedUnit.UsSurveyFootPerSecond);
+                case "YardPerHour": return UnitKey.ForUnit(SpeedUnit.YardPerHour);
+                case "YardPerMinute": return UnitKey.ForUnit(SpeedUnit.YardPerMinute);
+                case "YardPerSecond": return UnitKey.ForUnit(SpeedUnit.YardPerSecond);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

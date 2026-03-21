@@ -807,6 +807,21 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "AmperePerMicrosecond": return UnitKey.ForUnit(ElectricCurrentGradientUnit.AmperePerMicrosecond);
+                case "AmperePerMillisecond": return UnitKey.ForUnit(ElectricCurrentGradientUnit.AmperePerMillisecond);
+                case "AmperePerMinute": return UnitKey.ForUnit(ElectricCurrentGradientUnit.AmperePerMinute);
+                case "AmperePerNanosecond": return UnitKey.ForUnit(ElectricCurrentGradientUnit.AmperePerNanosecond);
+                case "AmperePerSecond": return UnitKey.ForUnit(ElectricCurrentGradientUnit.AmperePerSecond);
+                case "MilliamperePerMinute": return UnitKey.ForUnit(ElectricCurrentGradientUnit.MilliamperePerMinute);
+                case "MilliamperePerSecond": return UnitKey.ForUnit(ElectricCurrentGradientUnit.MilliamperePerSecond);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

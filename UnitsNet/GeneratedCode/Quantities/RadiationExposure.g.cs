@@ -814,6 +814,22 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CoulombPerKilogram": return UnitKey.ForUnit(RadiationExposureUnit.CoulombPerKilogram);
+                case "MicrocoulombPerKilogram": return UnitKey.ForUnit(RadiationExposureUnit.MicrocoulombPerKilogram);
+                case "Microroentgen": return UnitKey.ForUnit(RadiationExposureUnit.Microroentgen);
+                case "MillicoulombPerKilogram": return UnitKey.ForUnit(RadiationExposureUnit.MillicoulombPerKilogram);
+                case "Milliroentgen": return UnitKey.ForUnit(RadiationExposureUnit.Milliroentgen);
+                case "NanocoulombPerKilogram": return UnitKey.ForUnit(RadiationExposureUnit.NanocoulombPerKilogram);
+                case "PicocoulombPerKilogram": return UnitKey.ForUnit(RadiationExposureUnit.PicocoulombPerKilogram);
+                case "Roentgen": return UnitKey.ForUnit(RadiationExposureUnit.Roentgen);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

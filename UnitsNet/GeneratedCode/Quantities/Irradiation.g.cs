@@ -835,6 +835,23 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "BtuPerSquareFoot": return UnitKey.ForUnit(IrradiationUnit.BtuPerSquareFoot);
+                case "JoulePerSquareCentimeter": return UnitKey.ForUnit(IrradiationUnit.JoulePerSquareCentimeter);
+                case "JoulePerSquareMeter": return UnitKey.ForUnit(IrradiationUnit.JoulePerSquareMeter);
+                case "JoulePerSquareMillimeter": return UnitKey.ForUnit(IrradiationUnit.JoulePerSquareMillimeter);
+                case "KilobtuPerSquareFoot": return UnitKey.ForUnit(IrradiationUnit.KilobtuPerSquareFoot);
+                case "KilojoulePerSquareMeter": return UnitKey.ForUnit(IrradiationUnit.KilojoulePerSquareMeter);
+                case "KilowattHourPerSquareMeter": return UnitKey.ForUnit(IrradiationUnit.KilowattHourPerSquareMeter);
+                case "MillijoulePerSquareCentimeter": return UnitKey.ForUnit(IrradiationUnit.MillijoulePerSquareCentimeter);
+                case "WattHourPerSquareMeter": return UnitKey.ForUnit(IrradiationUnit.WattHourPerSquareMeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

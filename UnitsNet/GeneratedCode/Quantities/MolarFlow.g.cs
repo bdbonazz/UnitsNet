@@ -864,6 +864,23 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "KilomolePerHour": return UnitKey.ForUnit(MolarFlowUnit.KilomolePerHour);
+                case "KilomolePerMinute": return UnitKey.ForUnit(MolarFlowUnit.KilomolePerMinute);
+                case "KilomolePerSecond": return UnitKey.ForUnit(MolarFlowUnit.KilomolePerSecond);
+                case "MolePerHour": return UnitKey.ForUnit(MolarFlowUnit.MolePerHour);
+                case "MolePerMinute": return UnitKey.ForUnit(MolarFlowUnit.MolePerMinute);
+                case "MolePerSecond": return UnitKey.ForUnit(MolarFlowUnit.MolePerSecond);
+                case "PoundMolePerHour": return UnitKey.ForUnit(MolarFlowUnit.PoundMolePerHour);
+                case "PoundMolePerMinute": return UnitKey.ForUnit(MolarFlowUnit.PoundMolePerMinute);
+                case "PoundMolePerSecond": return UnitKey.ForUnit(MolarFlowUnit.PoundMolePerSecond);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

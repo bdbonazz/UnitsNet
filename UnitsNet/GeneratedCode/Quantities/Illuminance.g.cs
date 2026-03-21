@@ -756,6 +756,18 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Kilolux": return UnitKey.ForUnit(IlluminanceUnit.Kilolux);
+                case "Lux": return UnitKey.ForUnit(IlluminanceUnit.Lux);
+                case "Megalux": return UnitKey.ForUnit(IlluminanceUnit.Megalux);
+                case "Millilux": return UnitKey.ForUnit(IlluminanceUnit.Millilux);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

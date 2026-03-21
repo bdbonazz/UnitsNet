@@ -792,6 +792,20 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "MicrosiemensPerCentimeter": return UnitKey.ForUnit(ElectricConductivityUnit.MicrosiemensPerCentimeter);
+                case "MillisiemensPerCentimeter": return UnitKey.ForUnit(ElectricConductivityUnit.MillisiemensPerCentimeter);
+                case "SiemensPerCentimeter": return UnitKey.ForUnit(ElectricConductivityUnit.SiemensPerCentimeter);
+                case "SiemensPerFoot": return UnitKey.ForUnit(ElectricConductivityUnit.SiemensPerFoot);
+                case "SiemensPerInch": return UnitKey.ForUnit(ElectricConductivityUnit.SiemensPerInch);
+                case "SiemensPerMeter": return UnitKey.ForUnit(ElectricConductivityUnit.SiemensPerMeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

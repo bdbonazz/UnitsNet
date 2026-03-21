@@ -707,6 +707,16 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "DecibelMilliwatt": return UnitKey.ForUnit(PowerRatioUnit.DecibelMilliwatt);
+                case "DecibelWatt": return UnitKey.ForUnit(PowerRatioUnit.DecibelWatt);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

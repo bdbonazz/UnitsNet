@@ -706,6 +706,16 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CubicFootPerMinutePerSquareFoot": return UnitKey.ForUnit(VolumeFlowPerAreaUnit.CubicFootPerMinutePerSquareFoot);
+                case "CubicMeterPerSecondPerSquareMeter": return UnitKey.ForUnit(VolumeFlowPerAreaUnit.CubicMeterPerSecondPerSquareMeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

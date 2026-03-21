@@ -1594,6 +1594,63 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentigramPerDeciliter": return UnitKey.ForUnit(MassConcentrationUnit.CentigramPerDeciliter);
+                case "CentigramPerLiter": return UnitKey.ForUnit(MassConcentrationUnit.CentigramPerLiter);
+                case "CentigramPerMicroliter": return UnitKey.ForUnit(MassConcentrationUnit.CentigramPerMicroliter);
+                case "CentigramPerMilliliter": return UnitKey.ForUnit(MassConcentrationUnit.CentigramPerMilliliter);
+                case "DecigramPerDeciliter": return UnitKey.ForUnit(MassConcentrationUnit.DecigramPerDeciliter);
+                case "DecigramPerLiter": return UnitKey.ForUnit(MassConcentrationUnit.DecigramPerLiter);
+                case "DecigramPerMicroliter": return UnitKey.ForUnit(MassConcentrationUnit.DecigramPerMicroliter);
+                case "DecigramPerMilliliter": return UnitKey.ForUnit(MassConcentrationUnit.DecigramPerMilliliter);
+                case "GramPerCubicCentimeter": return UnitKey.ForUnit(MassConcentrationUnit.GramPerCubicCentimeter);
+                case "GramPerCubicMeter": return UnitKey.ForUnit(MassConcentrationUnit.GramPerCubicMeter);
+                case "GramPerCubicMillimeter": return UnitKey.ForUnit(MassConcentrationUnit.GramPerCubicMillimeter);
+                case "GramPerDeciliter": return UnitKey.ForUnit(MassConcentrationUnit.GramPerDeciliter);
+                case "GramPerLiter": return UnitKey.ForUnit(MassConcentrationUnit.GramPerLiter);
+                case "GramPerMicroliter": return UnitKey.ForUnit(MassConcentrationUnit.GramPerMicroliter);
+                case "GramPerMilliliter": return UnitKey.ForUnit(MassConcentrationUnit.GramPerMilliliter);
+                case "KilogramPerCubicCentimeter": return UnitKey.ForUnit(MassConcentrationUnit.KilogramPerCubicCentimeter);
+                case "KilogramPerCubicMeter": return UnitKey.ForUnit(MassConcentrationUnit.KilogramPerCubicMeter);
+                case "KilogramPerCubicMillimeter": return UnitKey.ForUnit(MassConcentrationUnit.KilogramPerCubicMillimeter);
+                case "KilogramPerLiter": return UnitKey.ForUnit(MassConcentrationUnit.KilogramPerLiter);
+                case "KilopoundPerCubicFoot": return UnitKey.ForUnit(MassConcentrationUnit.KilopoundPerCubicFoot);
+                case "KilopoundPerCubicInch": return UnitKey.ForUnit(MassConcentrationUnit.KilopoundPerCubicInch);
+                case "MicrogramPerCubicMeter": return UnitKey.ForUnit(MassConcentrationUnit.MicrogramPerCubicMeter);
+                case "MicrogramPerDeciliter": return UnitKey.ForUnit(MassConcentrationUnit.MicrogramPerDeciliter);
+                case "MicrogramPerLiter": return UnitKey.ForUnit(MassConcentrationUnit.MicrogramPerLiter);
+                case "MicrogramPerMicroliter": return UnitKey.ForUnit(MassConcentrationUnit.MicrogramPerMicroliter);
+                case "MicrogramPerMilliliter": return UnitKey.ForUnit(MassConcentrationUnit.MicrogramPerMilliliter);
+                case "MilligramPerCubicMeter": return UnitKey.ForUnit(MassConcentrationUnit.MilligramPerCubicMeter);
+                case "MilligramPerDeciliter": return UnitKey.ForUnit(MassConcentrationUnit.MilligramPerDeciliter);
+                case "MilligramPerLiter": return UnitKey.ForUnit(MassConcentrationUnit.MilligramPerLiter);
+                case "MilligramPerMicroliter": return UnitKey.ForUnit(MassConcentrationUnit.MilligramPerMicroliter);
+                case "MilligramPerMilliliter": return UnitKey.ForUnit(MassConcentrationUnit.MilligramPerMilliliter);
+                case "NanogramPerDeciliter": return UnitKey.ForUnit(MassConcentrationUnit.NanogramPerDeciliter);
+                case "NanogramPerLiter": return UnitKey.ForUnit(MassConcentrationUnit.NanogramPerLiter);
+                case "NanogramPerMicroliter": return UnitKey.ForUnit(MassConcentrationUnit.NanogramPerMicroliter);
+                case "NanogramPerMilliliter": return UnitKey.ForUnit(MassConcentrationUnit.NanogramPerMilliliter);
+                case "OuncePerImperialGallon": return UnitKey.ForUnit(MassConcentrationUnit.OuncePerImperialGallon);
+                case "OuncePerUSGallon": return UnitKey.ForUnit(MassConcentrationUnit.OuncePerUSGallon);
+                case "PicogramPerDeciliter": return UnitKey.ForUnit(MassConcentrationUnit.PicogramPerDeciliter);
+                case "PicogramPerLiter": return UnitKey.ForUnit(MassConcentrationUnit.PicogramPerLiter);
+                case "PicogramPerMicroliter": return UnitKey.ForUnit(MassConcentrationUnit.PicogramPerMicroliter);
+                case "PicogramPerMilliliter": return UnitKey.ForUnit(MassConcentrationUnit.PicogramPerMilliliter);
+                case "PoundPerCubicFoot": return UnitKey.ForUnit(MassConcentrationUnit.PoundPerCubicFoot);
+                case "PoundPerCubicInch": return UnitKey.ForUnit(MassConcentrationUnit.PoundPerCubicInch);
+                case "PoundPerImperialGallon": return UnitKey.ForUnit(MassConcentrationUnit.PoundPerImperialGallon);
+                case "PoundPerUSGallon": return UnitKey.ForUnit(MassConcentrationUnit.PoundPerUSGallon);
+                case "SlugPerCubicFoot": return UnitKey.ForUnit(MassConcentrationUnit.SlugPerCubicFoot);
+                case "TonnePerCubicCentimeter": return UnitKey.ForUnit(MassConcentrationUnit.TonnePerCubicCentimeter);
+                case "TonnePerCubicMeter": return UnitKey.ForUnit(MassConcentrationUnit.TonnePerCubicMeter);
+                case "TonnePerCubicMillimeter": return UnitKey.ForUnit(MassConcentrationUnit.TonnePerCubicMillimeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

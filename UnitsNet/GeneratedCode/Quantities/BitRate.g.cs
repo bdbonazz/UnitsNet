@@ -1375,6 +1375,53 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "BitPerSecond": return UnitKey.ForUnit(BitRateUnit.BitPerSecond);
+                case "BytePerSecond": return UnitKey.ForUnit(BitRateUnit.BytePerSecond);
+                case "ExabitPerSecond": return UnitKey.ForUnit(BitRateUnit.ExabitPerSecond);
+                case "ExabytePerSecond": return UnitKey.ForUnit(BitRateUnit.ExabytePerSecond);
+                case "ExaoctetPerSecond": return UnitKey.ForUnit(BitRateUnit.ExaoctetPerSecond);
+                case "ExbibitPerSecond": return UnitKey.ForUnit(BitRateUnit.ExbibitPerSecond);
+                case "ExbibytePerSecond": return UnitKey.ForUnit(BitRateUnit.ExbibytePerSecond);
+                case "ExbioctetPerSecond": return UnitKey.ForUnit(BitRateUnit.ExbioctetPerSecond);
+                case "GibibitPerSecond": return UnitKey.ForUnit(BitRateUnit.GibibitPerSecond);
+                case "GibibytePerSecond": return UnitKey.ForUnit(BitRateUnit.GibibytePerSecond);
+                case "GibioctetPerSecond": return UnitKey.ForUnit(BitRateUnit.GibioctetPerSecond);
+                case "GigabitPerSecond": return UnitKey.ForUnit(BitRateUnit.GigabitPerSecond);
+                case "GigabytePerSecond": return UnitKey.ForUnit(BitRateUnit.GigabytePerSecond);
+                case "GigaoctetPerSecond": return UnitKey.ForUnit(BitRateUnit.GigaoctetPerSecond);
+                case "KibibitPerSecond": return UnitKey.ForUnit(BitRateUnit.KibibitPerSecond);
+                case "KibibytePerSecond": return UnitKey.ForUnit(BitRateUnit.KibibytePerSecond);
+                case "KibioctetPerSecond": return UnitKey.ForUnit(BitRateUnit.KibioctetPerSecond);
+                case "KilobitPerSecond": return UnitKey.ForUnit(BitRateUnit.KilobitPerSecond);
+                case "KilobytePerSecond": return UnitKey.ForUnit(BitRateUnit.KilobytePerSecond);
+                case "KilooctetPerSecond": return UnitKey.ForUnit(BitRateUnit.KilooctetPerSecond);
+                case "MebibitPerSecond": return UnitKey.ForUnit(BitRateUnit.MebibitPerSecond);
+                case "MebibytePerSecond": return UnitKey.ForUnit(BitRateUnit.MebibytePerSecond);
+                case "MebioctetPerSecond": return UnitKey.ForUnit(BitRateUnit.MebioctetPerSecond);
+                case "MegabitPerSecond": return UnitKey.ForUnit(BitRateUnit.MegabitPerSecond);
+                case "MegabytePerSecond": return UnitKey.ForUnit(BitRateUnit.MegabytePerSecond);
+                case "MegaoctetPerSecond": return UnitKey.ForUnit(BitRateUnit.MegaoctetPerSecond);
+                case "OctetPerSecond": return UnitKey.ForUnit(BitRateUnit.OctetPerSecond);
+                case "PebibitPerSecond": return UnitKey.ForUnit(BitRateUnit.PebibitPerSecond);
+                case "PebibytePerSecond": return UnitKey.ForUnit(BitRateUnit.PebibytePerSecond);
+                case "PebioctetPerSecond": return UnitKey.ForUnit(BitRateUnit.PebioctetPerSecond);
+                case "PetabitPerSecond": return UnitKey.ForUnit(BitRateUnit.PetabitPerSecond);
+                case "PetabytePerSecond": return UnitKey.ForUnit(BitRateUnit.PetabytePerSecond);
+                case "PetaoctetPerSecond": return UnitKey.ForUnit(BitRateUnit.PetaoctetPerSecond);
+                case "TebibitPerSecond": return UnitKey.ForUnit(BitRateUnit.TebibitPerSecond);
+                case "TebibytePerSecond": return UnitKey.ForUnit(BitRateUnit.TebibytePerSecond);
+                case "TebioctetPerSecond": return UnitKey.ForUnit(BitRateUnit.TebioctetPerSecond);
+                case "TerabitPerSecond": return UnitKey.ForUnit(BitRateUnit.TerabitPerSecond);
+                case "TerabytePerSecond": return UnitKey.ForUnit(BitRateUnit.TerabytePerSecond);
+                case "TeraoctetPerSecond": return UnitKey.ForUnit(BitRateUnit.TeraoctetPerSecond);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

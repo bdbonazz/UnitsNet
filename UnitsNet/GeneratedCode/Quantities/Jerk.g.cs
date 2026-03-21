@@ -879,6 +879,25 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentimeterPerSecondCubed": return UnitKey.ForUnit(JerkUnit.CentimeterPerSecondCubed);
+                case "DecimeterPerSecondCubed": return UnitKey.ForUnit(JerkUnit.DecimeterPerSecondCubed);
+                case "FootPerSecondCubed": return UnitKey.ForUnit(JerkUnit.FootPerSecondCubed);
+                case "InchPerSecondCubed": return UnitKey.ForUnit(JerkUnit.InchPerSecondCubed);
+                case "KilometerPerSecondCubed": return UnitKey.ForUnit(JerkUnit.KilometerPerSecondCubed);
+                case "MeterPerSecondCubed": return UnitKey.ForUnit(JerkUnit.MeterPerSecondCubed);
+                case "MicrometerPerSecondCubed": return UnitKey.ForUnit(JerkUnit.MicrometerPerSecondCubed);
+                case "MillimeterPerSecondCubed": return UnitKey.ForUnit(JerkUnit.MillimeterPerSecondCubed);
+                case "MillistandardGravitiesPerSecond": return UnitKey.ForUnit(JerkUnit.MillistandardGravitiesPerSecond);
+                case "NanometerPerSecondCubed": return UnitKey.ForUnit(JerkUnit.NanometerPerSecondCubed);
+                case "StandardGravitiesPerSecond": return UnitKey.ForUnit(JerkUnit.StandardGravitiesPerSecond);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

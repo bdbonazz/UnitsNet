@@ -1022,6 +1022,31 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Centimole": return UnitKey.ForUnit(AmountOfSubstanceUnit.Centimole);
+                case "CentipoundMole": return UnitKey.ForUnit(AmountOfSubstanceUnit.CentipoundMole);
+                case "Decimole": return UnitKey.ForUnit(AmountOfSubstanceUnit.Decimole);
+                case "DecipoundMole": return UnitKey.ForUnit(AmountOfSubstanceUnit.DecipoundMole);
+                case "Femtomole": return UnitKey.ForUnit(AmountOfSubstanceUnit.Femtomole);
+                case "Kilomole": return UnitKey.ForUnit(AmountOfSubstanceUnit.Kilomole);
+                case "KilopoundMole": return UnitKey.ForUnit(AmountOfSubstanceUnit.KilopoundMole);
+                case "Megamole": return UnitKey.ForUnit(AmountOfSubstanceUnit.Megamole);
+                case "Micromole": return UnitKey.ForUnit(AmountOfSubstanceUnit.Micromole);
+                case "MicropoundMole": return UnitKey.ForUnit(AmountOfSubstanceUnit.MicropoundMole);
+                case "Millimole": return UnitKey.ForUnit(AmountOfSubstanceUnit.Millimole);
+                case "MillipoundMole": return UnitKey.ForUnit(AmountOfSubstanceUnit.MillipoundMole);
+                case "Mole": return UnitKey.ForUnit(AmountOfSubstanceUnit.Mole);
+                case "Nanomole": return UnitKey.ForUnit(AmountOfSubstanceUnit.Nanomole);
+                case "NanopoundMole": return UnitKey.ForUnit(AmountOfSubstanceUnit.NanopoundMole);
+                case "Picomole": return UnitKey.ForUnit(AmountOfSubstanceUnit.Picomole);
+                case "PoundMole": return UnitKey.ForUnit(AmountOfSubstanceUnit.PoundMole);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

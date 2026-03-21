@@ -781,6 +781,20 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Gauss": return UnitKey.ForUnit(MagneticFieldUnit.Gauss);
+                case "Microtesla": return UnitKey.ForUnit(MagneticFieldUnit.Microtesla);
+                case "Milligauss": return UnitKey.ForUnit(MagneticFieldUnit.Milligauss);
+                case "Millitesla": return UnitKey.ForUnit(MagneticFieldUnit.Millitesla);
+                case "Nanotesla": return UnitKey.ForUnit(MagneticFieldUnit.Nanotesla);
+                case "Tesla": return UnitKey.ForUnit(MagneticFieldUnit.Tesla);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

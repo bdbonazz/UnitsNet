@@ -936,6 +936,28 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "KiloohmCentimeter": return UnitKey.ForUnit(ElectricResistivityUnit.KiloohmCentimeter);
+                case "KiloohmMeter": return UnitKey.ForUnit(ElectricResistivityUnit.KiloohmMeter);
+                case "MegaohmCentimeter": return UnitKey.ForUnit(ElectricResistivityUnit.MegaohmCentimeter);
+                case "MegaohmMeter": return UnitKey.ForUnit(ElectricResistivityUnit.MegaohmMeter);
+                case "MicroohmCentimeter": return UnitKey.ForUnit(ElectricResistivityUnit.MicroohmCentimeter);
+                case "MicroohmMeter": return UnitKey.ForUnit(ElectricResistivityUnit.MicroohmMeter);
+                case "MilliohmCentimeter": return UnitKey.ForUnit(ElectricResistivityUnit.MilliohmCentimeter);
+                case "MilliohmMeter": return UnitKey.ForUnit(ElectricResistivityUnit.MilliohmMeter);
+                case "NanoohmCentimeter": return UnitKey.ForUnit(ElectricResistivityUnit.NanoohmCentimeter);
+                case "NanoohmMeter": return UnitKey.ForUnit(ElectricResistivityUnit.NanoohmMeter);
+                case "OhmCentimeter": return UnitKey.ForUnit(ElectricResistivityUnit.OhmCentimeter);
+                case "OhmMeter": return UnitKey.ForUnit(ElectricResistivityUnit.OhmMeter);
+                case "PicoohmCentimeter": return UnitKey.ForUnit(ElectricResistivityUnit.PicoohmCentimeter);
+                case "PicoohmMeter": return UnitKey.ForUnit(ElectricResistivityUnit.PicoohmMeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

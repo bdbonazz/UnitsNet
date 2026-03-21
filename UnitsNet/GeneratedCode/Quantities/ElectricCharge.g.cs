@@ -896,6 +896,25 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "AmpereHour": return UnitKey.ForUnit(ElectricChargeUnit.AmpereHour);
+                case "Coulomb": return UnitKey.ForUnit(ElectricChargeUnit.Coulomb);
+                case "KiloampereHour": return UnitKey.ForUnit(ElectricChargeUnit.KiloampereHour);
+                case "Kilocoulomb": return UnitKey.ForUnit(ElectricChargeUnit.Kilocoulomb);
+                case "MegaampereHour": return UnitKey.ForUnit(ElectricChargeUnit.MegaampereHour);
+                case "Megacoulomb": return UnitKey.ForUnit(ElectricChargeUnit.Megacoulomb);
+                case "Microcoulomb": return UnitKey.ForUnit(ElectricChargeUnit.Microcoulomb);
+                case "MilliampereHour": return UnitKey.ForUnit(ElectricChargeUnit.MilliampereHour);
+                case "Millicoulomb": return UnitKey.ForUnit(ElectricChargeUnit.Millicoulomb);
+                case "Nanocoulomb": return UnitKey.ForUnit(ElectricChargeUnit.Nanocoulomb);
+                case "Picocoulomb": return UnitKey.ForUnit(ElectricChargeUnit.Picocoulomb);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

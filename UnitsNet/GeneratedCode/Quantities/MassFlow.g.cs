@@ -1338,6 +1338,47 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentigramPerDay": return UnitKey.ForUnit(MassFlowUnit.CentigramPerDay);
+                case "CentigramPerSecond": return UnitKey.ForUnit(MassFlowUnit.CentigramPerSecond);
+                case "DecagramPerDay": return UnitKey.ForUnit(MassFlowUnit.DecagramPerDay);
+                case "DecagramPerSecond": return UnitKey.ForUnit(MassFlowUnit.DecagramPerSecond);
+                case "DecigramPerDay": return UnitKey.ForUnit(MassFlowUnit.DecigramPerDay);
+                case "DecigramPerSecond": return UnitKey.ForUnit(MassFlowUnit.DecigramPerSecond);
+                case "GramPerDay": return UnitKey.ForUnit(MassFlowUnit.GramPerDay);
+                case "GramPerHour": return UnitKey.ForUnit(MassFlowUnit.GramPerHour);
+                case "GramPerSecond": return UnitKey.ForUnit(MassFlowUnit.GramPerSecond);
+                case "HectogramPerDay": return UnitKey.ForUnit(MassFlowUnit.HectogramPerDay);
+                case "HectogramPerSecond": return UnitKey.ForUnit(MassFlowUnit.HectogramPerSecond);
+                case "KilogramPerDay": return UnitKey.ForUnit(MassFlowUnit.KilogramPerDay);
+                case "KilogramPerHour": return UnitKey.ForUnit(MassFlowUnit.KilogramPerHour);
+                case "KilogramPerMinute": return UnitKey.ForUnit(MassFlowUnit.KilogramPerMinute);
+                case "KilogramPerSecond": return UnitKey.ForUnit(MassFlowUnit.KilogramPerSecond);
+                case "MegagramPerDay": return UnitKey.ForUnit(MassFlowUnit.MegagramPerDay);
+                case "MegapoundPerDay": return UnitKey.ForUnit(MassFlowUnit.MegapoundPerDay);
+                case "MegapoundPerHour": return UnitKey.ForUnit(MassFlowUnit.MegapoundPerHour);
+                case "MegapoundPerMinute": return UnitKey.ForUnit(MassFlowUnit.MegapoundPerMinute);
+                case "MegapoundPerSecond": return UnitKey.ForUnit(MassFlowUnit.MegapoundPerSecond);
+                case "MicrogramPerDay": return UnitKey.ForUnit(MassFlowUnit.MicrogramPerDay);
+                case "MicrogramPerSecond": return UnitKey.ForUnit(MassFlowUnit.MicrogramPerSecond);
+                case "MilligramPerDay": return UnitKey.ForUnit(MassFlowUnit.MilligramPerDay);
+                case "MilligramPerSecond": return UnitKey.ForUnit(MassFlowUnit.MilligramPerSecond);
+                case "NanogramPerDay": return UnitKey.ForUnit(MassFlowUnit.NanogramPerDay);
+                case "NanogramPerSecond": return UnitKey.ForUnit(MassFlowUnit.NanogramPerSecond);
+                case "PoundPerDay": return UnitKey.ForUnit(MassFlowUnit.PoundPerDay);
+                case "PoundPerHour": return UnitKey.ForUnit(MassFlowUnit.PoundPerHour);
+                case "PoundPerMinute": return UnitKey.ForUnit(MassFlowUnit.PoundPerMinute);
+                case "PoundPerSecond": return UnitKey.ForUnit(MassFlowUnit.PoundPerSecond);
+                case "ShortTonPerHour": return UnitKey.ForUnit(MassFlowUnit.ShortTonPerHour);
+                case "TonnePerDay": return UnitKey.ForUnit(MassFlowUnit.TonnePerDay);
+                case "TonnePerHour": return UnitKey.ForUnit(MassFlowUnit.TonnePerHour);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

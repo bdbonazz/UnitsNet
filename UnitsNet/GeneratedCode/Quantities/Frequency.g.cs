@@ -897,6 +897,26 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "BeatPerMinute": return UnitKey.ForUnit(FrequencyUnit.BeatPerMinute);
+                case "CyclePerHour": return UnitKey.ForUnit(FrequencyUnit.CyclePerHour);
+                case "CyclePerMinute": return UnitKey.ForUnit(FrequencyUnit.CyclePerMinute);
+                case "Gigahertz": return UnitKey.ForUnit(FrequencyUnit.Gigahertz);
+                case "Hertz": return UnitKey.ForUnit(FrequencyUnit.Hertz);
+                case "Kilohertz": return UnitKey.ForUnit(FrequencyUnit.Kilohertz);
+                case "Megahertz": return UnitKey.ForUnit(FrequencyUnit.Megahertz);
+                case "Microhertz": return UnitKey.ForUnit(FrequencyUnit.Microhertz);
+                case "Millihertz": return UnitKey.ForUnit(FrequencyUnit.Millihertz);
+                case "PerSecond": return UnitKey.ForUnit(FrequencyUnit.PerSecond);
+                case "RadianPerSecond": return UnitKey.ForUnit(FrequencyUnit.RadianPerSecond);
+                case "Terahertz": return UnitKey.ForUnit(FrequencyUnit.Terahertz);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

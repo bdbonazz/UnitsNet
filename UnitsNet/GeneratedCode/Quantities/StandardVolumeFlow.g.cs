@@ -832,6 +832,23 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "StandardCubicCentimeterPerMinute": return UnitKey.ForUnit(StandardVolumeFlowUnit.StandardCubicCentimeterPerMinute);
+                case "StandardCubicFootPerHour": return UnitKey.ForUnit(StandardVolumeFlowUnit.StandardCubicFootPerHour);
+                case "StandardCubicFootPerMinute": return UnitKey.ForUnit(StandardVolumeFlowUnit.StandardCubicFootPerMinute);
+                case "StandardCubicFootPerSecond": return UnitKey.ForUnit(StandardVolumeFlowUnit.StandardCubicFootPerSecond);
+                case "StandardCubicMeterPerDay": return UnitKey.ForUnit(StandardVolumeFlowUnit.StandardCubicMeterPerDay);
+                case "StandardCubicMeterPerHour": return UnitKey.ForUnit(StandardVolumeFlowUnit.StandardCubicMeterPerHour);
+                case "StandardCubicMeterPerMinute": return UnitKey.ForUnit(StandardVolumeFlowUnit.StandardCubicMeterPerMinute);
+                case "StandardCubicMeterPerSecond": return UnitKey.ForUnit(StandardVolumeFlowUnit.StandardCubicMeterPerSecond);
+                case "StandardLiterPerMinute": return UnitKey.ForUnit(StandardVolumeFlowUnit.StandardLiterPerMinute);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

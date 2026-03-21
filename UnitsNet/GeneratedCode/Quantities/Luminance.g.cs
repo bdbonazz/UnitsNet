@@ -864,6 +864,24 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CandelaPerSquareFoot": return UnitKey.ForUnit(LuminanceUnit.CandelaPerSquareFoot);
+                case "CandelaPerSquareInch": return UnitKey.ForUnit(LuminanceUnit.CandelaPerSquareInch);
+                case "CandelaPerSquareMeter": return UnitKey.ForUnit(LuminanceUnit.CandelaPerSquareMeter);
+                case "CenticandelaPerSquareMeter": return UnitKey.ForUnit(LuminanceUnit.CenticandelaPerSquareMeter);
+                case "DecicandelaPerSquareMeter": return UnitKey.ForUnit(LuminanceUnit.DecicandelaPerSquareMeter);
+                case "KilocandelaPerSquareMeter": return UnitKey.ForUnit(LuminanceUnit.KilocandelaPerSquareMeter);
+                case "MicrocandelaPerSquareMeter": return UnitKey.ForUnit(LuminanceUnit.MicrocandelaPerSquareMeter);
+                case "MillicandelaPerSquareMeter": return UnitKey.ForUnit(LuminanceUnit.MillicandelaPerSquareMeter);
+                case "NanocandelaPerSquareMeter": return UnitKey.ForUnit(LuminanceUnit.NanocandelaPerSquareMeter);
+                case "Nit": return UnitKey.ForUnit(LuminanceUnit.Nit);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

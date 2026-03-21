@@ -1005,6 +1005,32 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "BtuPerHourSquareFoot": return UnitKey.ForUnit(HeatFluxUnit.BtuPerHourSquareFoot);
+                case "BtuPerMinuteSquareFoot": return UnitKey.ForUnit(HeatFluxUnit.BtuPerMinuteSquareFoot);
+                case "BtuPerSecondSquareFoot": return UnitKey.ForUnit(HeatFluxUnit.BtuPerSecondSquareFoot);
+                case "BtuPerSecondSquareInch": return UnitKey.ForUnit(HeatFluxUnit.BtuPerSecondSquareInch);
+                case "CaloriePerSecondSquareCentimeter": return UnitKey.ForUnit(HeatFluxUnit.CaloriePerSecondSquareCentimeter);
+                case "CentiwattPerSquareMeter": return UnitKey.ForUnit(HeatFluxUnit.CentiwattPerSquareMeter);
+                case "DeciwattPerSquareMeter": return UnitKey.ForUnit(HeatFluxUnit.DeciwattPerSquareMeter);
+                case "KilocaloriePerHourSquareMeter": return UnitKey.ForUnit(HeatFluxUnit.KilocaloriePerHourSquareMeter);
+                case "KilocaloriePerSecondSquareCentimeter": return UnitKey.ForUnit(HeatFluxUnit.KilocaloriePerSecondSquareCentimeter);
+                case "KilowattPerSquareMeter": return UnitKey.ForUnit(HeatFluxUnit.KilowattPerSquareMeter);
+                case "MicrowattPerSquareMeter": return UnitKey.ForUnit(HeatFluxUnit.MicrowattPerSquareMeter);
+                case "MilliwattPerSquareMeter": return UnitKey.ForUnit(HeatFluxUnit.MilliwattPerSquareMeter);
+                case "NanowattPerSquareMeter": return UnitKey.ForUnit(HeatFluxUnit.NanowattPerSquareMeter);
+                case "PoundForcePerFootSecond": return UnitKey.ForUnit(HeatFluxUnit.PoundForcePerFootSecond);
+                case "PoundPerSecondCubed": return UnitKey.ForUnit(HeatFluxUnit.PoundPerSecondCubed);
+                case "WattPerSquareFoot": return UnitKey.ForUnit(HeatFluxUnit.WattPerSquareFoot);
+                case "WattPerSquareInch": return UnitKey.ForUnit(HeatFluxUnit.WattPerSquareInch);
+                case "WattPerSquareMeter": return UnitKey.ForUnit(HeatFluxUnit.WattPerSquareMeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

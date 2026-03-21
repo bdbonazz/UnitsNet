@@ -929,6 +929,27 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentigramPerMole": return UnitKey.ForUnit(MolarMassUnit.CentigramPerMole);
+                case "DecagramPerMole": return UnitKey.ForUnit(MolarMassUnit.DecagramPerMole);
+                case "DecigramPerMole": return UnitKey.ForUnit(MolarMassUnit.DecigramPerMole);
+                case "GramPerMole": return UnitKey.ForUnit(MolarMassUnit.GramPerMole);
+                case "HectogramPerMole": return UnitKey.ForUnit(MolarMassUnit.HectogramPerMole);
+                case "KilogramPerKilomole": return UnitKey.ForUnit(MolarMassUnit.KilogramPerKilomole);
+                case "KilogramPerMole": return UnitKey.ForUnit(MolarMassUnit.KilogramPerMole);
+                case "KilopoundPerMole": return UnitKey.ForUnit(MolarMassUnit.KilopoundPerMole);
+                case "MegapoundPerMole": return UnitKey.ForUnit(MolarMassUnit.MegapoundPerMole);
+                case "MicrogramPerMole": return UnitKey.ForUnit(MolarMassUnit.MicrogramPerMole);
+                case "MilligramPerMole": return UnitKey.ForUnit(MolarMassUnit.MilligramPerMole);
+                case "NanogramPerMole": return UnitKey.ForUnit(MolarMassUnit.NanogramPerMole);
+                case "PoundPerMole": return UnitKey.ForUnit(MolarMassUnit.PoundPerMole);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

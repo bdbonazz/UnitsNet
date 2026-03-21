@@ -727,6 +727,17 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "MillimolePerKilogram": return UnitKey.ForUnit(MolalityUnit.MillimolePerKilogram);
+                case "MolePerGram": return UnitKey.ForUnit(MolalityUnit.MolePerGram);
+                case "MolePerKilogram": return UnitKey.ForUnit(MolalityUnit.MolePerKilogram);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

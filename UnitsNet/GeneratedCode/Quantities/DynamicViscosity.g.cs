@@ -871,6 +871,24 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Centipoise": return UnitKey.ForUnit(DynamicViscosityUnit.Centipoise);
+                case "MicropascalSecond": return UnitKey.ForUnit(DynamicViscosityUnit.MicropascalSecond);
+                case "MillipascalSecond": return UnitKey.ForUnit(DynamicViscosityUnit.MillipascalSecond);
+                case "NewtonSecondPerMeterSquared": return UnitKey.ForUnit(DynamicViscosityUnit.NewtonSecondPerMeterSquared);
+                case "PascalSecond": return UnitKey.ForUnit(DynamicViscosityUnit.PascalSecond);
+                case "Poise": return UnitKey.ForUnit(DynamicViscosityUnit.Poise);
+                case "PoundForceSecondPerSquareFoot": return UnitKey.ForUnit(DynamicViscosityUnit.PoundForceSecondPerSquareFoot);
+                case "PoundForceSecondPerSquareInch": return UnitKey.ForUnit(DynamicViscosityUnit.PoundForceSecondPerSquareInch);
+                case "PoundPerFootSecond": return UnitKey.ForUnit(DynamicViscosityUnit.PoundPerFootSecond);
+                case "Reyn": return UnitKey.ForUnit(DynamicViscosityUnit.Reyn);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

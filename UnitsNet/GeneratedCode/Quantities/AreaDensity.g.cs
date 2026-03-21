@@ -735,6 +735,17 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "GramPerSquareMeter": return UnitKey.ForUnit(AreaDensityUnit.GramPerSquareMeter);
+                case "KilogramPerSquareMeter": return UnitKey.ForUnit(AreaDensityUnit.KilogramPerSquareMeter);
+                case "MilligramPerSquareMeter": return UnitKey.ForUnit(AreaDensityUnit.MilligramPerSquareMeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

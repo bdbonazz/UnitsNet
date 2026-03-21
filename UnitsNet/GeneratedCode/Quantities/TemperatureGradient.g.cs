@@ -753,6 +753,18 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "DegreeCelsiusPerKilometer": return UnitKey.ForUnit(TemperatureGradientUnit.DegreeCelsiusPerKilometer);
+                case "DegreeCelsiusPerMeter": return UnitKey.ForUnit(TemperatureGradientUnit.DegreeCelsiusPerMeter);
+                case "DegreeFahrenheitPerFoot": return UnitKey.ForUnit(TemperatureGradientUnit.DegreeFahrenheitPerFoot);
+                case "KelvinPerMeter": return UnitKey.ForUnit(TemperatureGradientUnit.KelvinPerMeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

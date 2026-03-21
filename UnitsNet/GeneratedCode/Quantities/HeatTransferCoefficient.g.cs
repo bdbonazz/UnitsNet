@@ -760,6 +760,19 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "BtuPerHourSquareFootDegreeFahrenheit": return UnitKey.ForUnit(HeatTransferCoefficientUnit.BtuPerHourSquareFootDegreeFahrenheit);
+                case "CaloriePerHourSquareMeterDegreeCelsius": return UnitKey.ForUnit(HeatTransferCoefficientUnit.CaloriePerHourSquareMeterDegreeCelsius);
+                case "KilocaloriePerHourSquareMeterDegreeCelsius": return UnitKey.ForUnit(HeatTransferCoefficientUnit.KilocaloriePerHourSquareMeterDegreeCelsius);
+                case "WattPerSquareMeterCelsius": return UnitKey.ForUnit(HeatTransferCoefficientUnit.WattPerSquareMeterCelsius);
+                case "WattPerSquareMeterKelvin": return UnitKey.ForUnit(HeatTransferCoefficientUnit.WattPerSquareMeterKelvin);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

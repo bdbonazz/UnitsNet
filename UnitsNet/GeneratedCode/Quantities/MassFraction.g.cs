@@ -1102,6 +1102,38 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentigramPerGram": return UnitKey.ForUnit(MassFractionUnit.CentigramPerGram);
+                case "CentigramPerKilogram": return UnitKey.ForUnit(MassFractionUnit.CentigramPerKilogram);
+                case "DecagramPerGram": return UnitKey.ForUnit(MassFractionUnit.DecagramPerGram);
+                case "DecagramPerKilogram": return UnitKey.ForUnit(MassFractionUnit.DecagramPerKilogram);
+                case "DecigramPerGram": return UnitKey.ForUnit(MassFractionUnit.DecigramPerGram);
+                case "DecigramPerKilogram": return UnitKey.ForUnit(MassFractionUnit.DecigramPerKilogram);
+                case "DecimalFraction": return UnitKey.ForUnit(MassFractionUnit.DecimalFraction);
+                case "GramPerGram": return UnitKey.ForUnit(MassFractionUnit.GramPerGram);
+                case "GramPerKilogram": return UnitKey.ForUnit(MassFractionUnit.GramPerKilogram);
+                case "HectogramPerGram": return UnitKey.ForUnit(MassFractionUnit.HectogramPerGram);
+                case "HectogramPerKilogram": return UnitKey.ForUnit(MassFractionUnit.HectogramPerKilogram);
+                case "KilogramPerGram": return UnitKey.ForUnit(MassFractionUnit.KilogramPerGram);
+                case "KilogramPerKilogram": return UnitKey.ForUnit(MassFractionUnit.KilogramPerKilogram);
+                case "MicrogramPerGram": return UnitKey.ForUnit(MassFractionUnit.MicrogramPerGram);
+                case "MicrogramPerKilogram": return UnitKey.ForUnit(MassFractionUnit.MicrogramPerKilogram);
+                case "MilligramPerGram": return UnitKey.ForUnit(MassFractionUnit.MilligramPerGram);
+                case "MilligramPerKilogram": return UnitKey.ForUnit(MassFractionUnit.MilligramPerKilogram);
+                case "NanogramPerGram": return UnitKey.ForUnit(MassFractionUnit.NanogramPerGram);
+                case "NanogramPerKilogram": return UnitKey.ForUnit(MassFractionUnit.NanogramPerKilogram);
+                case "PartPerBillion": return UnitKey.ForUnit(MassFractionUnit.PartPerBillion);
+                case "PartPerMillion": return UnitKey.ForUnit(MassFractionUnit.PartPerMillion);
+                case "PartPerThousand": return UnitKey.ForUnit(MassFractionUnit.PartPerThousand);
+                case "PartPerTrillion": return UnitKey.ForUnit(MassFractionUnit.PartPerTrillion);
+                case "Percent": return UnitKey.ForUnit(MassFractionUnit.Percent);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

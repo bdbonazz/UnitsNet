@@ -796,6 +796,20 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentimeterToTheFourth": return UnitKey.ForUnit(AreaMomentOfInertiaUnit.CentimeterToTheFourth);
+                case "DecimeterToTheFourth": return UnitKey.ForUnit(AreaMomentOfInertiaUnit.DecimeterToTheFourth);
+                case "FootToTheFourth": return UnitKey.ForUnit(AreaMomentOfInertiaUnit.FootToTheFourth);
+                case "InchToTheFourth": return UnitKey.ForUnit(AreaMomentOfInertiaUnit.InchToTheFourth);
+                case "MeterToTheFourth": return UnitKey.ForUnit(AreaMomentOfInertiaUnit.MeterToTheFourth);
+                case "MillimeterToTheFourth": return UnitKey.ForUnit(AreaMomentOfInertiaUnit.MillimeterToTheFourth);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

@@ -727,6 +727,17 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CoulombPerSquareCentimeter": return UnitKey.ForUnit(ElectricSurfaceChargeDensityUnit.CoulombPerSquareCentimeter);
+                case "CoulombPerSquareInch": return UnitKey.ForUnit(ElectricSurfaceChargeDensityUnit.CoulombPerSquareInch);
+                case "CoulombPerSquareMeter": return UnitKey.ForUnit(ElectricSurfaceChargeDensityUnit.CoulombPerSquareMeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

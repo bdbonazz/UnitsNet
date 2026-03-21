@@ -1173,6 +1173,39 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "GramForceCentimeter": return UnitKey.ForUnit(TorqueUnit.GramForceCentimeter);
+                case "GramForceMeter": return UnitKey.ForUnit(TorqueUnit.GramForceMeter);
+                case "GramForceMillimeter": return UnitKey.ForUnit(TorqueUnit.GramForceMillimeter);
+                case "KilogramForceCentimeter": return UnitKey.ForUnit(TorqueUnit.KilogramForceCentimeter);
+                case "KilogramForceMeter": return UnitKey.ForUnit(TorqueUnit.KilogramForceMeter);
+                case "KilogramForceMillimeter": return UnitKey.ForUnit(TorqueUnit.KilogramForceMillimeter);
+                case "KilonewtonCentimeter": return UnitKey.ForUnit(TorqueUnit.KilonewtonCentimeter);
+                case "KilonewtonMeter": return UnitKey.ForUnit(TorqueUnit.KilonewtonMeter);
+                case "KilonewtonMillimeter": return UnitKey.ForUnit(TorqueUnit.KilonewtonMillimeter);
+                case "KilopoundForceFoot": return UnitKey.ForUnit(TorqueUnit.KilopoundForceFoot);
+                case "KilopoundForceInch": return UnitKey.ForUnit(TorqueUnit.KilopoundForceInch);
+                case "MeganewtonCentimeter": return UnitKey.ForUnit(TorqueUnit.MeganewtonCentimeter);
+                case "MeganewtonMeter": return UnitKey.ForUnit(TorqueUnit.MeganewtonMeter);
+                case "MeganewtonMillimeter": return UnitKey.ForUnit(TorqueUnit.MeganewtonMillimeter);
+                case "MegapoundForceFoot": return UnitKey.ForUnit(TorqueUnit.MegapoundForceFoot);
+                case "MegapoundForceInch": return UnitKey.ForUnit(TorqueUnit.MegapoundForceInch);
+                case "NewtonCentimeter": return UnitKey.ForUnit(TorqueUnit.NewtonCentimeter);
+                case "NewtonMeter": return UnitKey.ForUnit(TorqueUnit.NewtonMeter);
+                case "NewtonMillimeter": return UnitKey.ForUnit(TorqueUnit.NewtonMillimeter);
+                case "PoundalFoot": return UnitKey.ForUnit(TorqueUnit.PoundalFoot);
+                case "PoundForceFoot": return UnitKey.ForUnit(TorqueUnit.PoundForceFoot);
+                case "PoundForceInch": return UnitKey.ForUnit(TorqueUnit.PoundForceInch);
+                case "TonneForceCentimeter": return UnitKey.ForUnit(TorqueUnit.TonneForceCentimeter);
+                case "TonneForceMeter": return UnitKey.ForUnit(TorqueUnit.TonneForceMeter);
+                case "TonneForceMillimeter": return UnitKey.ForUnit(TorqueUnit.TonneForceMillimeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

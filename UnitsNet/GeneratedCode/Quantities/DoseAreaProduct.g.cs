@@ -1123,6 +1123,39 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentigraySquareCentimeter": return UnitKey.ForUnit(DoseAreaProductUnit.CentigraySquareCentimeter);
+                case "CentigraySquareDecimeter": return UnitKey.ForUnit(DoseAreaProductUnit.CentigraySquareDecimeter);
+                case "CentigraySquareMeter": return UnitKey.ForUnit(DoseAreaProductUnit.CentigraySquareMeter);
+                case "CentigraySquareMicrometer": return UnitKey.ForUnit(DoseAreaProductUnit.CentigraySquareMicrometer);
+                case "CentigraySquareMillimeter": return UnitKey.ForUnit(DoseAreaProductUnit.CentigraySquareMillimeter);
+                case "DecigraySquareCentimeter": return UnitKey.ForUnit(DoseAreaProductUnit.DecigraySquareCentimeter);
+                case "DecigraySquareDecimeter": return UnitKey.ForUnit(DoseAreaProductUnit.DecigraySquareDecimeter);
+                case "DecigraySquareMeter": return UnitKey.ForUnit(DoseAreaProductUnit.DecigraySquareMeter);
+                case "DecigraySquareMicrometer": return UnitKey.ForUnit(DoseAreaProductUnit.DecigraySquareMicrometer);
+                case "DecigraySquareMillimeter": return UnitKey.ForUnit(DoseAreaProductUnit.DecigraySquareMillimeter);
+                case "GraySquareCentimeter": return UnitKey.ForUnit(DoseAreaProductUnit.GraySquareCentimeter);
+                case "GraySquareDecimeter": return UnitKey.ForUnit(DoseAreaProductUnit.GraySquareDecimeter);
+                case "GraySquareMeter": return UnitKey.ForUnit(DoseAreaProductUnit.GraySquareMeter);
+                case "GraySquareMicrometer": return UnitKey.ForUnit(DoseAreaProductUnit.GraySquareMicrometer);
+                case "GraySquareMillimeter": return UnitKey.ForUnit(DoseAreaProductUnit.GraySquareMillimeter);
+                case "MicrograySquareCentimeter": return UnitKey.ForUnit(DoseAreaProductUnit.MicrograySquareCentimeter);
+                case "MicrograySquareDecimeter": return UnitKey.ForUnit(DoseAreaProductUnit.MicrograySquareDecimeter);
+                case "MicrograySquareMeter": return UnitKey.ForUnit(DoseAreaProductUnit.MicrograySquareMeter);
+                case "MicrograySquareMicrometer": return UnitKey.ForUnit(DoseAreaProductUnit.MicrograySquareMicrometer);
+                case "MicrograySquareMillimeter": return UnitKey.ForUnit(DoseAreaProductUnit.MicrograySquareMillimeter);
+                case "MilligraySquareCentimeter": return UnitKey.ForUnit(DoseAreaProductUnit.MilligraySquareCentimeter);
+                case "MilligraySquareDecimeter": return UnitKey.ForUnit(DoseAreaProductUnit.MilligraySquareDecimeter);
+                case "MilligraySquareMeter": return UnitKey.ForUnit(DoseAreaProductUnit.MilligraySquareMeter);
+                case "MilligraySquareMicrometer": return UnitKey.ForUnit(DoseAreaProductUnit.MilligraySquareMicrometer);
+                case "MilligraySquareMillimeter": return UnitKey.ForUnit(DoseAreaProductUnit.MilligraySquareMillimeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

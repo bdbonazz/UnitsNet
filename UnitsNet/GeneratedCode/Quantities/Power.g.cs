@@ -1258,6 +1258,41 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "BoilerHorsepower": return UnitKey.ForUnit(PowerUnit.BoilerHorsepower);
+                case "BritishThermalUnitPerHour": return UnitKey.ForUnit(PowerUnit.BritishThermalUnitPerHour);
+                case "Decawatt": return UnitKey.ForUnit(PowerUnit.Decawatt);
+                case "Deciwatt": return UnitKey.ForUnit(PowerUnit.Deciwatt);
+                case "ElectricalHorsepower": return UnitKey.ForUnit(PowerUnit.ElectricalHorsepower);
+                case "Femtowatt": return UnitKey.ForUnit(PowerUnit.Femtowatt);
+                case "GigajoulePerHour": return UnitKey.ForUnit(PowerUnit.GigajoulePerHour);
+                case "Gigawatt": return UnitKey.ForUnit(PowerUnit.Gigawatt);
+                case "HydraulicHorsepower": return UnitKey.ForUnit(PowerUnit.HydraulicHorsepower);
+                case "JoulePerHour": return UnitKey.ForUnit(PowerUnit.JoulePerHour);
+                case "KilobritishThermalUnitPerHour": return UnitKey.ForUnit(PowerUnit.KilobritishThermalUnitPerHour);
+                case "KilojoulePerHour": return UnitKey.ForUnit(PowerUnit.KilojoulePerHour);
+                case "Kilowatt": return UnitKey.ForUnit(PowerUnit.Kilowatt);
+                case "MechanicalHorsepower": return UnitKey.ForUnit(PowerUnit.MechanicalHorsepower);
+                case "MegabritishThermalUnitPerHour": return UnitKey.ForUnit(PowerUnit.MegabritishThermalUnitPerHour);
+                case "MegajoulePerHour": return UnitKey.ForUnit(PowerUnit.MegajoulePerHour);
+                case "Megawatt": return UnitKey.ForUnit(PowerUnit.Megawatt);
+                case "MetricHorsepower": return UnitKey.ForUnit(PowerUnit.MetricHorsepower);
+                case "Microwatt": return UnitKey.ForUnit(PowerUnit.Microwatt);
+                case "MillijoulePerHour": return UnitKey.ForUnit(PowerUnit.MillijoulePerHour);
+                case "Milliwatt": return UnitKey.ForUnit(PowerUnit.Milliwatt);
+                case "Nanowatt": return UnitKey.ForUnit(PowerUnit.Nanowatt);
+                case "Petawatt": return UnitKey.ForUnit(PowerUnit.Petawatt);
+                case "Picowatt": return UnitKey.ForUnit(PowerUnit.Picowatt);
+                case "Terawatt": return UnitKey.ForUnit(PowerUnit.Terawatt);
+                case "TonOfRefrigeration": return UnitKey.ForUnit(PowerUnit.TonOfRefrigeration);
+                case "Watt": return UnitKey.ForUnit(PowerUnit.Watt);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

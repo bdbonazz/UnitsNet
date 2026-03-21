@@ -742,6 +742,17 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CubicFootPerPound": return UnitKey.ForUnit(SpecificVolumeUnit.CubicFootPerPound);
+                case "CubicMeterPerKilogram": return UnitKey.ForUnit(SpecificVolumeUnit.CubicMeterPerKilogram);
+                case "MillicubicMeterPerKilogram": return UnitKey.ForUnit(SpecificVolumeUnit.MillicubicMeterPerKilogram);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

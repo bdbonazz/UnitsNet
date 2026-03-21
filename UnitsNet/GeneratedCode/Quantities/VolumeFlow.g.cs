@@ -2059,6 +2059,89 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "AcreFootPerDay": return UnitKey.ForUnit(VolumeFlowUnit.AcreFootPerDay);
+                case "AcreFootPerHour": return UnitKey.ForUnit(VolumeFlowUnit.AcreFootPerHour);
+                case "AcreFootPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.AcreFootPerMinute);
+                case "AcreFootPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.AcreFootPerSecond);
+                case "CentiliterPerDay": return UnitKey.ForUnit(VolumeFlowUnit.CentiliterPerDay);
+                case "CentiliterPerHour": return UnitKey.ForUnit(VolumeFlowUnit.CentiliterPerHour);
+                case "CentiliterPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.CentiliterPerMinute);
+                case "CentiliterPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.CentiliterPerSecond);
+                case "CubicCentimeterPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.CubicCentimeterPerMinute);
+                case "CubicDecimeterPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.CubicDecimeterPerMinute);
+                case "CubicFootPerHour": return UnitKey.ForUnit(VolumeFlowUnit.CubicFootPerHour);
+                case "CubicFootPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.CubicFootPerMinute);
+                case "CubicFootPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.CubicFootPerSecond);
+                case "CubicMeterPerDay": return UnitKey.ForUnit(VolumeFlowUnit.CubicMeterPerDay);
+                case "CubicMeterPerHour": return UnitKey.ForUnit(VolumeFlowUnit.CubicMeterPerHour);
+                case "CubicMeterPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.CubicMeterPerMinute);
+                case "CubicMeterPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.CubicMeterPerSecond);
+                case "CubicMillimeterPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.CubicMillimeterPerSecond);
+                case "CubicYardPerDay": return UnitKey.ForUnit(VolumeFlowUnit.CubicYardPerDay);
+                case "CubicYardPerHour": return UnitKey.ForUnit(VolumeFlowUnit.CubicYardPerHour);
+                case "CubicYardPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.CubicYardPerMinute);
+                case "CubicYardPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.CubicYardPerSecond);
+                case "DecaliterPerDay": return UnitKey.ForUnit(VolumeFlowUnit.DecaliterPerDay);
+                case "DecaliterPerHour": return UnitKey.ForUnit(VolumeFlowUnit.DecaliterPerHour);
+                case "DecaliterPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.DecaliterPerMinute);
+                case "DecaliterPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.DecaliterPerSecond);
+                case "DeciliterPerDay": return UnitKey.ForUnit(VolumeFlowUnit.DeciliterPerDay);
+                case "DeciliterPerHour": return UnitKey.ForUnit(VolumeFlowUnit.DeciliterPerHour);
+                case "DeciliterPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.DeciliterPerMinute);
+                case "DeciliterPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.DeciliterPerSecond);
+                case "HectoliterPerDay": return UnitKey.ForUnit(VolumeFlowUnit.HectoliterPerDay);
+                case "HectoliterPerHour": return UnitKey.ForUnit(VolumeFlowUnit.HectoliterPerHour);
+                case "HectoliterPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.HectoliterPerMinute);
+                case "HectoliterPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.HectoliterPerSecond);
+                case "KiloliterPerDay": return UnitKey.ForUnit(VolumeFlowUnit.KiloliterPerDay);
+                case "KiloliterPerHour": return UnitKey.ForUnit(VolumeFlowUnit.KiloliterPerHour);
+                case "KiloliterPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.KiloliterPerMinute);
+                case "KiloliterPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.KiloliterPerSecond);
+                case "KilousGallonPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.KilousGallonPerMinute);
+                case "LiterPerDay": return UnitKey.ForUnit(VolumeFlowUnit.LiterPerDay);
+                case "LiterPerHour": return UnitKey.ForUnit(VolumeFlowUnit.LiterPerHour);
+                case "LiterPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.LiterPerMinute);
+                case "LiterPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.LiterPerSecond);
+                case "MegaliterPerDay": return UnitKey.ForUnit(VolumeFlowUnit.MegaliterPerDay);
+                case "MegaliterPerHour": return UnitKey.ForUnit(VolumeFlowUnit.MegaliterPerHour);
+                case "MegaliterPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.MegaliterPerMinute);
+                case "MegaliterPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.MegaliterPerSecond);
+                case "MegaukGallonPerDay": return UnitKey.ForUnit(VolumeFlowUnit.MegaukGallonPerDay);
+                case "MegaukGallonPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.MegaukGallonPerSecond);
+                case "MegausGallonPerDay": return UnitKey.ForUnit(VolumeFlowUnit.MegausGallonPerDay);
+                case "MicroliterPerDay": return UnitKey.ForUnit(VolumeFlowUnit.MicroliterPerDay);
+                case "MicroliterPerHour": return UnitKey.ForUnit(VolumeFlowUnit.MicroliterPerHour);
+                case "MicroliterPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.MicroliterPerMinute);
+                case "MicroliterPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.MicroliterPerSecond);
+                case "MilliliterPerDay": return UnitKey.ForUnit(VolumeFlowUnit.MilliliterPerDay);
+                case "MilliliterPerHour": return UnitKey.ForUnit(VolumeFlowUnit.MilliliterPerHour);
+                case "MilliliterPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.MilliliterPerMinute);
+                case "MilliliterPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.MilliliterPerSecond);
+                case "MillionUsGallonPerDay": return UnitKey.ForUnit(VolumeFlowUnit.MillionUsGallonPerDay);
+                case "NanoliterPerDay": return UnitKey.ForUnit(VolumeFlowUnit.NanoliterPerDay);
+                case "NanoliterPerHour": return UnitKey.ForUnit(VolumeFlowUnit.NanoliterPerHour);
+                case "NanoliterPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.NanoliterPerMinute);
+                case "NanoliterPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.NanoliterPerSecond);
+                case "OilBarrelPerDay": return UnitKey.ForUnit(VolumeFlowUnit.OilBarrelPerDay);
+                case "OilBarrelPerHour": return UnitKey.ForUnit(VolumeFlowUnit.OilBarrelPerHour);
+                case "OilBarrelPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.OilBarrelPerMinute);
+                case "OilBarrelPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.OilBarrelPerSecond);
+                case "UkGallonPerDay": return UnitKey.ForUnit(VolumeFlowUnit.UkGallonPerDay);
+                case "UkGallonPerHour": return UnitKey.ForUnit(VolumeFlowUnit.UkGallonPerHour);
+                case "UkGallonPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.UkGallonPerMinute);
+                case "UkGallonPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.UkGallonPerSecond);
+                case "UsGallonPerDay": return UnitKey.ForUnit(VolumeFlowUnit.UsGallonPerDay);
+                case "UsGallonPerHour": return UnitKey.ForUnit(VolumeFlowUnit.UsGallonPerHour);
+                case "UsGallonPerMinute": return UnitKey.ForUnit(VolumeFlowUnit.UsGallonPerMinute);
+                case "UsGallonPerSecond": return UnitKey.ForUnit(VolumeFlowUnit.UsGallonPerSecond);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

@@ -1265,6 +1265,44 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "BtuPerPound": return UnitKey.ForUnit(SpecificEnergyUnit.BtuPerPound);
+                case "CaloriePerGram": return UnitKey.ForUnit(SpecificEnergyUnit.CaloriePerGram);
+                case "GigawattDayPerKilogram": return UnitKey.ForUnit(SpecificEnergyUnit.GigawattDayPerKilogram);
+                case "GigawattDayPerShortTon": return UnitKey.ForUnit(SpecificEnergyUnit.GigawattDayPerShortTon);
+                case "GigawattDayPerTonne": return UnitKey.ForUnit(SpecificEnergyUnit.GigawattDayPerTonne);
+                case "GigawattHourPerKilogram": return UnitKey.ForUnit(SpecificEnergyUnit.GigawattHourPerKilogram);
+                case "GigawattHourPerPound": return UnitKey.ForUnit(SpecificEnergyUnit.GigawattHourPerPound);
+                case "JoulePerKilogram": return UnitKey.ForUnit(SpecificEnergyUnit.JoulePerKilogram);
+                case "KilocaloriePerGram": return UnitKey.ForUnit(SpecificEnergyUnit.KilocaloriePerGram);
+                case "KilojoulePerKilogram": return UnitKey.ForUnit(SpecificEnergyUnit.KilojoulePerKilogram);
+                case "KilowattDayPerKilogram": return UnitKey.ForUnit(SpecificEnergyUnit.KilowattDayPerKilogram);
+                case "KilowattDayPerShortTon": return UnitKey.ForUnit(SpecificEnergyUnit.KilowattDayPerShortTon);
+                case "KilowattDayPerTonne": return UnitKey.ForUnit(SpecificEnergyUnit.KilowattDayPerTonne);
+                case "KilowattHourPerKilogram": return UnitKey.ForUnit(SpecificEnergyUnit.KilowattHourPerKilogram);
+                case "KilowattHourPerPound": return UnitKey.ForUnit(SpecificEnergyUnit.KilowattHourPerPound);
+                case "MegajoulePerKilogram": return UnitKey.ForUnit(SpecificEnergyUnit.MegajoulePerKilogram);
+                case "MegajoulePerTonne": return UnitKey.ForUnit(SpecificEnergyUnit.MegajoulePerTonne);
+                case "MegawattDayPerKilogram": return UnitKey.ForUnit(SpecificEnergyUnit.MegawattDayPerKilogram);
+                case "MegawattDayPerShortTon": return UnitKey.ForUnit(SpecificEnergyUnit.MegawattDayPerShortTon);
+                case "MegawattDayPerTonne": return UnitKey.ForUnit(SpecificEnergyUnit.MegawattDayPerTonne);
+                case "MegawattHourPerKilogram": return UnitKey.ForUnit(SpecificEnergyUnit.MegawattHourPerKilogram);
+                case "MegawattHourPerPound": return UnitKey.ForUnit(SpecificEnergyUnit.MegawattHourPerPound);
+                case "TerawattDayPerKilogram": return UnitKey.ForUnit(SpecificEnergyUnit.TerawattDayPerKilogram);
+                case "TerawattDayPerShortTon": return UnitKey.ForUnit(SpecificEnergyUnit.TerawattDayPerShortTon);
+                case "TerawattDayPerTonne": return UnitKey.ForUnit(SpecificEnergyUnit.TerawattDayPerTonne);
+                case "WattDayPerKilogram": return UnitKey.ForUnit(SpecificEnergyUnit.WattDayPerKilogram);
+                case "WattDayPerShortTon": return UnitKey.ForUnit(SpecificEnergyUnit.WattDayPerShortTon);
+                case "WattDayPerTonne": return UnitKey.ForUnit(SpecificEnergyUnit.WattDayPerTonne);
+                case "WattHourPerKilogram": return UnitKey.ForUnit(SpecificEnergyUnit.WattHourPerKilogram);
+                case "WattHourPerPound": return UnitKey.ForUnit(SpecificEnergyUnit.WattHourPerPound);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

@@ -799,6 +799,21 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Farad": return UnitKey.ForUnit(ElectricCapacitanceUnit.Farad);
+                case "Kilofarad": return UnitKey.ForUnit(ElectricCapacitanceUnit.Kilofarad);
+                case "Megafarad": return UnitKey.ForUnit(ElectricCapacitanceUnit.Megafarad);
+                case "Microfarad": return UnitKey.ForUnit(ElectricCapacitanceUnit.Microfarad);
+                case "Millifarad": return UnitKey.ForUnit(ElectricCapacitanceUnit.Millifarad);
+                case "Nanofarad": return UnitKey.ForUnit(ElectricCapacitanceUnit.Nanofarad);
+                case "Picofarad": return UnitKey.ForUnit(ElectricCapacitanceUnit.Picofarad);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

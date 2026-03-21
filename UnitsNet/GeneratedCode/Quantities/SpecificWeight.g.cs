@@ -1011,6 +1011,31 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "KilogramForcePerCubicCentimeter": return UnitKey.ForUnit(SpecificWeightUnit.KilogramForcePerCubicCentimeter);
+                case "KilogramForcePerCubicMeter": return UnitKey.ForUnit(SpecificWeightUnit.KilogramForcePerCubicMeter);
+                case "KilogramForcePerCubicMillimeter": return UnitKey.ForUnit(SpecificWeightUnit.KilogramForcePerCubicMillimeter);
+                case "KilonewtonPerCubicCentimeter": return UnitKey.ForUnit(SpecificWeightUnit.KilonewtonPerCubicCentimeter);
+                case "KilonewtonPerCubicMeter": return UnitKey.ForUnit(SpecificWeightUnit.KilonewtonPerCubicMeter);
+                case "KilonewtonPerCubicMillimeter": return UnitKey.ForUnit(SpecificWeightUnit.KilonewtonPerCubicMillimeter);
+                case "KilopoundForcePerCubicFoot": return UnitKey.ForUnit(SpecificWeightUnit.KilopoundForcePerCubicFoot);
+                case "KilopoundForcePerCubicInch": return UnitKey.ForUnit(SpecificWeightUnit.KilopoundForcePerCubicInch);
+                case "MeganewtonPerCubicMeter": return UnitKey.ForUnit(SpecificWeightUnit.MeganewtonPerCubicMeter);
+                case "NewtonPerCubicCentimeter": return UnitKey.ForUnit(SpecificWeightUnit.NewtonPerCubicCentimeter);
+                case "NewtonPerCubicMeter": return UnitKey.ForUnit(SpecificWeightUnit.NewtonPerCubicMeter);
+                case "NewtonPerCubicMillimeter": return UnitKey.ForUnit(SpecificWeightUnit.NewtonPerCubicMillimeter);
+                case "PoundForcePerCubicFoot": return UnitKey.ForUnit(SpecificWeightUnit.PoundForcePerCubicFoot);
+                case "PoundForcePerCubicInch": return UnitKey.ForUnit(SpecificWeightUnit.PoundForcePerCubicInch);
+                case "TonneForcePerCubicCentimeter": return UnitKey.ForUnit(SpecificWeightUnit.TonneForcePerCubicCentimeter);
+                case "TonneForcePerCubicMeter": return UnitKey.ForUnit(SpecificWeightUnit.TonneForcePerCubicMeter);
+                case "TonneForcePerCubicMillimeter": return UnitKey.ForUnit(SpecificWeightUnit.TonneForcePerCubicMillimeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

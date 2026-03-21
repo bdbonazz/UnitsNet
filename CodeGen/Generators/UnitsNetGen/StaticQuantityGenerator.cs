@@ -51,6 +51,21 @@ public partial class Quantity
 
             Writer.WL(@"
         }
+
+        internal static UnitKey GetUnitKey(string quantityName, string unitName)
+        {
+            switch(quantityName)
+            {");
+            foreach (Quantity quantity in _quantities)
+            {
+                Writer.WL($@"
+                case ""{quantity.Name}"": return {quantity.Name}.GetUnitKey(unitName);");
+            }
+
+            Writer.WL(@"
+                default: throw new InvalidOperationException($""No Quantity is found with name {quantityName}."");
+            }
+        }
     }
 }");
             return Writer.ToString();

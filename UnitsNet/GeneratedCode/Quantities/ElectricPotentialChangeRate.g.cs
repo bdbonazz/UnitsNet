@@ -1030,6 +1030,34 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "KilovoltPerHour": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.KilovoltPerHour);
+                case "KilovoltPerMicrosecond": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.KilovoltPerMicrosecond);
+                case "KilovoltPerMinute": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.KilovoltPerMinute);
+                case "KilovoltPerSecond": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.KilovoltPerSecond);
+                case "MegavoltPerHour": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.MegavoltPerHour);
+                case "MegavoltPerMicrosecond": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.MegavoltPerMicrosecond);
+                case "MegavoltPerMinute": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.MegavoltPerMinute);
+                case "MegavoltPerSecond": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.MegavoltPerSecond);
+                case "MicrovoltPerHour": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.MicrovoltPerHour);
+                case "MicrovoltPerMicrosecond": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.MicrovoltPerMicrosecond);
+                case "MicrovoltPerMinute": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.MicrovoltPerMinute);
+                case "MicrovoltPerSecond": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.MicrovoltPerSecond);
+                case "MillivoltPerHour": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.MillivoltPerHour);
+                case "MillivoltPerMicrosecond": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.MillivoltPerMicrosecond);
+                case "MillivoltPerMinute": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.MillivoltPerMinute);
+                case "MillivoltPerSecond": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.MillivoltPerSecond);
+                case "VoltPerHour": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.VoltPerHour);
+                case "VoltPerMicrosecond": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.VoltPerMicrosecond);
+                case "VoltPerMinute": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.VoltPerMinute);
+                case "VoltPerSecond": return UnitKey.ForUnit(ElectricPotentialChangeRateUnit.VoltPerSecond);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

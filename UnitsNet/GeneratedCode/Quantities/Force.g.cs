@@ -1028,6 +1028,29 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Decanewton": return UnitKey.ForUnit(ForceUnit.Decanewton);
+                case "Dyn": return UnitKey.ForUnit(ForceUnit.Dyn);
+                case "KilogramForce": return UnitKey.ForUnit(ForceUnit.KilogramForce);
+                case "Kilonewton": return UnitKey.ForUnit(ForceUnit.Kilonewton);
+                case "Kilopond": return UnitKey.ForUnit(ForceUnit.Kilopond);
+                case "KilopoundForce": return UnitKey.ForUnit(ForceUnit.KilopoundForce);
+                case "Meganewton": return UnitKey.ForUnit(ForceUnit.Meganewton);
+                case "Micronewton": return UnitKey.ForUnit(ForceUnit.Micronewton);
+                case "Millinewton": return UnitKey.ForUnit(ForceUnit.Millinewton);
+                case "Newton": return UnitKey.ForUnit(ForceUnit.Newton);
+                case "OunceForce": return UnitKey.ForUnit(ForceUnit.OunceForce);
+                case "Poundal": return UnitKey.ForUnit(ForceUnit.Poundal);
+                case "PoundForce": return UnitKey.ForUnit(ForceUnit.PoundForce);
+                case "ShortTonForce": return UnitKey.ForUnit(ForceUnit.ShortTonForce);
+                case "TonneForce": return UnitKey.ForUnit(ForceUnit.TonneForce);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

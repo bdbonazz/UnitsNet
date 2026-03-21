@@ -961,6 +961,28 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentimeterPerSecondSquared": return UnitKey.ForUnit(AccelerationUnit.CentimeterPerSecondSquared);
+                case "DecimeterPerSecondSquared": return UnitKey.ForUnit(AccelerationUnit.DecimeterPerSecondSquared);
+                case "FootPerSecondSquared": return UnitKey.ForUnit(AccelerationUnit.FootPerSecondSquared);
+                case "InchPerSecondSquared": return UnitKey.ForUnit(AccelerationUnit.InchPerSecondSquared);
+                case "KilometerPerSecondSquared": return UnitKey.ForUnit(AccelerationUnit.KilometerPerSecondSquared);
+                case "KnotPerHour": return UnitKey.ForUnit(AccelerationUnit.KnotPerHour);
+                case "KnotPerMinute": return UnitKey.ForUnit(AccelerationUnit.KnotPerMinute);
+                case "KnotPerSecond": return UnitKey.ForUnit(AccelerationUnit.KnotPerSecond);
+                case "MeterPerSecondSquared": return UnitKey.ForUnit(AccelerationUnit.MeterPerSecondSquared);
+                case "MicrometerPerSecondSquared": return UnitKey.ForUnit(AccelerationUnit.MicrometerPerSecondSquared);
+                case "MillimeterPerSecondSquared": return UnitKey.ForUnit(AccelerationUnit.MillimeterPerSecondSquared);
+                case "MillistandardGravity": return UnitKey.ForUnit(AccelerationUnit.MillistandardGravity);
+                case "NanometerPerSecondSquared": return UnitKey.ForUnit(AccelerationUnit.NanometerPerSecondSquared);
+                case "StandardGravity": return UnitKey.ForUnit(AccelerationUnit.StandardGravity);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

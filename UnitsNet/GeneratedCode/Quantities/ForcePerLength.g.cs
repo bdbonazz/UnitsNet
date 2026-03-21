@@ -1421,6 +1421,52 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentinewtonPerCentimeter": return UnitKey.ForUnit(ForcePerLengthUnit.CentinewtonPerCentimeter);
+                case "CentinewtonPerMeter": return UnitKey.ForUnit(ForcePerLengthUnit.CentinewtonPerMeter);
+                case "CentinewtonPerMillimeter": return UnitKey.ForUnit(ForcePerLengthUnit.CentinewtonPerMillimeter);
+                case "DecanewtonPerCentimeter": return UnitKey.ForUnit(ForcePerLengthUnit.DecanewtonPerCentimeter);
+                case "DecanewtonPerMeter": return UnitKey.ForUnit(ForcePerLengthUnit.DecanewtonPerMeter);
+                case "DecanewtonPerMillimeter": return UnitKey.ForUnit(ForcePerLengthUnit.DecanewtonPerMillimeter);
+                case "DecinewtonPerCentimeter": return UnitKey.ForUnit(ForcePerLengthUnit.DecinewtonPerCentimeter);
+                case "DecinewtonPerMeter": return UnitKey.ForUnit(ForcePerLengthUnit.DecinewtonPerMeter);
+                case "DecinewtonPerMillimeter": return UnitKey.ForUnit(ForcePerLengthUnit.DecinewtonPerMillimeter);
+                case "KilogramForcePerCentimeter": return UnitKey.ForUnit(ForcePerLengthUnit.KilogramForcePerCentimeter);
+                case "KilogramForcePerMeter": return UnitKey.ForUnit(ForcePerLengthUnit.KilogramForcePerMeter);
+                case "KilogramForcePerMillimeter": return UnitKey.ForUnit(ForcePerLengthUnit.KilogramForcePerMillimeter);
+                case "KilonewtonPerCentimeter": return UnitKey.ForUnit(ForcePerLengthUnit.KilonewtonPerCentimeter);
+                case "KilonewtonPerMeter": return UnitKey.ForUnit(ForcePerLengthUnit.KilonewtonPerMeter);
+                case "KilonewtonPerMillimeter": return UnitKey.ForUnit(ForcePerLengthUnit.KilonewtonPerMillimeter);
+                case "KilopoundForcePerFoot": return UnitKey.ForUnit(ForcePerLengthUnit.KilopoundForcePerFoot);
+                case "KilopoundForcePerInch": return UnitKey.ForUnit(ForcePerLengthUnit.KilopoundForcePerInch);
+                case "MeganewtonPerCentimeter": return UnitKey.ForUnit(ForcePerLengthUnit.MeganewtonPerCentimeter);
+                case "MeganewtonPerMeter": return UnitKey.ForUnit(ForcePerLengthUnit.MeganewtonPerMeter);
+                case "MeganewtonPerMillimeter": return UnitKey.ForUnit(ForcePerLengthUnit.MeganewtonPerMillimeter);
+                case "MicronewtonPerCentimeter": return UnitKey.ForUnit(ForcePerLengthUnit.MicronewtonPerCentimeter);
+                case "MicronewtonPerMeter": return UnitKey.ForUnit(ForcePerLengthUnit.MicronewtonPerMeter);
+                case "MicronewtonPerMillimeter": return UnitKey.ForUnit(ForcePerLengthUnit.MicronewtonPerMillimeter);
+                case "MillinewtonPerCentimeter": return UnitKey.ForUnit(ForcePerLengthUnit.MillinewtonPerCentimeter);
+                case "MillinewtonPerMeter": return UnitKey.ForUnit(ForcePerLengthUnit.MillinewtonPerMeter);
+                case "MillinewtonPerMillimeter": return UnitKey.ForUnit(ForcePerLengthUnit.MillinewtonPerMillimeter);
+                case "NanonewtonPerCentimeter": return UnitKey.ForUnit(ForcePerLengthUnit.NanonewtonPerCentimeter);
+                case "NanonewtonPerMeter": return UnitKey.ForUnit(ForcePerLengthUnit.NanonewtonPerMeter);
+                case "NanonewtonPerMillimeter": return UnitKey.ForUnit(ForcePerLengthUnit.NanonewtonPerMillimeter);
+                case "NewtonPerCentimeter": return UnitKey.ForUnit(ForcePerLengthUnit.NewtonPerCentimeter);
+                case "NewtonPerMeter": return UnitKey.ForUnit(ForcePerLengthUnit.NewtonPerMeter);
+                case "NewtonPerMillimeter": return UnitKey.ForUnit(ForcePerLengthUnit.NewtonPerMillimeter);
+                case "PoundForcePerFoot": return UnitKey.ForUnit(ForcePerLengthUnit.PoundForcePerFoot);
+                case "PoundForcePerInch": return UnitKey.ForUnit(ForcePerLengthUnit.PoundForcePerInch);
+                case "PoundForcePerYard": return UnitKey.ForUnit(ForcePerLengthUnit.PoundForcePerYard);
+                case "TonneForcePerCentimeter": return UnitKey.ForUnit(ForcePerLengthUnit.TonneForcePerCentimeter);
+                case "TonneForcePerMeter": return UnitKey.ForUnit(ForcePerLengthUnit.TonneForcePerMeter);
+                case "TonneForcePerMillimeter": return UnitKey.ForUnit(ForcePerLengthUnit.TonneForcePerMillimeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

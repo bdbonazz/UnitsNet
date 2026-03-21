@@ -1192,6 +1192,43 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Becquerel": return UnitKey.ForUnit(RadioactivityUnit.Becquerel);
+                case "Curie": return UnitKey.ForUnit(RadioactivityUnit.Curie);
+                case "Exabecquerel": return UnitKey.ForUnit(RadioactivityUnit.Exabecquerel);
+                case "Gigabecquerel": return UnitKey.ForUnit(RadioactivityUnit.Gigabecquerel);
+                case "Gigacurie": return UnitKey.ForUnit(RadioactivityUnit.Gigacurie);
+                case "Gigarutherford": return UnitKey.ForUnit(RadioactivityUnit.Gigarutherford);
+                case "Kilobecquerel": return UnitKey.ForUnit(RadioactivityUnit.Kilobecquerel);
+                case "Kilocurie": return UnitKey.ForUnit(RadioactivityUnit.Kilocurie);
+                case "Kilorutherford": return UnitKey.ForUnit(RadioactivityUnit.Kilorutherford);
+                case "Megabecquerel": return UnitKey.ForUnit(RadioactivityUnit.Megabecquerel);
+                case "Megacurie": return UnitKey.ForUnit(RadioactivityUnit.Megacurie);
+                case "Megarutherford": return UnitKey.ForUnit(RadioactivityUnit.Megarutherford);
+                case "Microbecquerel": return UnitKey.ForUnit(RadioactivityUnit.Microbecquerel);
+                case "Microcurie": return UnitKey.ForUnit(RadioactivityUnit.Microcurie);
+                case "Microrutherford": return UnitKey.ForUnit(RadioactivityUnit.Microrutherford);
+                case "Millibecquerel": return UnitKey.ForUnit(RadioactivityUnit.Millibecquerel);
+                case "Millicurie": return UnitKey.ForUnit(RadioactivityUnit.Millicurie);
+                case "Millirutherford": return UnitKey.ForUnit(RadioactivityUnit.Millirutherford);
+                case "Nanobecquerel": return UnitKey.ForUnit(RadioactivityUnit.Nanobecquerel);
+                case "Nanocurie": return UnitKey.ForUnit(RadioactivityUnit.Nanocurie);
+                case "Nanorutherford": return UnitKey.ForUnit(RadioactivityUnit.Nanorutherford);
+                case "Petabecquerel": return UnitKey.ForUnit(RadioactivityUnit.Petabecquerel);
+                case "Picobecquerel": return UnitKey.ForUnit(RadioactivityUnit.Picobecquerel);
+                case "Picocurie": return UnitKey.ForUnit(RadioactivityUnit.Picocurie);
+                case "Picorutherford": return UnitKey.ForUnit(RadioactivityUnit.Picorutherford);
+                case "Rutherford": return UnitKey.ForUnit(RadioactivityUnit.Rutherford);
+                case "Terabecquerel": return UnitKey.ForUnit(RadioactivityUnit.Terabecquerel);
+                case "Teracurie": return UnitKey.ForUnit(RadioactivityUnit.Teracurie);
+                case "Terarutherford": return UnitKey.ForUnit(RadioactivityUnit.Terarutherford);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

@@ -1127,6 +1127,21 @@ namespace UnitsNet
             converted = convertedOrNull.Value;
             return true;
         }}
+
+        internal static UnitKey GetUnitKey(string unitName)
+        {{
+            switch(unitName)
+            {{");
+            foreach (Unit unit in _quantity.Units)
+            {
+                Writer.WL($@"
+                case ""{unit.SingularName}"": return UnitKey.ForUnit({_unitEnumName}.{unit.SingularName});");
+            }
+
+            Writer.WL($@"
+                default: throw new InvalidOperationException($""No Unit is found with name {{unitName}}."");
+            }}
+        }}
 ");
             Writer.WL($@"
         #region Explicit implementations

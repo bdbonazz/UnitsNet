@@ -796,6 +796,21 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "InverseAtmosphere": return UnitKey.ForUnit(CompressibilityUnit.InverseAtmosphere);
+                case "InverseBar": return UnitKey.ForUnit(CompressibilityUnit.InverseBar);
+                case "InverseKilopascal": return UnitKey.ForUnit(CompressibilityUnit.InverseKilopascal);
+                case "InverseMegapascal": return UnitKey.ForUnit(CompressibilityUnit.InverseMegapascal);
+                case "InverseMillibar": return UnitKey.ForUnit(CompressibilityUnit.InverseMillibar);
+                case "InversePascal": return UnitKey.ForUnit(CompressibilityUnit.InversePascal);
+                case "InversePoundForcePerSquareInch": return UnitKey.ForUnit(CompressibilityUnit.InversePoundForcePerSquareInch);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

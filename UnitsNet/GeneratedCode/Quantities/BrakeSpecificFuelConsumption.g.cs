@@ -748,6 +748,17 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "GramPerKiloWattHour": return UnitKey.ForUnit(BrakeSpecificFuelConsumptionUnit.GramPerKiloWattHour);
+                case "KilogramPerJoule": return UnitKey.ForUnit(BrakeSpecificFuelConsumptionUnit.KilogramPerJoule);
+                case "PoundPerMechanicalHorsepowerHour": return UnitKey.ForUnit(BrakeSpecificFuelConsumptionUnit.PoundPerMechanicalHorsepowerHour);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

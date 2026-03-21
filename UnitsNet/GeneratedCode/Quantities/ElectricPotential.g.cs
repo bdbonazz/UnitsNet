@@ -813,6 +813,20 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Kilovolt": return UnitKey.ForUnit(ElectricPotentialUnit.Kilovolt);
+                case "Megavolt": return UnitKey.ForUnit(ElectricPotentialUnit.Megavolt);
+                case "Microvolt": return UnitKey.ForUnit(ElectricPotentialUnit.Microvolt);
+                case "Millivolt": return UnitKey.ForUnit(ElectricPotentialUnit.Millivolt);
+                case "Nanovolt": return UnitKey.ForUnit(ElectricPotentialUnit.Nanovolt);
+                case "Volt": return UnitKey.ForUnit(ElectricPotentialUnit.Volt);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

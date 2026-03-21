@@ -706,6 +706,16 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "DegreeCelsiusPerWatt": return UnitKey.ForUnit(ThermalResistanceUnit.DegreeCelsiusPerWatt);
+                case "KelvinPerWatt": return UnitKey.ForUnit(ThermalResistanceUnit.KelvinPerWatt);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

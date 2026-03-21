@@ -1013,6 +1013,27 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Day": return UnitKey.ForUnit(DurationUnit.Day);
+                case "Hour": return UnitKey.ForUnit(DurationUnit.Hour);
+                case "JulianYear": return UnitKey.ForUnit(DurationUnit.JulianYear);
+                case "Microsecond": return UnitKey.ForUnit(DurationUnit.Microsecond);
+                case "Millisecond": return UnitKey.ForUnit(DurationUnit.Millisecond);
+                case "Minute": return UnitKey.ForUnit(DurationUnit.Minute);
+                case "Month30": return UnitKey.ForUnit(DurationUnit.Month30);
+                case "Nanosecond": return UnitKey.ForUnit(DurationUnit.Nanosecond);
+                case "Picosecond": return UnitKey.ForUnit(DurationUnit.Picosecond);
+                case "Second": return UnitKey.ForUnit(DurationUnit.Second);
+                case "Sol": return UnitKey.ForUnit(DurationUnit.Sol);
+                case "Week": return UnitKey.ForUnit(DurationUnit.Week);
+                case "Year365": return UnitKey.ForUnit(DurationUnit.Year365);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

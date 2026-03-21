@@ -904,6 +904,27 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentinewtonSecond": return UnitKey.ForUnit(ImpulseUnit.CentinewtonSecond);
+                case "DecanewtonSecond": return UnitKey.ForUnit(ImpulseUnit.DecanewtonSecond);
+                case "DecinewtonSecond": return UnitKey.ForUnit(ImpulseUnit.DecinewtonSecond);
+                case "KilogramMeterPerSecond": return UnitKey.ForUnit(ImpulseUnit.KilogramMeterPerSecond);
+                case "KilonewtonSecond": return UnitKey.ForUnit(ImpulseUnit.KilonewtonSecond);
+                case "MeganewtonSecond": return UnitKey.ForUnit(ImpulseUnit.MeganewtonSecond);
+                case "MicronewtonSecond": return UnitKey.ForUnit(ImpulseUnit.MicronewtonSecond);
+                case "MillinewtonSecond": return UnitKey.ForUnit(ImpulseUnit.MillinewtonSecond);
+                case "NanonewtonSecond": return UnitKey.ForUnit(ImpulseUnit.NanonewtonSecond);
+                case "NewtonSecond": return UnitKey.ForUnit(ImpulseUnit.NewtonSecond);
+                case "PoundFootPerSecond": return UnitKey.ForUnit(ImpulseUnit.PoundFootPerSecond);
+                case "PoundForceSecond": return UnitKey.ForUnit(ImpulseUnit.PoundForceSecond);
+                case "SlugFootPerSecond": return UnitKey.ForUnit(ImpulseUnit.SlugFootPerSecond);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

@@ -1563,6 +1563,56 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Angstrom": return UnitKey.ForUnit(LengthUnit.Angstrom);
+                case "AstronomicalUnit": return UnitKey.ForUnit(LengthUnit.AstronomicalUnit);
+                case "Centimeter": return UnitKey.ForUnit(LengthUnit.Centimeter);
+                case "Chain": return UnitKey.ForUnit(LengthUnit.Chain);
+                case "DataMile": return UnitKey.ForUnit(LengthUnit.DataMile);
+                case "Decameter": return UnitKey.ForUnit(LengthUnit.Decameter);
+                case "Decimeter": return UnitKey.ForUnit(LengthUnit.Decimeter);
+                case "DtpPica": return UnitKey.ForUnit(LengthUnit.DtpPica);
+                case "DtpPoint": return UnitKey.ForUnit(LengthUnit.DtpPoint);
+                case "Fathom": return UnitKey.ForUnit(LengthUnit.Fathom);
+                case "Femtometer": return UnitKey.ForUnit(LengthUnit.Femtometer);
+                case "Foot": return UnitKey.ForUnit(LengthUnit.Foot);
+                case "Gigameter": return UnitKey.ForUnit(LengthUnit.Gigameter);
+                case "Hand": return UnitKey.ForUnit(LengthUnit.Hand);
+                case "Hectometer": return UnitKey.ForUnit(LengthUnit.Hectometer);
+                case "Inch": return UnitKey.ForUnit(LengthUnit.Inch);
+                case "Kilofoot": return UnitKey.ForUnit(LengthUnit.Kilofoot);
+                case "KilolightYear": return UnitKey.ForUnit(LengthUnit.KilolightYear);
+                case "Kilometer": return UnitKey.ForUnit(LengthUnit.Kilometer);
+                case "Kiloparsec": return UnitKey.ForUnit(LengthUnit.Kiloparsec);
+                case "Kiloyard": return UnitKey.ForUnit(LengthUnit.Kiloyard);
+                case "LightYear": return UnitKey.ForUnit(LengthUnit.LightYear);
+                case "MegalightYear": return UnitKey.ForUnit(LengthUnit.MegalightYear);
+                case "Megameter": return UnitKey.ForUnit(LengthUnit.Megameter);
+                case "Megaparsec": return UnitKey.ForUnit(LengthUnit.Megaparsec);
+                case "Meter": return UnitKey.ForUnit(LengthUnit.Meter);
+                case "Microinch": return UnitKey.ForUnit(LengthUnit.Microinch);
+                case "Micrometer": return UnitKey.ForUnit(LengthUnit.Micrometer);
+                case "Mil": return UnitKey.ForUnit(LengthUnit.Mil);
+                case "Mile": return UnitKey.ForUnit(LengthUnit.Mile);
+                case "Millimeter": return UnitKey.ForUnit(LengthUnit.Millimeter);
+                case "Nanometer": return UnitKey.ForUnit(LengthUnit.Nanometer);
+                case "NauticalMile": return UnitKey.ForUnit(LengthUnit.NauticalMile);
+                case "Parsec": return UnitKey.ForUnit(LengthUnit.Parsec);
+                case "Picometer": return UnitKey.ForUnit(LengthUnit.Picometer);
+                case "PrinterPica": return UnitKey.ForUnit(LengthUnit.PrinterPica);
+                case "PrinterPoint": return UnitKey.ForUnit(LengthUnit.PrinterPoint);
+                case "Shackle": return UnitKey.ForUnit(LengthUnit.Shackle);
+                case "SolarRadius": return UnitKey.ForUnit(LengthUnit.SolarRadius);
+                case "Twip": return UnitKey.ForUnit(LengthUnit.Twip);
+                case "UsSurveyFoot": return UnitKey.ForUnit(LengthUnit.UsSurveyFoot);
+                case "Yard": return UnitKey.ForUnit(LengthUnit.Yard);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

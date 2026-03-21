@@ -1462,6 +1462,58 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "DecawattPerCubicFoot": return UnitKey.ForUnit(PowerDensityUnit.DecawattPerCubicFoot);
+                case "DecawattPerCubicInch": return UnitKey.ForUnit(PowerDensityUnit.DecawattPerCubicInch);
+                case "DecawattPerCubicMeter": return UnitKey.ForUnit(PowerDensityUnit.DecawattPerCubicMeter);
+                case "DecawattPerLiter": return UnitKey.ForUnit(PowerDensityUnit.DecawattPerLiter);
+                case "DeciwattPerCubicFoot": return UnitKey.ForUnit(PowerDensityUnit.DeciwattPerCubicFoot);
+                case "DeciwattPerCubicInch": return UnitKey.ForUnit(PowerDensityUnit.DeciwattPerCubicInch);
+                case "DeciwattPerCubicMeter": return UnitKey.ForUnit(PowerDensityUnit.DeciwattPerCubicMeter);
+                case "DeciwattPerLiter": return UnitKey.ForUnit(PowerDensityUnit.DeciwattPerLiter);
+                case "GigawattPerCubicFoot": return UnitKey.ForUnit(PowerDensityUnit.GigawattPerCubicFoot);
+                case "GigawattPerCubicInch": return UnitKey.ForUnit(PowerDensityUnit.GigawattPerCubicInch);
+                case "GigawattPerCubicMeter": return UnitKey.ForUnit(PowerDensityUnit.GigawattPerCubicMeter);
+                case "GigawattPerLiter": return UnitKey.ForUnit(PowerDensityUnit.GigawattPerLiter);
+                case "KilowattPerCubicFoot": return UnitKey.ForUnit(PowerDensityUnit.KilowattPerCubicFoot);
+                case "KilowattPerCubicInch": return UnitKey.ForUnit(PowerDensityUnit.KilowattPerCubicInch);
+                case "KilowattPerCubicMeter": return UnitKey.ForUnit(PowerDensityUnit.KilowattPerCubicMeter);
+                case "KilowattPerLiter": return UnitKey.ForUnit(PowerDensityUnit.KilowattPerLiter);
+                case "MegawattPerCubicFoot": return UnitKey.ForUnit(PowerDensityUnit.MegawattPerCubicFoot);
+                case "MegawattPerCubicInch": return UnitKey.ForUnit(PowerDensityUnit.MegawattPerCubicInch);
+                case "MegawattPerCubicMeter": return UnitKey.ForUnit(PowerDensityUnit.MegawattPerCubicMeter);
+                case "MegawattPerLiter": return UnitKey.ForUnit(PowerDensityUnit.MegawattPerLiter);
+                case "MicrowattPerCubicFoot": return UnitKey.ForUnit(PowerDensityUnit.MicrowattPerCubicFoot);
+                case "MicrowattPerCubicInch": return UnitKey.ForUnit(PowerDensityUnit.MicrowattPerCubicInch);
+                case "MicrowattPerCubicMeter": return UnitKey.ForUnit(PowerDensityUnit.MicrowattPerCubicMeter);
+                case "MicrowattPerLiter": return UnitKey.ForUnit(PowerDensityUnit.MicrowattPerLiter);
+                case "MilliwattPerCubicFoot": return UnitKey.ForUnit(PowerDensityUnit.MilliwattPerCubicFoot);
+                case "MilliwattPerCubicInch": return UnitKey.ForUnit(PowerDensityUnit.MilliwattPerCubicInch);
+                case "MilliwattPerCubicMeter": return UnitKey.ForUnit(PowerDensityUnit.MilliwattPerCubicMeter);
+                case "MilliwattPerLiter": return UnitKey.ForUnit(PowerDensityUnit.MilliwattPerLiter);
+                case "NanowattPerCubicFoot": return UnitKey.ForUnit(PowerDensityUnit.NanowattPerCubicFoot);
+                case "NanowattPerCubicInch": return UnitKey.ForUnit(PowerDensityUnit.NanowattPerCubicInch);
+                case "NanowattPerCubicMeter": return UnitKey.ForUnit(PowerDensityUnit.NanowattPerCubicMeter);
+                case "NanowattPerLiter": return UnitKey.ForUnit(PowerDensityUnit.NanowattPerLiter);
+                case "PicowattPerCubicFoot": return UnitKey.ForUnit(PowerDensityUnit.PicowattPerCubicFoot);
+                case "PicowattPerCubicInch": return UnitKey.ForUnit(PowerDensityUnit.PicowattPerCubicInch);
+                case "PicowattPerCubicMeter": return UnitKey.ForUnit(PowerDensityUnit.PicowattPerCubicMeter);
+                case "PicowattPerLiter": return UnitKey.ForUnit(PowerDensityUnit.PicowattPerLiter);
+                case "TerawattPerCubicFoot": return UnitKey.ForUnit(PowerDensityUnit.TerawattPerCubicFoot);
+                case "TerawattPerCubicInch": return UnitKey.ForUnit(PowerDensityUnit.TerawattPerCubicInch);
+                case "TerawattPerCubicMeter": return UnitKey.ForUnit(PowerDensityUnit.TerawattPerCubicMeter);
+                case "TerawattPerLiter": return UnitKey.ForUnit(PowerDensityUnit.TerawattPerLiter);
+                case "WattPerCubicFoot": return UnitKey.ForUnit(PowerDensityUnit.WattPerCubicFoot);
+                case "WattPerCubicInch": return UnitKey.ForUnit(PowerDensityUnit.WattPerCubicInch);
+                case "WattPerCubicMeter": return UnitKey.ForUnit(PowerDensityUnit.WattPerCubicMeter);
+                case "WattPerLiter": return UnitKey.ForUnit(PowerDensityUnit.WattPerLiter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

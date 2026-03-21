@@ -742,6 +742,18 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "DegreePerSecondSquared": return UnitKey.ForUnit(RotationalAccelerationUnit.DegreePerSecondSquared);
+                case "RadianPerSecondSquared": return UnitKey.ForUnit(RotationalAccelerationUnit.RadianPerSecondSquared);
+                case "RevolutionPerMinutePerSecond": return UnitKey.ForUnit(RotationalAccelerationUnit.RevolutionPerMinutePerSecond);
+                case "RevolutionPerSecondSquared": return UnitKey.ForUnit(RotationalAccelerationUnit.RevolutionPerSecondSquared);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

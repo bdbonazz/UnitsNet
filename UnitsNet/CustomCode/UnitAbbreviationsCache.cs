@@ -270,6 +270,26 @@ namespace UnitsNet
             return GetDefaultAbbreviation(UnitKey.Create(unitType, unitValue), formatProvider);
         }
 
+        /// <summary>
+        ///     Gets the default abbreviation for a given quantity name and unit name.
+        /// </summary>
+        /// <param name="quantityName">The name of the Quantity.</param>
+        /// <param name="unitName">The name of the Unit.</param>
+        /// <param name="formatProvider">The format provider to use for lookup. Defaults to <see cref="CultureInfo.CurrentCulture" /> if null.</param>
+        /// <exception cref="ArgumentNullException">
+        ///     Thrown when the provided type is null.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        ///     Thrown when the provided type is not an enumeration type.
+        /// </exception>
+        /// <exception cref="InvalidOperationException">
+        ///     Thrown when no abbreviations are mapped for the specified unit.
+        /// </exception>
+        public string GetDefaultAbbreviation(string quantityName, string unitName, IFormatProvider? formatProvider = null)
+        {
+            return GetDefaultAbbreviation(Quantity.DefaultProvider.GetUnitKey(quantityName, unitName), formatProvider);
+        }
+
         /// <inheritdoc cref="GetDefaultAbbreviation{TUnitType}" />
         /// <param name="unitKey">The key representing the unit type and value.</param>
         /// <param name="formatProvider">The format provider to use for lookup. Defaults to <see cref="CultureInfo.CurrentCulture" /> if null.</param>

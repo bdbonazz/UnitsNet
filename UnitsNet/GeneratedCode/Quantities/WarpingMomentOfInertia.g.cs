@@ -778,6 +778,20 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentimeterToTheSixth": return UnitKey.ForUnit(WarpingMomentOfInertiaUnit.CentimeterToTheSixth);
+                case "DecimeterToTheSixth": return UnitKey.ForUnit(WarpingMomentOfInertiaUnit.DecimeterToTheSixth);
+                case "FootToTheSixth": return UnitKey.ForUnit(WarpingMomentOfInertiaUnit.FootToTheSixth);
+                case "InchToTheSixth": return UnitKey.ForUnit(WarpingMomentOfInertiaUnit.InchToTheSixth);
+                case "MeterToTheSixth": return UnitKey.ForUnit(WarpingMomentOfInertiaUnit.MeterToTheSixth);
+                case "MillimeterToTheSixth": return UnitKey.ForUnit(WarpingMomentOfInertiaUnit.MillimeterToTheSixth);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

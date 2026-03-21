@@ -781,6 +781,20 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Gigavoltampere": return UnitKey.ForUnit(ElectricApparentPowerUnit.Gigavoltampere);
+                case "Kilovoltampere": return UnitKey.ForUnit(ElectricApparentPowerUnit.Kilovoltampere);
+                case "Megavoltampere": return UnitKey.ForUnit(ElectricApparentPowerUnit.Megavoltampere);
+                case "Microvoltampere": return UnitKey.ForUnit(ElectricApparentPowerUnit.Microvoltampere);
+                case "Millivoltampere": return UnitKey.ForUnit(ElectricApparentPowerUnit.Millivoltampere);
+                case "Voltampere": return UnitKey.ForUnit(ElectricApparentPowerUnit.Voltampere);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

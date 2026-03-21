@@ -1123,6 +1123,39 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "GigawattPerCentimeter": return UnitKey.ForUnit(LinearPowerDensityUnit.GigawattPerCentimeter);
+                case "GigawattPerFoot": return UnitKey.ForUnit(LinearPowerDensityUnit.GigawattPerFoot);
+                case "GigawattPerInch": return UnitKey.ForUnit(LinearPowerDensityUnit.GigawattPerInch);
+                case "GigawattPerMeter": return UnitKey.ForUnit(LinearPowerDensityUnit.GigawattPerMeter);
+                case "GigawattPerMillimeter": return UnitKey.ForUnit(LinearPowerDensityUnit.GigawattPerMillimeter);
+                case "KilowattPerCentimeter": return UnitKey.ForUnit(LinearPowerDensityUnit.KilowattPerCentimeter);
+                case "KilowattPerFoot": return UnitKey.ForUnit(LinearPowerDensityUnit.KilowattPerFoot);
+                case "KilowattPerInch": return UnitKey.ForUnit(LinearPowerDensityUnit.KilowattPerInch);
+                case "KilowattPerMeter": return UnitKey.ForUnit(LinearPowerDensityUnit.KilowattPerMeter);
+                case "KilowattPerMillimeter": return UnitKey.ForUnit(LinearPowerDensityUnit.KilowattPerMillimeter);
+                case "MegawattPerCentimeter": return UnitKey.ForUnit(LinearPowerDensityUnit.MegawattPerCentimeter);
+                case "MegawattPerFoot": return UnitKey.ForUnit(LinearPowerDensityUnit.MegawattPerFoot);
+                case "MegawattPerInch": return UnitKey.ForUnit(LinearPowerDensityUnit.MegawattPerInch);
+                case "MegawattPerMeter": return UnitKey.ForUnit(LinearPowerDensityUnit.MegawattPerMeter);
+                case "MegawattPerMillimeter": return UnitKey.ForUnit(LinearPowerDensityUnit.MegawattPerMillimeter);
+                case "MilliwattPerCentimeter": return UnitKey.ForUnit(LinearPowerDensityUnit.MilliwattPerCentimeter);
+                case "MilliwattPerFoot": return UnitKey.ForUnit(LinearPowerDensityUnit.MilliwattPerFoot);
+                case "MilliwattPerInch": return UnitKey.ForUnit(LinearPowerDensityUnit.MilliwattPerInch);
+                case "MilliwattPerMeter": return UnitKey.ForUnit(LinearPowerDensityUnit.MilliwattPerMeter);
+                case "MilliwattPerMillimeter": return UnitKey.ForUnit(LinearPowerDensityUnit.MilliwattPerMillimeter);
+                case "WattPerCentimeter": return UnitKey.ForUnit(LinearPowerDensityUnit.WattPerCentimeter);
+                case "WattPerFoot": return UnitKey.ForUnit(LinearPowerDensityUnit.WattPerFoot);
+                case "WattPerInch": return UnitKey.ForUnit(LinearPowerDensityUnit.WattPerInch);
+                case "WattPerMeter": return UnitKey.ForUnit(LinearPowerDensityUnit.WattPerMeter);
+                case "WattPerMillimeter": return UnitKey.ForUnit(LinearPowerDensityUnit.WattPerMillimeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

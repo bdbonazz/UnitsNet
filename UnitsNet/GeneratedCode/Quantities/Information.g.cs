@@ -1358,6 +1358,53 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Bit": return UnitKey.ForUnit(InformationUnit.Bit);
+                case "Byte": return UnitKey.ForUnit(InformationUnit.Byte);
+                case "Exabit": return UnitKey.ForUnit(InformationUnit.Exabit);
+                case "Exabyte": return UnitKey.ForUnit(InformationUnit.Exabyte);
+                case "Exaoctet": return UnitKey.ForUnit(InformationUnit.Exaoctet);
+                case "Exbibit": return UnitKey.ForUnit(InformationUnit.Exbibit);
+                case "Exbibyte": return UnitKey.ForUnit(InformationUnit.Exbibyte);
+                case "Exbioctet": return UnitKey.ForUnit(InformationUnit.Exbioctet);
+                case "Gibibit": return UnitKey.ForUnit(InformationUnit.Gibibit);
+                case "Gibibyte": return UnitKey.ForUnit(InformationUnit.Gibibyte);
+                case "Gibioctet": return UnitKey.ForUnit(InformationUnit.Gibioctet);
+                case "Gigabit": return UnitKey.ForUnit(InformationUnit.Gigabit);
+                case "Gigabyte": return UnitKey.ForUnit(InformationUnit.Gigabyte);
+                case "Gigaoctet": return UnitKey.ForUnit(InformationUnit.Gigaoctet);
+                case "Kibibit": return UnitKey.ForUnit(InformationUnit.Kibibit);
+                case "Kibibyte": return UnitKey.ForUnit(InformationUnit.Kibibyte);
+                case "Kibioctet": return UnitKey.ForUnit(InformationUnit.Kibioctet);
+                case "Kilobit": return UnitKey.ForUnit(InformationUnit.Kilobit);
+                case "Kilobyte": return UnitKey.ForUnit(InformationUnit.Kilobyte);
+                case "Kilooctet": return UnitKey.ForUnit(InformationUnit.Kilooctet);
+                case "Mebibit": return UnitKey.ForUnit(InformationUnit.Mebibit);
+                case "Mebibyte": return UnitKey.ForUnit(InformationUnit.Mebibyte);
+                case "Mebioctet": return UnitKey.ForUnit(InformationUnit.Mebioctet);
+                case "Megabit": return UnitKey.ForUnit(InformationUnit.Megabit);
+                case "Megabyte": return UnitKey.ForUnit(InformationUnit.Megabyte);
+                case "Megaoctet": return UnitKey.ForUnit(InformationUnit.Megaoctet);
+                case "Octet": return UnitKey.ForUnit(InformationUnit.Octet);
+                case "Pebibit": return UnitKey.ForUnit(InformationUnit.Pebibit);
+                case "Pebibyte": return UnitKey.ForUnit(InformationUnit.Pebibyte);
+                case "Pebioctet": return UnitKey.ForUnit(InformationUnit.Pebioctet);
+                case "Petabit": return UnitKey.ForUnit(InformationUnit.Petabit);
+                case "Petabyte": return UnitKey.ForUnit(InformationUnit.Petabyte);
+                case "Petaoctet": return UnitKey.ForUnit(InformationUnit.Petaoctet);
+                case "Tebibit": return UnitKey.ForUnit(InformationUnit.Tebibit);
+                case "Tebibyte": return UnitKey.ForUnit(InformationUnit.Tebibyte);
+                case "Tebioctet": return UnitKey.ForUnit(InformationUnit.Tebioctet);
+                case "Terabit": return UnitKey.ForUnit(InformationUnit.Terabit);
+                case "Terabyte": return UnitKey.ForUnit(InformationUnit.Terabyte);
+                case "Teraoctet": return UnitKey.ForUnit(InformationUnit.Teraoctet);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

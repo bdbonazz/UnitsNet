@@ -821,6 +821,21 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CaloriePerKelvin": return UnitKey.ForUnit(EntropyUnit.CaloriePerKelvin);
+                case "JoulePerDegreeCelsius": return UnitKey.ForUnit(EntropyUnit.JoulePerDegreeCelsius);
+                case "JoulePerKelvin": return UnitKey.ForUnit(EntropyUnit.JoulePerKelvin);
+                case "KilocaloriePerKelvin": return UnitKey.ForUnit(EntropyUnit.KilocaloriePerKelvin);
+                case "KilojoulePerDegreeCelsius": return UnitKey.ForUnit(EntropyUnit.KilojoulePerDegreeCelsius);
+                case "KilojoulePerKelvin": return UnitKey.ForUnit(EntropyUnit.KilojoulePerKelvin);
+                case "MegajoulePerKelvin": return UnitKey.ForUnit(EntropyUnit.MegajoulePerKelvin);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

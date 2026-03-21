@@ -913,6 +913,24 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "InverseCentimeter": return UnitKey.ForUnit(ReciprocalLengthUnit.InverseCentimeter);
+                case "InverseFoot": return UnitKey.ForUnit(ReciprocalLengthUnit.InverseFoot);
+                case "InverseInch": return UnitKey.ForUnit(ReciprocalLengthUnit.InverseInch);
+                case "InverseMeter": return UnitKey.ForUnit(ReciprocalLengthUnit.InverseMeter);
+                case "InverseMicroinch": return UnitKey.ForUnit(ReciprocalLengthUnit.InverseMicroinch);
+                case "InverseMil": return UnitKey.ForUnit(ReciprocalLengthUnit.InverseMil);
+                case "InverseMile": return UnitKey.ForUnit(ReciprocalLengthUnit.InverseMile);
+                case "InverseMillimeter": return UnitKey.ForUnit(ReciprocalLengthUnit.InverseMillimeter);
+                case "InverseUsSurveyFoot": return UnitKey.ForUnit(ReciprocalLengthUnit.InverseUsSurveyFoot);
+                case "InverseYard": return UnitKey.ForUnit(ReciprocalLengthUnit.InverseYard);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

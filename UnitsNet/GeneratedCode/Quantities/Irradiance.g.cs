@@ -922,6 +922,28 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "KilowattPerSquareCentimeter": return UnitKey.ForUnit(IrradianceUnit.KilowattPerSquareCentimeter);
+                case "KilowattPerSquareMeter": return UnitKey.ForUnit(IrradianceUnit.KilowattPerSquareMeter);
+                case "MegawattPerSquareCentimeter": return UnitKey.ForUnit(IrradianceUnit.MegawattPerSquareCentimeter);
+                case "MegawattPerSquareMeter": return UnitKey.ForUnit(IrradianceUnit.MegawattPerSquareMeter);
+                case "MicrowattPerSquareCentimeter": return UnitKey.ForUnit(IrradianceUnit.MicrowattPerSquareCentimeter);
+                case "MicrowattPerSquareMeter": return UnitKey.ForUnit(IrradianceUnit.MicrowattPerSquareMeter);
+                case "MilliwattPerSquareCentimeter": return UnitKey.ForUnit(IrradianceUnit.MilliwattPerSquareCentimeter);
+                case "MilliwattPerSquareMeter": return UnitKey.ForUnit(IrradianceUnit.MilliwattPerSquareMeter);
+                case "NanowattPerSquareCentimeter": return UnitKey.ForUnit(IrradianceUnit.NanowattPerSquareCentimeter);
+                case "NanowattPerSquareMeter": return UnitKey.ForUnit(IrradianceUnit.NanowattPerSquareMeter);
+                case "PicowattPerSquareCentimeter": return UnitKey.ForUnit(IrradianceUnit.PicowattPerSquareCentimeter);
+                case "PicowattPerSquareMeter": return UnitKey.ForUnit(IrradianceUnit.PicowattPerSquareMeter);
+                case "WattPerSquareCentimeter": return UnitKey.ForUnit(IrradianceUnit.WattPerSquareCentimeter);
+                case "WattPerSquareMeter": return UnitKey.ForUnit(IrradianceUnit.WattPerSquareMeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

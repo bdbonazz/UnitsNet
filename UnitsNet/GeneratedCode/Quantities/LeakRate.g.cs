@@ -745,6 +745,18 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "AtmCubicCentimeterPerSecond": return UnitKey.ForUnit(LeakRateUnit.AtmCubicCentimeterPerSecond);
+                case "MillibarLiterPerSecond": return UnitKey.ForUnit(LeakRateUnit.MillibarLiterPerSecond);
+                case "PascalCubicMeterPerSecond": return UnitKey.ForUnit(LeakRateUnit.PascalCubicMeterPerSecond);
+                case "TorrLiterPerSecond": return UnitKey.ForUnit(LeakRateUnit.TorrLiterPerSecond);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

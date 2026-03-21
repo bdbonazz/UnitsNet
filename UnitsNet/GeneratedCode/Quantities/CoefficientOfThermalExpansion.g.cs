@@ -789,6 +789,20 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "PerDegreeCelsius": return UnitKey.ForUnit(CoefficientOfThermalExpansionUnit.PerDegreeCelsius);
+                case "PerDegreeFahrenheit": return UnitKey.ForUnit(CoefficientOfThermalExpansionUnit.PerDegreeFahrenheit);
+                case "PerKelvin": return UnitKey.ForUnit(CoefficientOfThermalExpansionUnit.PerKelvin);
+                case "PpmPerDegreeCelsius": return UnitKey.ForUnit(CoefficientOfThermalExpansionUnit.PpmPerDegreeCelsius);
+                case "PpmPerDegreeFahrenheit": return UnitKey.ForUnit(CoefficientOfThermalExpansionUnit.PpmPerDegreeFahrenheit);
+                case "PpmPerKelvin": return UnitKey.ForUnit(CoefficientOfThermalExpansionUnit.PpmPerKelvin);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

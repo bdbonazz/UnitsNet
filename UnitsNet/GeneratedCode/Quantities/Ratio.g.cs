@@ -764,6 +764,20 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "DecimalFraction": return UnitKey.ForUnit(RatioUnit.DecimalFraction);
+                case "PartPerBillion": return UnitKey.ForUnit(RatioUnit.PartPerBillion);
+                case "PartPerMillion": return UnitKey.ForUnit(RatioUnit.PartPerMillion);
+                case "PartPerThousand": return UnitKey.ForUnit(RatioUnit.PartPerThousand);
+                case "PartPerTrillion": return UnitKey.ForUnit(RatioUnit.PartPerTrillion);
+                case "Percent": return UnitKey.ForUnit(RatioUnit.Percent);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

@@ -867,6 +867,23 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Centistokes": return UnitKey.ForUnit(KinematicViscosityUnit.Centistokes);
+                case "Decistokes": return UnitKey.ForUnit(KinematicViscosityUnit.Decistokes);
+                case "Kilostokes": return UnitKey.ForUnit(KinematicViscosityUnit.Kilostokes);
+                case "Microstokes": return UnitKey.ForUnit(KinematicViscosityUnit.Microstokes);
+                case "Millistokes": return UnitKey.ForUnit(KinematicViscosityUnit.Millistokes);
+                case "Nanostokes": return UnitKey.ForUnit(KinematicViscosityUnit.Nanostokes);
+                case "SquareFootPerSecond": return UnitKey.ForUnit(KinematicViscosityUnit.SquareFootPerSecond);
+                case "SquareMeterPerSecond": return UnitKey.ForUnit(KinematicViscosityUnit.SquareMeterPerSecond);
+                case "Stokes": return UnitKey.ForUnit(KinematicViscosityUnit.Stokes);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

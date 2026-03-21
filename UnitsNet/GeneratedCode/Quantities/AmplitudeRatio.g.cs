@@ -743,6 +743,18 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "DecibelMicrovolt": return UnitKey.ForUnit(AmplitudeRatioUnit.DecibelMicrovolt);
+                case "DecibelMillivolt": return UnitKey.ForUnit(AmplitudeRatioUnit.DecibelMillivolt);
+                case "DecibelUnloaded": return UnitKey.ForUnit(AmplitudeRatioUnit.DecibelUnloaded);
+                case "DecibelVolt": return UnitKey.ForUnit(AmplitudeRatioUnit.DecibelVolt);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

@@ -861,6 +861,24 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "MicrosievertPerHour": return UnitKey.ForUnit(RadiationEquivalentDoseRateUnit.MicrosievertPerHour);
+                case "MicrosievertPerSecond": return UnitKey.ForUnit(RadiationEquivalentDoseRateUnit.MicrosievertPerSecond);
+                case "MilliroentgenEquivalentManPerHour": return UnitKey.ForUnit(RadiationEquivalentDoseRateUnit.MilliroentgenEquivalentManPerHour);
+                case "MillisievertPerHour": return UnitKey.ForUnit(RadiationEquivalentDoseRateUnit.MillisievertPerHour);
+                case "MillisievertPerSecond": return UnitKey.ForUnit(RadiationEquivalentDoseRateUnit.MillisievertPerSecond);
+                case "NanosievertPerHour": return UnitKey.ForUnit(RadiationEquivalentDoseRateUnit.NanosievertPerHour);
+                case "NanosievertPerSecond": return UnitKey.ForUnit(RadiationEquivalentDoseRateUnit.NanosievertPerSecond);
+                case "RoentgenEquivalentManPerHour": return UnitKey.ForUnit(RadiationEquivalentDoseRateUnit.RoentgenEquivalentManPerHour);
+                case "SievertPerHour": return UnitKey.ForUnit(RadiationEquivalentDoseRateUnit.SievertPerHour);
+                case "SievertPerSecond": return UnitKey.ForUnit(RadiationEquivalentDoseRateUnit.SievertPerSecond);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

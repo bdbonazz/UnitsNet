@@ -910,6 +910,25 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentimolePerLiter": return UnitKey.ForUnit(MolarityUnit.CentimolePerLiter);
+                case "DecimolePerLiter": return UnitKey.ForUnit(MolarityUnit.DecimolePerLiter);
+                case "FemtomolePerLiter": return UnitKey.ForUnit(MolarityUnit.FemtomolePerLiter);
+                case "KilomolePerCubicMeter": return UnitKey.ForUnit(MolarityUnit.KilomolePerCubicMeter);
+                case "MicromolePerLiter": return UnitKey.ForUnit(MolarityUnit.MicromolePerLiter);
+                case "MillimolePerLiter": return UnitKey.ForUnit(MolarityUnit.MillimolePerLiter);
+                case "MolePerCubicMeter": return UnitKey.ForUnit(MolarityUnit.MolePerCubicMeter);
+                case "MolePerLiter": return UnitKey.ForUnit(MolarityUnit.MolePerLiter);
+                case "NanomolePerLiter": return UnitKey.ForUnit(MolarityUnit.NanomolePerLiter);
+                case "PicomolePerLiter": return UnitKey.ForUnit(MolarityUnit.PicomolePerLiter);
+                case "PoundMolePerCubicFoot": return UnitKey.ForUnit(MolarityUnit.PoundMolePerCubicFoot);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

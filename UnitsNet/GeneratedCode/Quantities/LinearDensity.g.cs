@@ -1022,6 +1022,32 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "GramPerCentimeter": return UnitKey.ForUnit(LinearDensityUnit.GramPerCentimeter);
+                case "GramPerFoot": return UnitKey.ForUnit(LinearDensityUnit.GramPerFoot);
+                case "GramPerMeter": return UnitKey.ForUnit(LinearDensityUnit.GramPerMeter);
+                case "GramPerMillimeter": return UnitKey.ForUnit(LinearDensityUnit.GramPerMillimeter);
+                case "KilogramPerCentimeter": return UnitKey.ForUnit(LinearDensityUnit.KilogramPerCentimeter);
+                case "KilogramPerFoot": return UnitKey.ForUnit(LinearDensityUnit.KilogramPerFoot);
+                case "KilogramPerMeter": return UnitKey.ForUnit(LinearDensityUnit.KilogramPerMeter);
+                case "KilogramPerMillimeter": return UnitKey.ForUnit(LinearDensityUnit.KilogramPerMillimeter);
+                case "MicrogramPerCentimeter": return UnitKey.ForUnit(LinearDensityUnit.MicrogramPerCentimeter);
+                case "MicrogramPerFoot": return UnitKey.ForUnit(LinearDensityUnit.MicrogramPerFoot);
+                case "MicrogramPerMeter": return UnitKey.ForUnit(LinearDensityUnit.MicrogramPerMeter);
+                case "MicrogramPerMillimeter": return UnitKey.ForUnit(LinearDensityUnit.MicrogramPerMillimeter);
+                case "MilligramPerCentimeter": return UnitKey.ForUnit(LinearDensityUnit.MilligramPerCentimeter);
+                case "MilligramPerFoot": return UnitKey.ForUnit(LinearDensityUnit.MilligramPerFoot);
+                case "MilligramPerMeter": return UnitKey.ForUnit(LinearDensityUnit.MilligramPerMeter);
+                case "MilligramPerMillimeter": return UnitKey.ForUnit(LinearDensityUnit.MilligramPerMillimeter);
+                case "PoundPerFoot": return UnitKey.ForUnit(LinearDensityUnit.PoundPerFoot);
+                case "PoundPerInch": return UnitKey.ForUnit(LinearDensityUnit.PoundPerInch);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

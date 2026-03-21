@@ -724,6 +724,17 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "JoulePerMoleKelvin": return UnitKey.ForUnit(MolarEntropyUnit.JoulePerMoleKelvin);
+                case "KilojoulePerMoleKelvin": return UnitKey.ForUnit(MolarEntropyUnit.KilojoulePerMoleKelvin);
+                case "MegajoulePerMoleKelvin": return UnitKey.ForUnit(MolarEntropyUnit.MegajoulePerMoleKelvin);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

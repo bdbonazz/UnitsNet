@@ -951,6 +951,29 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Arcminute": return UnitKey.ForUnit(AngleUnit.Arcminute);
+                case "Arcsecond": return UnitKey.ForUnit(AngleUnit.Arcsecond);
+                case "Centiradian": return UnitKey.ForUnit(AngleUnit.Centiradian);
+                case "Deciradian": return UnitKey.ForUnit(AngleUnit.Deciradian);
+                case "Degree": return UnitKey.ForUnit(AngleUnit.Degree);
+                case "Gradian": return UnitKey.ForUnit(AngleUnit.Gradian);
+                case "Microdegree": return UnitKey.ForUnit(AngleUnit.Microdegree);
+                case "Microradian": return UnitKey.ForUnit(AngleUnit.Microradian);
+                case "Millidegree": return UnitKey.ForUnit(AngleUnit.Millidegree);
+                case "Milliradian": return UnitKey.ForUnit(AngleUnit.Milliradian);
+                case "Nanodegree": return UnitKey.ForUnit(AngleUnit.Nanodegree);
+                case "Nanoradian": return UnitKey.ForUnit(AngleUnit.Nanoradian);
+                case "NatoMil": return UnitKey.ForUnit(AngleUnit.NatoMil);
+                case "Radian": return UnitKey.ForUnit(AngleUnit.Radian);
+                case "Revolution": return UnitKey.ForUnit(AngleUnit.Revolution);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

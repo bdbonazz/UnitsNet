@@ -1005,6 +1005,32 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "AtmospherePerSecond": return UnitKey.ForUnit(PressureChangeRateUnit.AtmospherePerSecond);
+                case "BarPerMinute": return UnitKey.ForUnit(PressureChangeRateUnit.BarPerMinute);
+                case "BarPerSecond": return UnitKey.ForUnit(PressureChangeRateUnit.BarPerSecond);
+                case "KilopascalPerMinute": return UnitKey.ForUnit(PressureChangeRateUnit.KilopascalPerMinute);
+                case "KilopascalPerSecond": return UnitKey.ForUnit(PressureChangeRateUnit.KilopascalPerSecond);
+                case "KilopoundForcePerSquareInchPerMinute": return UnitKey.ForUnit(PressureChangeRateUnit.KilopoundForcePerSquareInchPerMinute);
+                case "KilopoundForcePerSquareInchPerSecond": return UnitKey.ForUnit(PressureChangeRateUnit.KilopoundForcePerSquareInchPerSecond);
+                case "MegapascalPerMinute": return UnitKey.ForUnit(PressureChangeRateUnit.MegapascalPerMinute);
+                case "MegapascalPerSecond": return UnitKey.ForUnit(PressureChangeRateUnit.MegapascalPerSecond);
+                case "MegapoundForcePerSquareInchPerMinute": return UnitKey.ForUnit(PressureChangeRateUnit.MegapoundForcePerSquareInchPerMinute);
+                case "MegapoundForcePerSquareInchPerSecond": return UnitKey.ForUnit(PressureChangeRateUnit.MegapoundForcePerSquareInchPerSecond);
+                case "MillibarPerMinute": return UnitKey.ForUnit(PressureChangeRateUnit.MillibarPerMinute);
+                case "MillibarPerSecond": return UnitKey.ForUnit(PressureChangeRateUnit.MillibarPerSecond);
+                case "MillimeterOfMercuryPerSecond": return UnitKey.ForUnit(PressureChangeRateUnit.MillimeterOfMercuryPerSecond);
+                case "PascalPerMinute": return UnitKey.ForUnit(PressureChangeRateUnit.PascalPerMinute);
+                case "PascalPerSecond": return UnitKey.ForUnit(PressureChangeRateUnit.PascalPerSecond);
+                case "PoundForcePerSquareInchPerMinute": return UnitKey.ForUnit(PressureChangeRateUnit.PoundForcePerSquareInchPerMinute);
+                case "PoundForcePerSquareInchPerSecond": return UnitKey.ForUnit(PressureChangeRateUnit.PoundForcePerSquareInchPerSecond);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

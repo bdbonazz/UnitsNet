@@ -925,6 +925,28 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Decawatt": return UnitKey.ForUnit(LuminosityUnit.Decawatt);
+                case "Deciwatt": return UnitKey.ForUnit(LuminosityUnit.Deciwatt);
+                case "Femtowatt": return UnitKey.ForUnit(LuminosityUnit.Femtowatt);
+                case "Gigawatt": return UnitKey.ForUnit(LuminosityUnit.Gigawatt);
+                case "Kilowatt": return UnitKey.ForUnit(LuminosityUnit.Kilowatt);
+                case "Megawatt": return UnitKey.ForUnit(LuminosityUnit.Megawatt);
+                case "Microwatt": return UnitKey.ForUnit(LuminosityUnit.Microwatt);
+                case "Milliwatt": return UnitKey.ForUnit(LuminosityUnit.Milliwatt);
+                case "Nanowatt": return UnitKey.ForUnit(LuminosityUnit.Nanowatt);
+                case "Petawatt": return UnitKey.ForUnit(LuminosityUnit.Petawatt);
+                case "Picowatt": return UnitKey.ForUnit(LuminosityUnit.Picowatt);
+                case "SolarLuminosity": return UnitKey.ForUnit(LuminosityUnit.SolarLuminosity);
+                case "Terawatt": return UnitKey.ForUnit(LuminosityUnit.Terawatt);
+                case "Watt": return UnitKey.ForUnit(LuminosityUnit.Watt);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

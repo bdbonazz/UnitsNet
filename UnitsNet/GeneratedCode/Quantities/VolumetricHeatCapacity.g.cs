@@ -835,6 +835,23 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "BtuPerCubicFootDegreeFahrenheit": return UnitKey.ForUnit(VolumetricHeatCapacityUnit.BtuPerCubicFootDegreeFahrenheit);
+                case "CaloriePerCubicCentimeterDegreeCelsius": return UnitKey.ForUnit(VolumetricHeatCapacityUnit.CaloriePerCubicCentimeterDegreeCelsius);
+                case "JoulePerCubicMeterDegreeCelsius": return UnitKey.ForUnit(VolumetricHeatCapacityUnit.JoulePerCubicMeterDegreeCelsius);
+                case "JoulePerCubicMeterKelvin": return UnitKey.ForUnit(VolumetricHeatCapacityUnit.JoulePerCubicMeterKelvin);
+                case "KilocaloriePerCubicCentimeterDegreeCelsius": return UnitKey.ForUnit(VolumetricHeatCapacityUnit.KilocaloriePerCubicCentimeterDegreeCelsius);
+                case "KilojoulePerCubicMeterDegreeCelsius": return UnitKey.ForUnit(VolumetricHeatCapacityUnit.KilojoulePerCubicMeterDegreeCelsius);
+                case "KilojoulePerCubicMeterKelvin": return UnitKey.ForUnit(VolumetricHeatCapacityUnit.KilojoulePerCubicMeterKelvin);
+                case "MegajoulePerCubicMeterDegreeCelsius": return UnitKey.ForUnit(VolumetricHeatCapacityUnit.MegajoulePerCubicMeterDegreeCelsius);
+                case "MegajoulePerCubicMeterKelvin": return UnitKey.ForUnit(VolumetricHeatCapacityUnit.MegajoulePerCubicMeterKelvin);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

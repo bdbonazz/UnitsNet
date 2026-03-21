@@ -874,6 +874,23 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Ampere": return UnitKey.ForUnit(ElectricCurrentUnit.Ampere);
+                case "Centiampere": return UnitKey.ForUnit(ElectricCurrentUnit.Centiampere);
+                case "Femtoampere": return UnitKey.ForUnit(ElectricCurrentUnit.Femtoampere);
+                case "Kiloampere": return UnitKey.ForUnit(ElectricCurrentUnit.Kiloampere);
+                case "Megaampere": return UnitKey.ForUnit(ElectricCurrentUnit.Megaampere);
+                case "Microampere": return UnitKey.ForUnit(ElectricCurrentUnit.Microampere);
+                case "Milliampere": return UnitKey.ForUnit(ElectricCurrentUnit.Milliampere);
+                case "Nanoampere": return UnitKey.ForUnit(ElectricCurrentUnit.Nanoampere);
+                case "Picoampere": return UnitKey.ForUnit(ElectricCurrentUnit.Picoampere);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

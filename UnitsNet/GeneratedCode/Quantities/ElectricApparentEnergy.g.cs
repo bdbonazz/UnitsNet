@@ -724,6 +724,17 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "KilovoltampereHour": return UnitKey.ForUnit(ElectricApparentEnergyUnit.KilovoltampereHour);
+                case "MegavoltampereHour": return UnitKey.ForUnit(ElectricApparentEnergyUnit.MegavoltampereHour);
+                case "VoltampereHour": return UnitKey.ForUnit(ElectricApparentEnergyUnit.VoltampereHour);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

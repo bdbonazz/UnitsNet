@@ -828,6 +828,22 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Gigaohm": return UnitKey.ForUnit(ElectricResistanceUnit.Gigaohm);
+                case "Kiloohm": return UnitKey.ForUnit(ElectricResistanceUnit.Kiloohm);
+                case "Megaohm": return UnitKey.ForUnit(ElectricResistanceUnit.Megaohm);
+                case "Microohm": return UnitKey.ForUnit(ElectricResistanceUnit.Microohm);
+                case "Milliohm": return UnitKey.ForUnit(ElectricResistanceUnit.Milliohm);
+                case "Nanoohm": return UnitKey.ForUnit(ElectricResistanceUnit.Nanoohm);
+                case "Ohm": return UnitKey.ForUnit(ElectricResistanceUnit.Ohm);
+                case "Teraohm": return UnitKey.ForUnit(ElectricResistanceUnit.Teraohm);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

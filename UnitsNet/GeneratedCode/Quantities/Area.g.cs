@@ -1045,6 +1045,28 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Acre": return UnitKey.ForUnit(AreaUnit.Acre);
+                case "Hectare": return UnitKey.ForUnit(AreaUnit.Hectare);
+                case "SquareCentimeter": return UnitKey.ForUnit(AreaUnit.SquareCentimeter);
+                case "SquareDecimeter": return UnitKey.ForUnit(AreaUnit.SquareDecimeter);
+                case "SquareFoot": return UnitKey.ForUnit(AreaUnit.SquareFoot);
+                case "SquareInch": return UnitKey.ForUnit(AreaUnit.SquareInch);
+                case "SquareKilometer": return UnitKey.ForUnit(AreaUnit.SquareKilometer);
+                case "SquareMeter": return UnitKey.ForUnit(AreaUnit.SquareMeter);
+                case "SquareMicrometer": return UnitKey.ForUnit(AreaUnit.SquareMicrometer);
+                case "SquareMile": return UnitKey.ForUnit(AreaUnit.SquareMile);
+                case "SquareMillimeter": return UnitKey.ForUnit(AreaUnit.SquareMillimeter);
+                case "SquareNauticalMile": return UnitKey.ForUnit(AreaUnit.SquareNauticalMile);
+                case "SquareYard": return UnitKey.ForUnit(AreaUnit.SquareYard);
+                case "UsSurveySquareFoot": return UnitKey.ForUnit(AreaUnit.UsSurveySquareFoot);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

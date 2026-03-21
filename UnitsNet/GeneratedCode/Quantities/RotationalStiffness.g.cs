@@ -1307,6 +1307,48 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentinewtonMeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.CentinewtonMeterPerDegree);
+                case "CentinewtonMillimeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.CentinewtonMillimeterPerDegree);
+                case "CentinewtonMillimeterPerRadian": return UnitKey.ForUnit(RotationalStiffnessUnit.CentinewtonMillimeterPerRadian);
+                case "DecanewtonMeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.DecanewtonMeterPerDegree);
+                case "DecanewtonMillimeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.DecanewtonMillimeterPerDegree);
+                case "DecanewtonMillimeterPerRadian": return UnitKey.ForUnit(RotationalStiffnessUnit.DecanewtonMillimeterPerRadian);
+                case "DecinewtonMeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.DecinewtonMeterPerDegree);
+                case "DecinewtonMillimeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.DecinewtonMillimeterPerDegree);
+                case "DecinewtonMillimeterPerRadian": return UnitKey.ForUnit(RotationalStiffnessUnit.DecinewtonMillimeterPerRadian);
+                case "KilonewtonMeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.KilonewtonMeterPerDegree);
+                case "KilonewtonMeterPerRadian": return UnitKey.ForUnit(RotationalStiffnessUnit.KilonewtonMeterPerRadian);
+                case "KilonewtonMillimeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.KilonewtonMillimeterPerDegree);
+                case "KilonewtonMillimeterPerRadian": return UnitKey.ForUnit(RotationalStiffnessUnit.KilonewtonMillimeterPerRadian);
+                case "KilopoundForceFootPerDegrees": return UnitKey.ForUnit(RotationalStiffnessUnit.KilopoundForceFootPerDegrees);
+                case "KilopoundForceFootPerRadian": return UnitKey.ForUnit(RotationalStiffnessUnit.KilopoundForceFootPerRadian);
+                case "MeganewtonMeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.MeganewtonMeterPerDegree);
+                case "MeganewtonMeterPerRadian": return UnitKey.ForUnit(RotationalStiffnessUnit.MeganewtonMeterPerRadian);
+                case "MeganewtonMillimeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.MeganewtonMillimeterPerDegree);
+                case "MeganewtonMillimeterPerRadian": return UnitKey.ForUnit(RotationalStiffnessUnit.MeganewtonMillimeterPerRadian);
+                case "MicronewtonMeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.MicronewtonMeterPerDegree);
+                case "MicronewtonMillimeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.MicronewtonMillimeterPerDegree);
+                case "MicronewtonMillimeterPerRadian": return UnitKey.ForUnit(RotationalStiffnessUnit.MicronewtonMillimeterPerRadian);
+                case "MillinewtonMeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.MillinewtonMeterPerDegree);
+                case "MillinewtonMillimeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.MillinewtonMillimeterPerDegree);
+                case "MillinewtonMillimeterPerRadian": return UnitKey.ForUnit(RotationalStiffnessUnit.MillinewtonMillimeterPerRadian);
+                case "NanonewtonMeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.NanonewtonMeterPerDegree);
+                case "NanonewtonMillimeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.NanonewtonMillimeterPerDegree);
+                case "NanonewtonMillimeterPerRadian": return UnitKey.ForUnit(RotationalStiffnessUnit.NanonewtonMillimeterPerRadian);
+                case "NewtonMeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.NewtonMeterPerDegree);
+                case "NewtonMeterPerRadian": return UnitKey.ForUnit(RotationalStiffnessUnit.NewtonMeterPerRadian);
+                case "NewtonMillimeterPerDegree": return UnitKey.ForUnit(RotationalStiffnessUnit.NewtonMillimeterPerDegree);
+                case "NewtonMillimeterPerRadian": return UnitKey.ForUnit(RotationalStiffnessUnit.NewtonMillimeterPerRadian);
+                case "PoundForceFeetPerRadian": return UnitKey.ForUnit(RotationalStiffnessUnit.PoundForceFeetPerRadian);
+                case "PoundForceFootPerDegrees": return UnitKey.ForUnit(RotationalStiffnessUnit.PoundForceFootPerDegrees);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

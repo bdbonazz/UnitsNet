@@ -922,6 +922,27 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentiradianPerSecond": return UnitKey.ForUnit(RotationalSpeedUnit.CentiradianPerSecond);
+                case "DeciradianPerSecond": return UnitKey.ForUnit(RotationalSpeedUnit.DeciradianPerSecond);
+                case "DegreePerMinute": return UnitKey.ForUnit(RotationalSpeedUnit.DegreePerMinute);
+                case "DegreePerSecond": return UnitKey.ForUnit(RotationalSpeedUnit.DegreePerSecond);
+                case "MicrodegreePerSecond": return UnitKey.ForUnit(RotationalSpeedUnit.MicrodegreePerSecond);
+                case "MicroradianPerSecond": return UnitKey.ForUnit(RotationalSpeedUnit.MicroradianPerSecond);
+                case "MillidegreePerSecond": return UnitKey.ForUnit(RotationalSpeedUnit.MillidegreePerSecond);
+                case "MilliradianPerSecond": return UnitKey.ForUnit(RotationalSpeedUnit.MilliradianPerSecond);
+                case "NanodegreePerSecond": return UnitKey.ForUnit(RotationalSpeedUnit.NanodegreePerSecond);
+                case "NanoradianPerSecond": return UnitKey.ForUnit(RotationalSpeedUnit.NanoradianPerSecond);
+                case "RadianPerSecond": return UnitKey.ForUnit(RotationalSpeedUnit.RadianPerSecond);
+                case "RevolutionPerMinute": return UnitKey.ForUnit(RotationalSpeedUnit.RevolutionPerMinute);
+                case "RevolutionPerSecond": return UnitKey.ForUnit(RotationalSpeedUnit.RevolutionPerSecond);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

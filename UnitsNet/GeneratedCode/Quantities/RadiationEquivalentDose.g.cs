@@ -796,6 +796,20 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Microsievert": return UnitKey.ForUnit(RadiationEquivalentDoseUnit.Microsievert);
+                case "MilliroentgenEquivalentMan": return UnitKey.ForUnit(RadiationEquivalentDoseUnit.MilliroentgenEquivalentMan);
+                case "Millisievert": return UnitKey.ForUnit(RadiationEquivalentDoseUnit.Millisievert);
+                case "Nanosievert": return UnitKey.ForUnit(RadiationEquivalentDoseUnit.Nanosievert);
+                case "RoentgenEquivalentMan": return UnitKey.ForUnit(RadiationEquivalentDoseUnit.RoentgenEquivalentMan);
+                case "Sievert": return UnitKey.ForUnit(RadiationEquivalentDoseUnit.Sievert);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

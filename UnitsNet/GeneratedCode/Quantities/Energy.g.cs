@@ -1485,6 +1485,54 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "BritishThermalUnit": return UnitKey.ForUnit(EnergyUnit.BritishThermalUnit);
+                case "Calorie": return UnitKey.ForUnit(EnergyUnit.Calorie);
+                case "DecathermEc": return UnitKey.ForUnit(EnergyUnit.DecathermEc);
+                case "DecathermImperial": return UnitKey.ForUnit(EnergyUnit.DecathermImperial);
+                case "DecathermUs": return UnitKey.ForUnit(EnergyUnit.DecathermUs);
+                case "ElectronVolt": return UnitKey.ForUnit(EnergyUnit.ElectronVolt);
+                case "Erg": return UnitKey.ForUnit(EnergyUnit.Erg);
+                case "FootPound": return UnitKey.ForUnit(EnergyUnit.FootPound);
+                case "GigabritishThermalUnit": return UnitKey.ForUnit(EnergyUnit.GigabritishThermalUnit);
+                case "GigaelectronVolt": return UnitKey.ForUnit(EnergyUnit.GigaelectronVolt);
+                case "Gigajoule": return UnitKey.ForUnit(EnergyUnit.Gigajoule);
+                case "GigawattDay": return UnitKey.ForUnit(EnergyUnit.GigawattDay);
+                case "GigawattHour": return UnitKey.ForUnit(EnergyUnit.GigawattHour);
+                case "HorsepowerHour": return UnitKey.ForUnit(EnergyUnit.HorsepowerHour);
+                case "Joule": return UnitKey.ForUnit(EnergyUnit.Joule);
+                case "KilobritishThermalUnit": return UnitKey.ForUnit(EnergyUnit.KilobritishThermalUnit);
+                case "Kilocalorie": return UnitKey.ForUnit(EnergyUnit.Kilocalorie);
+                case "KiloelectronVolt": return UnitKey.ForUnit(EnergyUnit.KiloelectronVolt);
+                case "Kilojoule": return UnitKey.ForUnit(EnergyUnit.Kilojoule);
+                case "KilowattDay": return UnitKey.ForUnit(EnergyUnit.KilowattDay);
+                case "KilowattHour": return UnitKey.ForUnit(EnergyUnit.KilowattHour);
+                case "MegabritishThermalUnit": return UnitKey.ForUnit(EnergyUnit.MegabritishThermalUnit);
+                case "Megacalorie": return UnitKey.ForUnit(EnergyUnit.Megacalorie);
+                case "MegaelectronVolt": return UnitKey.ForUnit(EnergyUnit.MegaelectronVolt);
+                case "Megajoule": return UnitKey.ForUnit(EnergyUnit.Megajoule);
+                case "MegawattDay": return UnitKey.ForUnit(EnergyUnit.MegawattDay);
+                case "MegawattHour": return UnitKey.ForUnit(EnergyUnit.MegawattHour);
+                case "Microjoule": return UnitKey.ForUnit(EnergyUnit.Microjoule);
+                case "Millijoule": return UnitKey.ForUnit(EnergyUnit.Millijoule);
+                case "Nanojoule": return UnitKey.ForUnit(EnergyUnit.Nanojoule);
+                case "Petajoule": return UnitKey.ForUnit(EnergyUnit.Petajoule);
+                case "TeraelectronVolt": return UnitKey.ForUnit(EnergyUnit.TeraelectronVolt);
+                case "Terajoule": return UnitKey.ForUnit(EnergyUnit.Terajoule);
+                case "TerawattDay": return UnitKey.ForUnit(EnergyUnit.TerawattDay);
+                case "TerawattHour": return UnitKey.ForUnit(EnergyUnit.TerawattHour);
+                case "ThermEc": return UnitKey.ForUnit(EnergyUnit.ThermEc);
+                case "ThermImperial": return UnitKey.ForUnit(EnergyUnit.ThermImperial);
+                case "ThermUs": return UnitKey.ForUnit(EnergyUnit.ThermUs);
+                case "WattDay": return UnitKey.ForUnit(EnergyUnit.WattDay);
+                case "WattHour": return UnitKey.ForUnit(EnergyUnit.WattHour);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

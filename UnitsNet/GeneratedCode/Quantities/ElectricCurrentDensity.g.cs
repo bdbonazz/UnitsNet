@@ -727,6 +727,17 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "AmperePerSquareFoot": return UnitKey.ForUnit(ElectricCurrentDensityUnit.AmperePerSquareFoot);
+                case "AmperePerSquareInch": return UnitKey.ForUnit(ElectricCurrentDensityUnit.AmperePerSquareInch);
+                case "AmperePerSquareMeter": return UnitKey.ForUnit(ElectricCurrentDensityUnit.AmperePerSquareMeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

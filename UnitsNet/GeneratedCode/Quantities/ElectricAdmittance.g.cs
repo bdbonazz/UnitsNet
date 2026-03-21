@@ -962,6 +962,30 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Gigamho": return UnitKey.ForUnit(ElectricAdmittanceUnit.Gigamho);
+                case "Gigasiemens": return UnitKey.ForUnit(ElectricAdmittanceUnit.Gigasiemens);
+                case "Kilomho": return UnitKey.ForUnit(ElectricAdmittanceUnit.Kilomho);
+                case "Kilosiemens": return UnitKey.ForUnit(ElectricAdmittanceUnit.Kilosiemens);
+                case "Megamho": return UnitKey.ForUnit(ElectricAdmittanceUnit.Megamho);
+                case "Megasiemens": return UnitKey.ForUnit(ElectricAdmittanceUnit.Megasiemens);
+                case "Mho": return UnitKey.ForUnit(ElectricAdmittanceUnit.Mho);
+                case "Micromho": return UnitKey.ForUnit(ElectricAdmittanceUnit.Micromho);
+                case "Microsiemens": return UnitKey.ForUnit(ElectricAdmittanceUnit.Microsiemens);
+                case "Millimho": return UnitKey.ForUnit(ElectricAdmittanceUnit.Millimho);
+                case "Millisiemens": return UnitKey.ForUnit(ElectricAdmittanceUnit.Millisiemens);
+                case "Nanomho": return UnitKey.ForUnit(ElectricAdmittanceUnit.Nanomho);
+                case "Nanosiemens": return UnitKey.ForUnit(ElectricAdmittanceUnit.Nanosiemens);
+                case "Siemens": return UnitKey.ForUnit(ElectricAdmittanceUnit.Siemens);
+                case "Teramho": return UnitKey.ForUnit(ElectricAdmittanceUnit.Teramho);
+                case "Terasiemens": return UnitKey.ForUnit(ElectricAdmittanceUnit.Terasiemens);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

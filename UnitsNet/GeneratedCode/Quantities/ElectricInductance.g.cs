@@ -763,6 +763,19 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Henry": return UnitKey.ForUnit(ElectricInductanceUnit.Henry);
+                case "Microhenry": return UnitKey.ForUnit(ElectricInductanceUnit.Microhenry);
+                case "Millihenry": return UnitKey.ForUnit(ElectricInductanceUnit.Millihenry);
+                case "Nanohenry": return UnitKey.ForUnit(ElectricInductanceUnit.Nanohenry);
+                case "Picohenry": return UnitKey.ForUnit(ElectricInductanceUnit.Picohenry);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

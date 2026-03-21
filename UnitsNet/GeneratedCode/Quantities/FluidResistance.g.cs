@@ -1015,6 +1015,33 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "DyneSecondPerCentimeterToTheFifth": return UnitKey.ForUnit(FluidResistanceUnit.DyneSecondPerCentimeterToTheFifth);
+                case "MegapascalSecondPerCubicMeter": return UnitKey.ForUnit(FluidResistanceUnit.MegapascalSecondPerCubicMeter);
+                case "MillimeterMercuryMinutePerCubicCentimeter": return UnitKey.ForUnit(FluidResistanceUnit.MillimeterMercuryMinutePerCubicCentimeter);
+                case "MillimeterMercuryMinutePerCubicMeter": return UnitKey.ForUnit(FluidResistanceUnit.MillimeterMercuryMinutePerCubicMeter);
+                case "MillimeterMercuryMinutePerLiter": return UnitKey.ForUnit(FluidResistanceUnit.MillimeterMercuryMinutePerLiter);
+                case "MillimeterMercuryMinutePerMilliliter": return UnitKey.ForUnit(FluidResistanceUnit.MillimeterMercuryMinutePerMilliliter);
+                case "MillimeterMercurySecondPerCubicCentimeter": return UnitKey.ForUnit(FluidResistanceUnit.MillimeterMercurySecondPerCubicCentimeter);
+                case "MillimeterMercurySecondPerCubicMeter": return UnitKey.ForUnit(FluidResistanceUnit.MillimeterMercurySecondPerCubicMeter);
+                case "MillimeterMercurySecondPerLiter": return UnitKey.ForUnit(FluidResistanceUnit.MillimeterMercurySecondPerLiter);
+                case "MillimeterMercurySecondPerMilliliter": return UnitKey.ForUnit(FluidResistanceUnit.MillimeterMercurySecondPerMilliliter);
+                case "PascalMinutePerCubicCentimeter": return UnitKey.ForUnit(FluidResistanceUnit.PascalMinutePerCubicCentimeter);
+                case "PascalMinutePerCubicMeter": return UnitKey.ForUnit(FluidResistanceUnit.PascalMinutePerCubicMeter);
+                case "PascalMinutePerLiter": return UnitKey.ForUnit(FluidResistanceUnit.PascalMinutePerLiter);
+                case "PascalMinutePerMilliliter": return UnitKey.ForUnit(FluidResistanceUnit.PascalMinutePerMilliliter);
+                case "PascalSecondPerCubicCentimeter": return UnitKey.ForUnit(FluidResistanceUnit.PascalSecondPerCubicCentimeter);
+                case "PascalSecondPerCubicMeter": return UnitKey.ForUnit(FluidResistanceUnit.PascalSecondPerCubicMeter);
+                case "PascalSecondPerLiter": return UnitKey.ForUnit(FluidResistanceUnit.PascalSecondPerLiter);
+                case "PascalSecondPerMilliliter": return UnitKey.ForUnit(FluidResistanceUnit.PascalSecondPerMilliliter);
+                case "WoodUnit": return UnitKey.ForUnit(FluidResistanceUnit.WoodUnit);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

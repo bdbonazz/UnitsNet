@@ -1741,6 +1741,70 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "CentigramPerDeciliter": return UnitKey.ForUnit(DensityUnit.CentigramPerDeciliter);
+                case "CentigramPerLiter": return UnitKey.ForUnit(DensityUnit.CentigramPerLiter);
+                case "CentigramPerMilliliter": return UnitKey.ForUnit(DensityUnit.CentigramPerMilliliter);
+                case "DecigramPerDeciliter": return UnitKey.ForUnit(DensityUnit.DecigramPerDeciliter);
+                case "DecigramPerLiter": return UnitKey.ForUnit(DensityUnit.DecigramPerLiter);
+                case "DecigramPerMilliliter": return UnitKey.ForUnit(DensityUnit.DecigramPerMilliliter);
+                case "FemtogramPerDeciliter": return UnitKey.ForUnit(DensityUnit.FemtogramPerDeciliter);
+                case "FemtogramPerLiter": return UnitKey.ForUnit(DensityUnit.FemtogramPerLiter);
+                case "FemtogramPerMilliliter": return UnitKey.ForUnit(DensityUnit.FemtogramPerMilliliter);
+                case "GramPerCubicCentimeter": return UnitKey.ForUnit(DensityUnit.GramPerCubicCentimeter);
+                case "GramPerCubicFoot": return UnitKey.ForUnit(DensityUnit.GramPerCubicFoot);
+                case "GramPerCubicInch": return UnitKey.ForUnit(DensityUnit.GramPerCubicInch);
+                case "GramPerCubicMeter": return UnitKey.ForUnit(DensityUnit.GramPerCubicMeter);
+                case "GramPerCubicMillimeter": return UnitKey.ForUnit(DensityUnit.GramPerCubicMillimeter);
+                case "GramPerDeciliter": return UnitKey.ForUnit(DensityUnit.GramPerDeciliter);
+                case "GramPerLiter": return UnitKey.ForUnit(DensityUnit.GramPerLiter);
+                case "GramPerMilliliter": return UnitKey.ForUnit(DensityUnit.GramPerMilliliter);
+                case "KilogramPerCubicCentimeter": return UnitKey.ForUnit(DensityUnit.KilogramPerCubicCentimeter);
+                case "KilogramPerCubicMeter": return UnitKey.ForUnit(DensityUnit.KilogramPerCubicMeter);
+                case "KilogramPerCubicMillimeter": return UnitKey.ForUnit(DensityUnit.KilogramPerCubicMillimeter);
+                case "KilogramPerLiter": return UnitKey.ForUnit(DensityUnit.KilogramPerLiter);
+                case "KilopoundPerCubicFoot": return UnitKey.ForUnit(DensityUnit.KilopoundPerCubicFoot);
+                case "KilopoundPerCubicInch": return UnitKey.ForUnit(DensityUnit.KilopoundPerCubicInch);
+                case "KilopoundPerCubicYard": return UnitKey.ForUnit(DensityUnit.KilopoundPerCubicYard);
+                case "MicrogramPerCubicMeter": return UnitKey.ForUnit(DensityUnit.MicrogramPerCubicMeter);
+                case "MicrogramPerDeciliter": return UnitKey.ForUnit(DensityUnit.MicrogramPerDeciliter);
+                case "MicrogramPerLiter": return UnitKey.ForUnit(DensityUnit.MicrogramPerLiter);
+                case "MicrogramPerMilliliter": return UnitKey.ForUnit(DensityUnit.MicrogramPerMilliliter);
+                case "MilligramPerCubicMeter": return UnitKey.ForUnit(DensityUnit.MilligramPerCubicMeter);
+                case "MilligramPerDeciliter": return UnitKey.ForUnit(DensityUnit.MilligramPerDeciliter);
+                case "MilligramPerLiter": return UnitKey.ForUnit(DensityUnit.MilligramPerLiter);
+                case "MilligramPerMilliliter": return UnitKey.ForUnit(DensityUnit.MilligramPerMilliliter);
+                case "NanogramPerDeciliter": return UnitKey.ForUnit(DensityUnit.NanogramPerDeciliter);
+                case "NanogramPerLiter": return UnitKey.ForUnit(DensityUnit.NanogramPerLiter);
+                case "NanogramPerMilliliter": return UnitKey.ForUnit(DensityUnit.NanogramPerMilliliter);
+                case "PicogramPerDeciliter": return UnitKey.ForUnit(DensityUnit.PicogramPerDeciliter);
+                case "PicogramPerLiter": return UnitKey.ForUnit(DensityUnit.PicogramPerLiter);
+                case "PicogramPerMilliliter": return UnitKey.ForUnit(DensityUnit.PicogramPerMilliliter);
+                case "PoundPerCubicCentimeter": return UnitKey.ForUnit(DensityUnit.PoundPerCubicCentimeter);
+                case "PoundPerCubicFoot": return UnitKey.ForUnit(DensityUnit.PoundPerCubicFoot);
+                case "PoundPerCubicInch": return UnitKey.ForUnit(DensityUnit.PoundPerCubicInch);
+                case "PoundPerCubicMeter": return UnitKey.ForUnit(DensityUnit.PoundPerCubicMeter);
+                case "PoundPerCubicMillimeter": return UnitKey.ForUnit(DensityUnit.PoundPerCubicMillimeter);
+                case "PoundPerCubicYard": return UnitKey.ForUnit(DensityUnit.PoundPerCubicYard);
+                case "PoundPerImperialGallon": return UnitKey.ForUnit(DensityUnit.PoundPerImperialGallon);
+                case "PoundPerUSGallon": return UnitKey.ForUnit(DensityUnit.PoundPerUSGallon);
+                case "SlugPerCubicCentimeter": return UnitKey.ForUnit(DensityUnit.SlugPerCubicCentimeter);
+                case "SlugPerCubicFoot": return UnitKey.ForUnit(DensityUnit.SlugPerCubicFoot);
+                case "SlugPerCubicInch": return UnitKey.ForUnit(DensityUnit.SlugPerCubicInch);
+                case "SlugPerCubicMeter": return UnitKey.ForUnit(DensityUnit.SlugPerCubicMeter);
+                case "SlugPerCubicMillimeter": return UnitKey.ForUnit(DensityUnit.SlugPerCubicMillimeter);
+                case "TonnePerCubicCentimeter": return UnitKey.ForUnit(DensityUnit.TonnePerCubicCentimeter);
+                case "TonnePerCubicFoot": return UnitKey.ForUnit(DensityUnit.TonnePerCubicFoot);
+                case "TonnePerCubicInch": return UnitKey.ForUnit(DensityUnit.TonnePerCubicInch);
+                case "TonnePerCubicMeter": return UnitKey.ForUnit(DensityUnit.TonnePerCubicMeter);
+                case "TonnePerCubicMillimeter": return UnitKey.ForUnit(DensityUnit.TonnePerCubicMillimeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

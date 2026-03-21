@@ -911,6 +911,26 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "GramPerHourPerSquareCentimeter": return UnitKey.ForUnit(MassFluxUnit.GramPerHourPerSquareCentimeter);
+                case "GramPerHourPerSquareMeter": return UnitKey.ForUnit(MassFluxUnit.GramPerHourPerSquareMeter);
+                case "GramPerHourPerSquareMillimeter": return UnitKey.ForUnit(MassFluxUnit.GramPerHourPerSquareMillimeter);
+                case "GramPerSecondPerSquareCentimeter": return UnitKey.ForUnit(MassFluxUnit.GramPerSecondPerSquareCentimeter);
+                case "GramPerSecondPerSquareMeter": return UnitKey.ForUnit(MassFluxUnit.GramPerSecondPerSquareMeter);
+                case "GramPerSecondPerSquareMillimeter": return UnitKey.ForUnit(MassFluxUnit.GramPerSecondPerSquareMillimeter);
+                case "KilogramPerHourPerSquareCentimeter": return UnitKey.ForUnit(MassFluxUnit.KilogramPerHourPerSquareCentimeter);
+                case "KilogramPerHourPerSquareMeter": return UnitKey.ForUnit(MassFluxUnit.KilogramPerHourPerSquareMeter);
+                case "KilogramPerHourPerSquareMillimeter": return UnitKey.ForUnit(MassFluxUnit.KilogramPerHourPerSquareMillimeter);
+                case "KilogramPerSecondPerSquareCentimeter": return UnitKey.ForUnit(MassFluxUnit.KilogramPerSecondPerSquareCentimeter);
+                case "KilogramPerSecondPerSquareMeter": return UnitKey.ForUnit(MassFluxUnit.KilogramPerSecondPerSquareMeter);
+                case "KilogramPerSecondPerSquareMillimeter": return UnitKey.ForUnit(MassFluxUnit.KilogramPerSecondPerSquareMillimeter);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

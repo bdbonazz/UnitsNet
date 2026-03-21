@@ -803,6 +803,24 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "DegreeCelsius": return UnitKey.ForUnit(TemperatureUnit.DegreeCelsius);
+                case "DegreeDelisle": return UnitKey.ForUnit(TemperatureUnit.DegreeDelisle);
+                case "DegreeFahrenheit": return UnitKey.ForUnit(TemperatureUnit.DegreeFahrenheit);
+                case "DegreeNewton": return UnitKey.ForUnit(TemperatureUnit.DegreeNewton);
+                case "DegreeRankine": return UnitKey.ForUnit(TemperatureUnit.DegreeRankine);
+                case "DegreeReaumur": return UnitKey.ForUnit(TemperatureUnit.DegreeReaumur);
+                case "DegreeRoemer": return UnitKey.ForUnit(TemperatureUnit.DegreeRoemer);
+                case "Kelvin": return UnitKey.ForUnit(TemperatureUnit.Kelvin);
+                case "MillidegreeCelsius": return UnitKey.ForUnit(TemperatureUnit.MillidegreeCelsius);
+                case "SolarTemperature": return UnitKey.ForUnit(TemperatureUnit.SolarTemperature);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

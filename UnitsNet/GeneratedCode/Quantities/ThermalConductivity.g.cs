@@ -709,6 +709,16 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "BtuPerHourFootFahrenheit": return UnitKey.ForUnit(ThermalConductivityUnit.BtuPerHourFootFahrenheit);
+                case "WattPerMeterKelvin": return UnitKey.ForUnit(ThermalConductivityUnit.WattPerMeterKelvin);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

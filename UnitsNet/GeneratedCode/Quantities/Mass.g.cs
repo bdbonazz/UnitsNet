@@ -1344,6 +1344,45 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Centigram": return UnitKey.ForUnit(MassUnit.Centigram);
+                case "Dalton": return UnitKey.ForUnit(MassUnit.Dalton);
+                case "Decagram": return UnitKey.ForUnit(MassUnit.Decagram);
+                case "Decigram": return UnitKey.ForUnit(MassUnit.Decigram);
+                case "EarthMass": return UnitKey.ForUnit(MassUnit.EarthMass);
+                case "Femtogram": return UnitKey.ForUnit(MassUnit.Femtogram);
+                case "Gigadalton": return UnitKey.ForUnit(MassUnit.Gigadalton);
+                case "Grain": return UnitKey.ForUnit(MassUnit.Grain);
+                case "Gram": return UnitKey.ForUnit(MassUnit.Gram);
+                case "Hectogram": return UnitKey.ForUnit(MassUnit.Hectogram);
+                case "Kilodalton": return UnitKey.ForUnit(MassUnit.Kilodalton);
+                case "Kilogram": return UnitKey.ForUnit(MassUnit.Kilogram);
+                case "Kilopound": return UnitKey.ForUnit(MassUnit.Kilopound);
+                case "Kilotonne": return UnitKey.ForUnit(MassUnit.Kilotonne);
+                case "LongHundredweight": return UnitKey.ForUnit(MassUnit.LongHundredweight);
+                case "LongTon": return UnitKey.ForUnit(MassUnit.LongTon);
+                case "Megadalton": return UnitKey.ForUnit(MassUnit.Megadalton);
+                case "Megapound": return UnitKey.ForUnit(MassUnit.Megapound);
+                case "Megatonne": return UnitKey.ForUnit(MassUnit.Megatonne);
+                case "Microgram": return UnitKey.ForUnit(MassUnit.Microgram);
+                case "Milligram": return UnitKey.ForUnit(MassUnit.Milligram);
+                case "Nanogram": return UnitKey.ForUnit(MassUnit.Nanogram);
+                case "Ounce": return UnitKey.ForUnit(MassUnit.Ounce);
+                case "Picogram": return UnitKey.ForUnit(MassUnit.Picogram);
+                case "Pound": return UnitKey.ForUnit(MassUnit.Pound);
+                case "ShortHundredweight": return UnitKey.ForUnit(MassUnit.ShortHundredweight);
+                case "ShortTon": return UnitKey.ForUnit(MassUnit.ShortTon);
+                case "Slug": return UnitKey.ForUnit(MassUnit.Slug);
+                case "SolarMass": return UnitKey.ForUnit(MassUnit.SolarMass);
+                case "Stone": return UnitKey.ForUnit(MassUnit.Stone);
+                case "Tonne": return UnitKey.ForUnit(MassUnit.Tonne);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)

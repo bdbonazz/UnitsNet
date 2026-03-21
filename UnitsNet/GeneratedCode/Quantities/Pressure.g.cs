@@ -1608,6 +1608,62 @@ namespace UnitsNet
             return true;
         }
 
+        internal static UnitKey GetUnitKey(string unitName)
+        {
+            switch(unitName)
+            {
+                case "Atmosphere": return UnitKey.ForUnit(PressureUnit.Atmosphere);
+                case "Bar": return UnitKey.ForUnit(PressureUnit.Bar);
+                case "Centibar": return UnitKey.ForUnit(PressureUnit.Centibar);
+                case "CentimeterOfWaterColumn": return UnitKey.ForUnit(PressureUnit.CentimeterOfWaterColumn);
+                case "Decapascal": return UnitKey.ForUnit(PressureUnit.Decapascal);
+                case "Decibar": return UnitKey.ForUnit(PressureUnit.Decibar);
+                case "DynePerSquareCentimeter": return UnitKey.ForUnit(PressureUnit.DynePerSquareCentimeter);
+                case "FootOfHead": return UnitKey.ForUnit(PressureUnit.FootOfHead);
+                case "Gigapascal": return UnitKey.ForUnit(PressureUnit.Gigapascal);
+                case "Hectopascal": return UnitKey.ForUnit(PressureUnit.Hectopascal);
+                case "InchOfMercury": return UnitKey.ForUnit(PressureUnit.InchOfMercury);
+                case "InchOfWaterColumn": return UnitKey.ForUnit(PressureUnit.InchOfWaterColumn);
+                case "Kilobar": return UnitKey.ForUnit(PressureUnit.Kilobar);
+                case "KilogramForcePerSquareCentimeter": return UnitKey.ForUnit(PressureUnit.KilogramForcePerSquareCentimeter);
+                case "KilogramForcePerSquareMeter": return UnitKey.ForUnit(PressureUnit.KilogramForcePerSquareMeter);
+                case "KilogramForcePerSquareMillimeter": return UnitKey.ForUnit(PressureUnit.KilogramForcePerSquareMillimeter);
+                case "KilonewtonPerSquareCentimeter": return UnitKey.ForUnit(PressureUnit.KilonewtonPerSquareCentimeter);
+                case "KilonewtonPerSquareMeter": return UnitKey.ForUnit(PressureUnit.KilonewtonPerSquareMeter);
+                case "KilonewtonPerSquareMillimeter": return UnitKey.ForUnit(PressureUnit.KilonewtonPerSquareMillimeter);
+                case "Kilopascal": return UnitKey.ForUnit(PressureUnit.Kilopascal);
+                case "KilopoundForcePerSquareFoot": return UnitKey.ForUnit(PressureUnit.KilopoundForcePerSquareFoot);
+                case "KilopoundForcePerSquareInch": return UnitKey.ForUnit(PressureUnit.KilopoundForcePerSquareInch);
+                case "KilopoundForcePerSquareMil": return UnitKey.ForUnit(PressureUnit.KilopoundForcePerSquareMil);
+                case "Megabar": return UnitKey.ForUnit(PressureUnit.Megabar);
+                case "MeganewtonPerSquareMeter": return UnitKey.ForUnit(PressureUnit.MeganewtonPerSquareMeter);
+                case "Megapascal": return UnitKey.ForUnit(PressureUnit.Megapascal);
+                case "MeterOfHead": return UnitKey.ForUnit(PressureUnit.MeterOfHead);
+                case "MeterOfWaterColumn": return UnitKey.ForUnit(PressureUnit.MeterOfWaterColumn);
+                case "Microbar": return UnitKey.ForUnit(PressureUnit.Microbar);
+                case "Micropascal": return UnitKey.ForUnit(PressureUnit.Micropascal);
+                case "Millibar": return UnitKey.ForUnit(PressureUnit.Millibar);
+                case "MillimeterOfMercury": return UnitKey.ForUnit(PressureUnit.MillimeterOfMercury);
+                case "MillimeterOfWaterColumn": return UnitKey.ForUnit(PressureUnit.MillimeterOfWaterColumn);
+                case "Millipascal": return UnitKey.ForUnit(PressureUnit.Millipascal);
+                case "Millitorr": return UnitKey.ForUnit(PressureUnit.Millitorr);
+                case "NewtonPerSquareCentimeter": return UnitKey.ForUnit(PressureUnit.NewtonPerSquareCentimeter);
+                case "NewtonPerSquareMeter": return UnitKey.ForUnit(PressureUnit.NewtonPerSquareMeter);
+                case "NewtonPerSquareMillimeter": return UnitKey.ForUnit(PressureUnit.NewtonPerSquareMillimeter);
+                case "Pascal": return UnitKey.ForUnit(PressureUnit.Pascal);
+                case "PoundForcePerSquareFoot": return UnitKey.ForUnit(PressureUnit.PoundForcePerSquareFoot);
+                case "PoundForcePerSquareInch": return UnitKey.ForUnit(PressureUnit.PoundForcePerSquareInch);
+                case "PoundForcePerSquareMil": return UnitKey.ForUnit(PressureUnit.PoundForcePerSquareMil);
+                case "PoundPerInchSecondSquared": return UnitKey.ForUnit(PressureUnit.PoundPerInchSecondSquared);
+                case "TechnicalAtmosphere": return UnitKey.ForUnit(PressureUnit.TechnicalAtmosphere);
+                case "TonneForcePerSquareCentimeter": return UnitKey.ForUnit(PressureUnit.TonneForcePerSquareCentimeter);
+                case "TonneForcePerSquareMeter": return UnitKey.ForUnit(PressureUnit.TonneForcePerSquareMeter);
+                case "TonneForcePerSquareMillimeter": return UnitKey.ForUnit(PressureUnit.TonneForcePerSquareMillimeter);
+                case "Torr": return UnitKey.ForUnit(PressureUnit.Torr);
+                default: throw new InvalidOperationException($"No Unit is found with name {unitName}.");
+            }
+        }
+
         #region Explicit implementations
 
         double IQuantity.As(Enum unit)
